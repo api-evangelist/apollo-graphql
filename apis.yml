@@ -5,7 +5,11 @@ apis:
   - aid: apollo-graphql:apollo-graphql
     name: Apollo GraphQL
     tags:
-      - API
+      - GraphQL
+      - Graph
+      - Clients
+      - Connectors
+      - Federation
     humanURL: ' https://www.apollographql.com/'
     properties:
       - url: ' https://www.apollographql.com/'
