@@ -129,6 +129,17 @@ common:
       - name: Enhanced Customer Experience
       - name: Modernization
       - name: Mergers and Acquisitions
+  - name: Integrations
+    type: Integrations
+    url: https://www.apollographql.com/graphos/apollo-connectors
+    data:
+      - name: Anthropic
+      - name: OpenAI
+      - name: OData
+      - name: AWS DynamoDB
+      - name: Stripe
+      - name: AWS Lambda
+      - name: Strapi
 created: '2025-06-10T00:00:00.000Z'
 modified: '2025-06-10'
 position: Consumer
