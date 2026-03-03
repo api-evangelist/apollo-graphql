@@ -143,6 +143,9 @@ common:
 created: '2025-06-10T00:00:00.000Z'
 modified: '2025-06-10'
 position: Consumer
+segments:
+  - Clients
+  - ProCode_API_Composition
 description: >-
   Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is
   the fastest and safest way to build and scale your APIs. 
