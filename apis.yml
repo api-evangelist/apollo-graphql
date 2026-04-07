@@ -5,11 +5,11 @@ apis:
   - aid: apollo-graphql:apollo-graphql
     name: Apollo GraphQL
     tags:
-      - GraphQL
-      - Graph
       - Clients
       - Connectors
       - Federation
+      - Graph
+      - GraphQL
     humanURL: ' https://www.apollographql.com/'
     properties:
       - url: ' https://www.apollographql.com/'
@@ -20,22 +20,20 @@ apis:
   - aid: apollo-graphql:apollo-graphos-platform-api
     name: Apollo GraphOS Platform API
     tags:
+      - API Management
+      - Federation
       - GraphQL
       - Platform
       - Schema Registry
-      - Federation
-      - API Management
     humanURL: https://www.apollographql.com/docs/graphos/platform/platform-api
     properties:
       - url: https://www.apollographql.com/docs/graphos/platform/platform-api
         type: Documentation
       - url: https://www.apollographql.com/docs/graphos/platform
         type: GettingStarted
-      - url: 
-          https://www.apollographql.com/docs/graphos/platform/security/overview
+      - url: https://www.apollographql.com/docs/graphos/platform/security/overview
         type: Security
-      - url: 
-          https://www.apollographql.com/docs/graphos/platform/schema-management
+      - url: https://www.apollographql.com/docs/graphos/platform/schema-management
         type: SchemaManagement
     description: >-
       The GraphOS Platform API enables programmatic management of Apollo GraphOS,
@@ -45,10 +43,10 @@ apis:
     name: Apollo Server
     tags:
       - GraphQL
-      - Server
       - JavaScript
-      - TypeScript
       - Node.js
+      - Server
+      - TypeScript
     humanURL: https://www.apollographql.com/docs/apollo-server
     properties:
       - url: https://www.apollographql.com/docs/apollo-server
@@ -70,12 +68,12 @@ apis:
   - aid: apollo-graphql:apollo-client-web
     name: Apollo Client (Web)
     tags:
-      - GraphQL
       - Client
-      - React
+      - GraphQL
       - JavaScript
-      - TypeScript
+      - React
       - State Management
+      - TypeScript
     humanURL: https://www.apollographql.com/docs/react
     properties:
       - url: https://www.apollographql.com/docs/react
@@ -99,11 +97,11 @@ apis:
   - aid: apollo-graphql:apollo-client-ios
     name: Apollo Client (iOS)
     tags:
-      - GraphQL
       - Client
+      - GraphQL
       - iOS
-      - Swift
       - Mobile
+      - Swift
     humanURL: https://www.apollographql.com/docs/ios
     properties:
       - url: https://www.apollographql.com/docs/ios
@@ -120,11 +118,11 @@ apis:
   - aid: apollo-graphql:apollo-client-kotlin
     name: Apollo Client (Kotlin)
     tags:
-      - GraphQL
-      - Client
-      - Kotlin
       - Android
+      - Client
+      - GraphQL
       - JVM
+      - Kotlin
       - Mobile
     humanURL: https://www.apollographql.com/docs/kotlin
     properties:
@@ -142,17 +140,16 @@ apis:
   - aid: apollo-graphql:apollo-router
     name: Apollo Router
     tags:
-      - GraphQL
-      - Router
       - Federation
       - Gateway
+      - GraphQL
+      - Router
       - Rust
     humanURL: https://www.apollographql.com/docs/graphos/routing
     properties:
       - url: https://www.apollographql.com/docs/graphos/routing
         type: Documentation
-      - url: 
-          https://www.apollographql.com/docs/graphos/routing/configuration/overview
+      - url: https://www.apollographql.com/docs/graphos/routing/configuration/overview
         type: Configuration
       - url: https://github.com/apollographql/router
         type: GitHubRepository
@@ -168,20 +165,18 @@ apis:
   - aid: apollo-graphql:apollo-connectors
     name: Apollo Connectors
     tags:
-      - GraphQL
-      - REST
       - Connectors
-      - Integration
       - Federation
+      - GraphQL
+      - Integration
+      - REST
     humanURL: https://www.apollographql.com/docs/graphos/connectors
     properties:
       - url: https://www.apollographql.com/docs/graphos/connectors
         type: Documentation
-      - url: 
-          https://www.apollographql.com/docs/graphos/connectors/getting-started
+      - url: https://www.apollographql.com/docs/graphos/connectors/getting-started
         type: GettingStarted
-      - url: 
-          https://www.apollographql.com/docs/graphos/connectors/getting-started/requirements
+      - url: https://www.apollographql.com/docs/graphos/connectors/getting-started/requirements
         type: Requirements
       - url: https://www.apollographql.com/graphos/apollo-connectors
         type: ProductPage
@@ -193,11 +188,11 @@ apis:
   - aid: apollo-graphql:rover-cli
     name: Rover CLI
     tags:
-      - GraphQL
-      - CLI
-      - Schema Management
       - CI/CD
+      - CLI
       - Federation
+      - GraphQL
+      - Schema Management
     humanURL: https://www.apollographql.com/docs/rover
     properties:
       - url: https://www.apollographql.com/docs/rover
@@ -220,11 +215,11 @@ apis:
   - aid: apollo-graphql:apollo-federation
     name: Apollo Federation
     tags:
-      - GraphQL
-      - Federation
-      - Supergraph
-      - Microservices
       - Distributed
+      - Federation
+      - GraphQL
+      - Microservices
+      - Supergraph
     humanURL: >-
       https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/federation
     properties:
@@ -236,8 +231,7 @@ apis:
         type: DirectivesReference
       - url: https://github.com/apollographql/federation
         type: GitHubRepository
-      - url: 
-          https://www.apollographql.com/docs/graphos/reference/federation/versions
+      - url: https://www.apollographql.com/docs/graphos/reference/federation/versions
         type: Changelog
     description: >-
       Apollo Federation enables declarative composition of multiple APIs into a
@@ -247,9 +241,9 @@ apis:
   - aid: apollo-graphql:apollo-mcp-server
     name: Apollo MCP Server
     tags:
+      - AI
       - GraphQL
       - MCP
-      - AI
       - Model Context Protocol
     humanURL: https://www.apollographql.com/docs/apollo-mcp-server
     properties:
@@ -263,15 +257,15 @@ apis:
       GraphQL APIs through the MCP standard.
 name: Apollo GraphQL
 tags:
-  - GraphQL
-  - Graph
+  - API Orchestration
   - Clients
   - Connectors
   - Federation
-  - API Orchestration
-  - Supergraph
+  - Graph
+  - GraphQL
   - Router
   - Schema Registry
+  - Supergraph
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
@@ -301,8 +295,7 @@ common:
     type: Certifications
     description: 'null'
   - url: https://www.apollographql.com/blog
-    name: Apollo GraphQL Blog  latest insights and news on API and GraphQL 
-      solutions
+    name: Apollo GraphQL Blog  latest insights and news on API and GraphQL solutions
     type: Blog
     description: 'null'
   - url: https://www.apollographql.com/developers
