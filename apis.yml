@@ -31,9 +31,11 @@ apis:
         type: Documentation
       - url: https://www.apollographql.com/docs/graphos/platform
         type: GettingStarted
-      - url: https://www.apollographql.com/docs/graphos/platform/security/overview
+      - url: 
+          https://www.apollographql.com/docs/graphos/platform/security/overview
         type: Security
-      - url: https://www.apollographql.com/docs/graphos/platform/schema-management
+      - url: 
+          https://www.apollographql.com/docs/graphos/platform/schema-management
         type: SchemaManagement
     description: >-
       The GraphOS Platform API enables programmatic management of Apollo GraphOS,
@@ -149,7 +151,8 @@ apis:
     properties:
       - url: https://www.apollographql.com/docs/graphos/routing
         type: Documentation
-      - url: https://www.apollographql.com/docs/graphos/routing/configuration/overview
+      - url: 
+          https://www.apollographql.com/docs/graphos/routing/configuration/overview
         type: Configuration
       - url: https://github.com/apollographql/router
         type: GitHubRepository
@@ -174,9 +177,11 @@ apis:
     properties:
       - url: https://www.apollographql.com/docs/graphos/connectors
         type: Documentation
-      - url: https://www.apollographql.com/docs/graphos/connectors/getting-started
+      - url: 
+          https://www.apollographql.com/docs/graphos/connectors/getting-started
         type: GettingStarted
-      - url: https://www.apollographql.com/docs/graphos/connectors/getting-started/requirements
+      - url: 
+          https://www.apollographql.com/docs/graphos/connectors/getting-started/requirements
         type: Requirements
       - url: https://www.apollographql.com/graphos/apollo-connectors
         type: ProductPage
@@ -231,7 +236,8 @@ apis:
         type: DirectivesReference
       - url: https://github.com/apollographql/federation
         type: GitHubRepository
-      - url: https://www.apollographql.com/docs/graphos/reference/federation/versions
+      - url: 
+          https://www.apollographql.com/docs/graphos/reference/federation/versions
         type: Changelog
     description: >-
       Apollo Federation enables declarative composition of multiple APIs into a
@@ -295,7 +301,8 @@ common:
     type: Certifications
     description: 'null'
   - url: https://www.apollographql.com/blog
-    name: Apollo GraphQL Blog  latest insights and news on API and GraphQL solutions
+    name: Apollo GraphQL Blog  latest insights and news on API and GraphQL 
+      solutions
     type: Blog
     description: 'null'
   - url: https://www.apollographql.com/developers
@@ -475,8 +482,8 @@ segments:
   - Clients
   - ProCode_API_Composition
 description: >-
-  Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is
-  the fastest and safest way to build and scale your APIs. 
+  Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is the
+  fastest and safest way to build and scale your APIs.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
