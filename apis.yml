@@ -477,6 +477,14 @@ segments:
 description: >-
   Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is the
   fastest and safest way to build and scale your APIs.
+integrations:
+  - name: Logo 1
+  - name: Logo 2
+  - name: Logo 3
+  - name: Logo 4
+  - name: Logo 5
+  - name: Logo 6
+  - name: Logo 7
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
