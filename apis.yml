@@ -59,7 +59,7 @@ apis:
     type: PackageManager
   - url: >-
       https://github.com/apollographql/apollo-server/blob/main/packages/server/CHANGELOG.md
-    type: Changelog
+    type: ChangeLog
   description: >-
     Apollo Server is an open-source, spec-compliant GraphQL server compatible
     with any GraphQL client. It is the recommended way to build a
@@ -88,7 +88,7 @@ apis:
     type: PackageManager
   - url: >-
       https://github.com/apollographql/apollo-client/blob/main/CHANGELOG.md
-    type: Changelog
+    type: ChangeLog
   description: >-
     Apollo Client is a comprehensive state management library for JavaScript
     and TypeScript applications. It is the industry-leading GraphQL client for
@@ -109,7 +109,7 @@ apis:
   - url: https://github.com/apollographql/apollo-ios
     type: GitHubRepository
   - url: https://github.com/apollographql/apollo-ios/blob/main/CHANGELOG.md
-    type: Changelog
+    type: ChangeLog
   description: >-
     Apollo iOS is a Swift-first, open-source GraphQL client for native iOS
     applications. It executes queries and mutations using a GraphQL server and
@@ -131,7 +131,7 @@ apis:
   - url: https://github.com/apollographql/apollo-kotlin
     type: GitHubRepository
   - url: https://github.com/apollographql/apollo-kotlin/releases
-    type: Changelog
+    type: ChangeLog
   description: >-
     Apollo Kotlin is a strongly-typed, caching GraphQL client for the JVM,
     Android, and Kotlin multiplatform. It generates Kotlin models for GraphQL
@@ -154,7 +154,7 @@ apis:
   - url: https://github.com/apollographql/router
     type: GitHubRepository
   - url: https://github.com/apollographql/router/releases
-    type: Changelog
+    type: ChangeLog
   - url: https://www.apollographql.com/docs/graphos/routing/security/jwt
     type: Security
   description: >-
@@ -206,7 +206,7 @@ apis:
   - url: https://github.com/apollographql/rover
     type: GitHubRepository
   - url: https://github.com/apollographql/rover/blob/main/CHANGELOG.md
-    type: Changelog
+    type: ChangeLog
   description: >-
     Rover is the command-line interface for managing and maintaining graphs
     with Apollo GraphOS. It supports publishing subgraph schemas, running a
@@ -232,7 +232,7 @@ apis:
   - url: https://github.com/apollographql/federation
     type: GitHubRepository
   - url: https://www.apollographql.com/docs/graphos/reference/federation/versions
-    type: Changelog
+    type: ChangeLog
   description: >-
     Apollo Federation enables declarative composition of multiple APIs into a
     single federated GraphQL API. It serves as an API orchestration layer
@@ -250,7 +250,7 @@ apis:
   - url: https://www.apollographql.com/docs/apollo-mcp-server
     type: Documentation
   - url: https://github.com/apollographql/apollo-mcp-server/releases
-    type: Changelog
+    type: ChangeLog
   description: >-
     Apollo MCP Server provides Model Context Protocol integration for Apollo
     GraphQL, enabling AI agents and large language models to interact with
@@ -397,7 +397,7 @@ common:
   description: 'null'
 - url: https://www.apollographql.com/docs/graphos/resources/changelog
   name: Apollo Product Changelogs
-  type: Changelog
+  type: ChangeLog
   description: 'null'
 - url: https://www.apollographql.com/why-apollo
   name: Why Apollo GraphQL
