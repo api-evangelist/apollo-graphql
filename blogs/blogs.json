@@ -2,12 +2,20 @@
   "repo": "apollo-graphql",
   "feeds": [
     {
+      "source": "https://www.apollographql.com/blog/rss.xml",
+      "feed_url": "https://www.apollographql.com/blog/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://www.apollographql.com/blog",
       "feed_url": "https://www.apollographql.com/blog/rss.xml",
-      "title": "Blog posts | RSS Feed",
-      "saved": 41
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "post_count": 52,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 53,
+  "fetched": "2026-06-01T23:35:02Z"
 }
