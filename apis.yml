@@ -347,7 +347,7 @@ common:
 - url: >-
     https://studio.apollographql.com/signup?_gl=1%2Ahmmq01%2A_gcl_au%2ANjc4MTcyOTc1LjE3NDk1ODk4Nzg.
   name: Studio
-  type: SignUp
+  type: Signup
   description: 'null'
 - url: https://studio.apollographql.com/login?from=%2Fwelcome
   name: Studio
@@ -475,7 +475,7 @@ common:
   type: MCPServer
 - name: Agent Skills
   url: https://github.com/apollographql/skills
-  type: AgentSkill
+  type: AgentSkills
 created: '2025-06-10T00:00:00.000Z'
 modified: '2026-05-19'
 position: Consumer
