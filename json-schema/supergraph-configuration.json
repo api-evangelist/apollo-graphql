@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/apollo-federation/json-schema/supergraph-configuration.json",
+  "title": "Apollo Federation Supergraph Configuration",
+  "description": "JSON Schema for Apollo Router and Federation supergraph configuration (supergraph.yaml / router.yaml).",
+  "type": "object",
+  "properties": {
+    "federation_version": {
+      "type": "string",
+      "enum": ["=2.0.0", "=2.3.0", "=2.5.0", "=2.6.0", "=2.7.0", "=2.8.0", "=2.9.0"],
+      "description": "Federation version for composition."
+    },
+    "subgraphs": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/SubgraphConfig"
+      },
+      "description": "Subgraph definitions keyed by name."
+    }
+  },
+  "$defs": {
+    "SubgraphConfig": {
+      "type": "object",
+      "required": ["routing_url", "schema"],
+      "properties": {
+        "routing_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL where the subgraph can be reached at runtime."
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Path to the subgraph schema file."
+            },
+            "subgraph_url": {
+              "type": "string",
+              "format": "uri",
+              "description": "URL to introspect the subgraph schema from."
+            },
+            "graphref": {
+              "type": "string",
+              "description": "Apollo Studio graph reference (graph@variant)."
+            }
+          },
+          "description": "Subgraph schema source."
+        }
+      }
+    }
+  }
+}

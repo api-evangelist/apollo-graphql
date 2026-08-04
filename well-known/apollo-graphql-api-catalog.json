@@ -1,0 +1,9 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://graphql.api.apollographql.com",
+      "service-doc": [{ "href": "https://www.apollographql.com/docs/graphos/" }],
+      "status": [{ "href": "https://status.apollographql.com" }]
+    }
+  ]
+}

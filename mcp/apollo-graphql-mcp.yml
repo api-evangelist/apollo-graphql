@@ -1,0 +1,68 @@
+generated: '2026-08-03'
+method: probed
+status: published
+provider_published: true
+source: https://mcp.apollographql.com/mcp
+description: Apollo's hosted GraphOS MCP Server. Anonymous JSON-RPC tools/list returns a real tool set
+  with input schemas — no credentials required to enumerate it.
+verified: '2026-08-03'
+server:
+  name: apollo-graphos
+  transport: http
+  url: https://mcp.apollographql.com/mcp
+  auth: none
+  deployment: vendor-hosted
+evidence:
+- url: https://mcp.apollographql.com/mcp
+  status: 200
+  method: POST
+  note: jsonrpc tools/list returned 13 tools with inputSchema
+tools:
+- name: GetTopOperations
+  description: Identify the most-used operations on a graph variant for a time range, with request counts,
+    types, and signatures. Use to find high-traffic operations, detect unused operations, and prioritize
+    findings by traffic impact.
+- name: GetPersistedQueryListStatus
+  description: Check whether a graph variant has a Persisted Query List (PQL) and its current build (revision
+    and operation count). Use to assess PQL configuration — a production variant with no PQL is a security
+    gap. Provide the graph
+- name: GetLaunchHistory
+  description: Retrieve recent launches for a graph variant (most recent first) to detect deployment instability
+    such as repeated failures or frequent superseded launches. Each entry includes the launch id, status,
+    and timestamps, so y
+- name: ApolloConnectorsSpec
+  description: Returns the Apollo Connectors specification for guidance on creating or modifying GraphQL
+    schemas that use @connect or @source.
+- name: GetLaunch
+  description: 'Inspect a single launch by ID for full detail: status, timestamps, which subgraphs changed,
+    composition errors, and the schema diff summary. Use to drill into a specific launch — e.g. a failed
+    or superseded one found via'
+- name: GetSubgraphMetrics
+  description: 'Top subgraphs/connectors by traffic/health for a graph over a time window, as compact
+    CSV (header row + one row per subgraph per day). Columns: start timestamp, end exclusive timestamp,
+    fetch service name, fetch count, f'
+- name: GetMyIdentity
+  description: 'Resolve the caller''s identity from their API key. Call this FIRST when the user asks
+    about "my graph" but has not provided a graph ID. For a graph/service key, `me` resolves to a Graph:
+    use `id` as the graphId and `varia'
+- name: ApolloDocsRead
+  description: Reads an Apollo documentation page by slug in chunks. Use slugs returned by ApolloDocsSearch.
+- name: GetOperationMetrics
+  description: 'Top operations by usage/health for a graph over a time window, as compact CSV (header
+    row + one row per operation per day). Columns: start timestamp, end exclusive timestamp, operation
+    name, request count, request latenc'
+- name: GetLatestLaunch
+  description: 'Inspect the most recent launch for a graph variant: status, completion time, subgraph
+    changes, composition errors, and a schema diff summary vs the previous launch (additions/removals/edits/deprecations
+    plus affected ope'
+- name: GetVariantDetails
+  description: 'Retrieve detailed metadata for a graph variant: federation version, subgraph inventory
+    (names), router status and any pending router version, and the current router configuration (raw YAML).
+    Use this to assess a variant'''
+- name: ApolloDocsSearch
+  description: Searches official Apollo documentation for GraphQL, GraphOS, Apollo Router, Apollo Client,
+    MCP Server, schema design, deployment, and Connectors. Returns URLs, slugs, and excerpts.
+- name: GetLintResults
+  description: 'Retrieve schema lint violations from a graph''s most recent check workflows: each diagnostic''s
+    coordinate, severity level, message, rule, and source location, plus error/warning/total/ignored counts.
+    Use to assess schema '

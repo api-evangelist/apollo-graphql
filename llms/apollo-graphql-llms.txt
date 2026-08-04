@@ -1,0 +1,1225 @@
+# Apollo GraphQL
+
+## Docs > Products > Platform > Apollo GraphOS Platform
+
+- [Apollo GraphOS Quickstart](https://www.apollographql.com/docs/graphos/platform/quickstart.md): This step-by-step guide teaches you how to set up a GraphQL API. Learn to create a graph from scratch and expand it with additional API endpoints.
+- [Platform Limits](https://www.apollographql.com/docs/graphos/platform/platform-limits.md): Efficiently deploy changes to your GraphQL schema with a solid understanding of platform API limitations.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > APIs and Tools
+
+- [The GraphOS Platform API](https://www.apollographql.com/docs/graphos/platform/platform-api.md): Fetch graph details, publish schemas, run schema checks, manage proposals, and more. Access API documentation within GraphOS Studio.
+- [Apollo Sandbox](https://www.apollographql.com/docs/graphos/platform/sandbox.md): Learn how Apollo Sandbox loads a running GraphQL server's schema and facilitates schema introspection, schema checks, offline usage, and more.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > APIs and Tools > GraphOS MCP Server
+
+- [Install GraphOS MCP Server](https://www.apollographql.com/docs/graphos/platform/graphos-mcp-server/install.md): Learn how GraphOS MCP Server gives your agentic coding clients direct access to Apollo's documentation and graph-building capabilities to orchestrate APIs.
+- [GraphOS MCP Server Tools](https://www.apollographql.com/docs/graphos/platform/graphos-mcp-server/tools.md): Learn how GraphOS MCP Server gives your agentic coding clients direct access to Apollo's documentation and graph-building capabilities to orchestrate APIs.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management
+
+- [GraphOS Schema Management](https://www.apollographql.com/docs/graphos/platform/schema-management.md): Efficiently develop and deploy changes to your GraphQL schema with the Apollo GraphOS suite of schema governance and delivery tools.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management > Schema Delivery > Publishing
+
+- [Publishing Schemas to GraphOS](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/publishing.md): Publish your GraphQL schemas to Apollo GraphOS using the Rover CLI or Platform API in your continuous delivery pipeline.
+- [Publish Schemas to GraphOS using Rover](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/publishing/rover.md): Publish your GraphQL schemas to Apollo GraphOS using the Rover CLI in your continuous delivery pipeline.
+- [Publish Schemas to GraphOS using the Platform API](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/publishing/platform-api.md): Publish your GraphQL schemas to Apollo GraphOS using the Apollo Platform API in your continuous delivery pipeline.
+- [Schema publishing with GitHub Actions](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/publishing/guide-github.md): This guide walks you through how to set up schema publishing in your CI/CD pipeline using GitHub Actions.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management > Schema Delivery
+
+- [Launches](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/launch.md): Discover which changes trigger a launch, how to monitor launch status, and the steps involved in an Apollo GraphOS launch.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management > Schema Delivery > Graph Artifacts
+
+- [Graph Artifacts](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/graph-artifacts.md): Use graph artifacts to pin your router to a specific schema version, roll back to a known-good version, and track which version was running at a given time.
+- [Deploy with Graph Artifacts](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/graph-artifacts/deploy.md): Learn how to use the GraphOS Platform API to fetch graph artifact references in CI/CD pipelines, and how to use the Apollo GraphOS Operator to manage graph artifacts in Kubernetes.
+- [Tags](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/graph-artifacts/tags.md): Tags are human-readable aliases for graph artifacts. Use them to promote schemas across environments by reassigning a tag rather than updating a digest reference in every router.
+- [OCI Registry](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/graph-artifacts/oci.md): Graph artifacts use the OCI image format. Use standard OCI tools to authenticate, pull, and inspect artifacts from the GraphOS registry.
+- [Self-host Graph Artifacts](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/graph-artifacts/self-host.md): Set up a local OCI registry to mirror Apollo graph artifacts for air-gapped or restricted network environments, or compose a supergraph schema locally and push it to your own OCI registry.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management > Schema Delivery > Contracts
+
+- [Contracts Overview](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/contracts/overview.md): Use Apollo GraphOS contracts to tailor access to your federated GraphQL supergraph for different consumers.
+- [Creating and Using Contracts](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/contracts/create.md): Learn how to use the @tag directive in subgraph schemas and how to create, edit, and validate contracts in GraphOS Studio.
+- [Contracts Usage Patterns](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/contracts/usage-patterns.md): Learn how contracts enable teams to contribute to a single unified graph and also deliver use-case-specific schemas to different consumers.
+- [Contract Reference](https://www.apollographql.com/docs/graphos/platform/schema-management/delivery/contracts/reference.md): Reference for valid @tag locations, naming conventions, dependent tag relationships, and errors for Apollo GraphOS contracts.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management > Schema Checks
+
+- [Schema Checks](https://www.apollographql.com/docs/graphos/platform/schema-management/checks.md): Use GraphOS Schema checks to identify and validate potential breaking changes in your GraphQL schema before deployment.
+- [Run Schema Checks](https://www.apollographql.com/docs/graphos/platform/schema-management/checks/run.md): Learn how to run GraphOS schema checks against GraphQL schema changes—including as part of your CI pipeline.
+- [Run Custom Schema Checks](https://www.apollographql.com/docs/graphos/platform/schema-management/checks/custom.md): Learn how to extend the GraphOS schema checks workflow by configuring custom schema checks that allow your organization to enforce unique validation rules using your own services.
+- [Check Configurations](https://www.apollographql.com/docs/graphos/platform/schema-management/checks/configure.md): Configure and customize GraphOS schema checks using Apollo GraphOS Studio or Rover CLI.
+- [Connecting Apollo to GitHub](https://www.apollographql.com/docs/graphos/platform/schema-management/checks/github-integration.md): Enhance graphQL schema checks with the Apollo Studio GitHub app to link results to pull requests and run checks on each commit.
+- [Schema Checks Reference](https://www.apollographql.com/docs/graphos/platform/schema-management/checks/reference.md): GraphOS Schema checks reference for schema changes in your GraphQL schema.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management > Schema Linting
+
+- [Schema Linting](https://www.apollographql.com/docs/graphos/platform/schema-management/linting.md): Enforce GraphQL formatting conventions and best practices with Apollo GraphOS schema linting.
+- [Schema Linter Rules](https://www.apollographql.com/docs/graphos/platform/schema-management/linting/rules.md): Reference for GraphQL schema linter rules. Ensure consistent naming conventions, type definitions, and directive usage with examples for each violation.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Schema Management > Schema Proposals
+
+- [Schema Proposals](https://www.apollographql.com/docs/graphos/platform/schema-management/proposals.md): Use GraphOS's native GraphQL schema change management process propose, review, and track schema changes before and after publication.
+- [Schema Proposal Configurations](https://www.apollographql.com/docs/graphos/platform/schema-management/proposals/configure.md): Fine-tune the GraphQL schema proposal workflow by configuring permissions, default reviewers, approval requirements, and schema checks with GraphOS.
+- [Propose Schema Changes](https://www.apollographql.com/docs/graphos/platform/schema-management/proposals/create.md): Propose GraphQL schema changes in GraphOS Studio. Edit and lint schemas, save and check revisions, and request reviews for async collaboration.
+- [Review Schema Proposals](https://www.apollographql.com/docs/graphos/platform/schema-management/proposals/review.md): Review and provide feedback on GraphQL schema proposals in GraphOS Studio. Explore changes, add comments, and approve proposals.
+- [Implement Approved Proposals](https://www.apollographql.com/docs/graphos/platform/schema-management/proposals/implement.md): Pull GraphQL schema changes from schema proposals using Rover, validate them with schema checks, and publish them to GraphOS.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Explorer IDE
+
+- [GraphOS Studio Explorer](https://www.apollographql.com/docs/graphos/platform/explorer.md): Learn about the Apollo GraphOS Studio Explorer—a powerful web IDE for creating, running, and managing GraphQL operations.
+- [Connecting and Authenticating with the Explorer](https://www.apollographql.com/docs/graphos/platform/explorer/connect.md): Configure CORS policies, request headers, cookies, and env variables so the Apollo GraphOS Explorer can connect to your GraphQL server.
+- [Operation Collections](https://www.apollographql.com/docs/graphos/platform/explorer/operation-collections.md): Organize and share frequently used GraphQL operations with operation collections in GraphOS Studio Explorer.
+- [GraphQL Subscription Support](https://www.apollographql.com/docs/graphos/platform/explorer/subscription-support.md): Execute GraphQL subscription operations in GraphOS Studio Explorer using WebSocket or HTTP protocols.
+- [Embedding the Explorer](https://www.apollographql.com/docs/graphos/platform/explorer/embed.md): Embed the GraphOS Studio Explorer in your webpage, customize its appearance and behavior, and set default GraphQL operations for easy testing.
+- [Custom Scripts in the Explorer](https://www.apollographql.com/docs/graphos/platform/explorer/scripting.md): Use preflight and postflight scripts to manage authentication and validate GraphQL operations in the Apollo GraphOS Explorer.
+- [Additional Explorer Features](https://www.apollographql.com/docs/graphos/platform/explorer/additional-features.md): Explore additional features including dark mode, table layout for GraphQL response data, file uploads, and more.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Graph Security
+
+- [Graph Security](https://www.apollographql.com/docs/graphos/platform/security/overview.md): Best practices for securing GraphQL APIs, including limiting discoverability, error obfuscation, query depth limits, and more.
+- [Safelisting with Persisted Queries](https://www.apollographql.com/docs/graphos/platform/security/persisted-queries.md): Secure your GraphQL APIs by maintaining an allowlist of trusted operations. Configure security levels for incremental adoption.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Metrics and Insights
+
+- [GraphOS Metrics and Insights](https://www.apollographql.com/docs/graphos/platform/insights.md)
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Metrics and Insights > Metrics Collection and Forwarding
+
+- [Sending Metrics to GraphOS](https://www.apollographql.com/docs/graphos/platform/insights/sending-operation-metrics.md): Learn how to report GraphQL operation and field usage metrics from the Apollo Router, Apollo Server, and third-party server libraries.
+- [Operation Signatures](https://www.apollographql.com/docs/graphos/platform/insights/operation-signatures.md): Learn how Apollo generates GraphQL operation signatures to group functionally identical operations for accurate performance analysis.
+- [Forwarding Metrics to Datadog](https://www.apollographql.com/docs/graphos/platform/insights/datadog-forwarding.md): Integrate Apollo with Datadog to forward GraphQL metrics from GraphOS. Visualize and set up alerts with Datadog for enhanced performance monitoring.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Metrics and Insights > Insights and Analysis
+
+- [Operation Metrics in GraphOS](https://www.apollographql.com/docs/graphos/platform/insights/operation-metrics.md): Apollo GraphOS empowers you to visualize key GraphQL metrics such as request rate, latency, and more for in-depth performance analysis of your graph.
+- [Field Usage in GraphOS](https://www.apollographql.com/docs/graphos/platform/insights/field-usage.md): Explore GraphQL schema field usage in Apollo GraphOS Studio. Analyze field requests and executions to understand your graph's performance.
+- [Error Diagnostics in GraphOS](https://www.apollographql.com/docs/graphos/platform/insights/errors.md): Leverage error insights in GraphOS Studio to view GraphQL errors by service, code and more.
+- [Subgraph Metrics in GraphOS](https://www.apollographql.com/docs/graphos/platform/insights/subgraphs.md): Explore subgraph metrics in GraphOS. Use latency heatmaps, error charts, and comparisons to identify bottlenecks, fix issues, and optimize your graph's performance.
+- [Segmenting Metrics by Client](https://www.apollographql.com/docs/graphos/platform/insights/client-segmentation.md): Leverage client awareness in GraphOS Studio to view GraphQL operation metrics segmented by clients, including client versions.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Metrics and Insights > Notifications and Alerts
+
+- [GraphOS Notifications and Alerts](https://www.apollographql.com/docs/graphos/platform/insights/notifications.md): Set up notifications for your GraphQL API's performance, schema changes, and more. Stay updated and address issues effectively using custom alerts.
+- [Daily Reports from GraphOS](https://www.apollographql.com/docs/graphos/platform/insights/notifications/daily-reports.md): Receive daily GraphQL activity summaries with Apollo GraphOS notifications. Analyze metrics to identify and resolve issues.
+- [Schema Change Notifications](https://www.apollographql.com/docs/graphos/platform/insights/notifications/schema-changes.md): Set up Apollo GraphOS notifications for GraphQL schema changes. Receive real-time alerts whenever your registered schema is modified.
+- [Schema Proposals Notifications](https://www.apollographql.com/docs/graphos/platform/insights/notifications/schema-proposals.md): Set up Apollo GraphOS notifications for GraphQL schema proposals. Receive real-time alerts whenever schema proposals are created or revised, or if their status changes.
+- [Performance Alerts from GraphOS](https://www.apollographql.com/docs/graphos/platform/insights/notifications/performance-alerts.md): Configure alerts to receive notifications in Slack or PagerDuty instance when specific operation metrics surpass defined thresholds.
+- [Build Status Notifications](https://www.apollographql.com/docs/graphos/platform/insights/notifications/build-status.md): Configure Apollo GraphOS to notify your team via webhook about schema build attempts in your federated GraphQL API.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Access Management
+
+- [GraphOS Organizations](https://www.apollographql.com/docs/graphos/platform/access-management/org.md): Discover how GraphOS organizes data through organizations, members, and roles. Learn about managing access, assigning roles, and utilizing fine-grained controls to ensure secure data handling within your organization.
+- [Members, Roles, and Permissions](https://www.apollographql.com/docs/graphos/platform/access-management/member-roles.md): Learn about Apollo GraphOS organization roles, access control permissions, member management, and API key roles for efficient collaboration.
+- [Export and Read Audit Logs](https://www.apollographql.com/docs/graphos/platform/access-management/audit-log.md): GraphOS Enterprise users can export and download an audit log of organizational events. Learn how to export and read audit logs from GraphOS Studio.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Access Management > API Keys
+
+- [API Keys](https://www.apollographql.com/docs/graphos/platform/access-management/api-keys.md): Learn which GraphOS API key to use and where to create and manage keys in GraphOS Studio or with the Platform API.
+- [Graph API Keys](https://www.apollographql.com/docs/graphos/platform/access-management/api-keys/graph-api-keys.md): Create a graph API key in GraphOS Studio and learn how Enterprise plans assign graph API key roles.
+- [Subgraph API Keys](https://www.apollographql.com/docs/graphos/platform/access-management/api-keys/subgraph-api-keys.md): Create subgraph API keys with the Rover CLI or GraphOS Platform API for checks, subgraph creation, and schema publishes.
+- [Personal API Keys](https://www.apollographql.com/docs/graphos/platform/access-management/api-keys/personal-api-keys.md): Create a personal API key in GraphOS Studio for Rover, the Apollo VS Code extension, and other local development tools.
+- [Operator API Keys](https://www.apollographql.com/docs/graphos/platform/access-management/api-keys/operator-api-keys.md): Create an Operator API key with the Rover CLI and review which Platform API operations the key can perform.
+- [Manage API Keys with GraphOS Studio](https://www.apollographql.com/docs/graphos/platform/access-management/api-keys/manage-api-keys-studio.md): Use GraphOS Studio to list, inspect, rotate, revoke, and delete GraphOS API keys.
+- [Manage API Keys with the Platform API](https://www.apollographql.com/docs/graphos/platform/access-management/api-keys/manage-api-keys-platform-api.md): Use the GraphOS Platform API to manage API keys.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Access Management > SSO
+
+- [GraphOS Single Sign-On](https://www.apollographql.com/docs/graphos/platform/access-management/sso/overview.md): Learn how to set up Single Sign-On (SSO) for Apollo GraphOS using SAML or OIDC. Explore both self-service and assisted setup options for secure, centralized access management.
+- [Multi-organization SSO](https://www.apollographql.com/docs/graphos/platform/access-management/sso/multi-organization.md): Set up multi-organization SSO to switch between organizations in GraphOS Studio without needing to reauthenticate.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Access Management > SSO > SAML
+
+- [Set up SAML SSO with Okta](https://www.apollographql.com/docs/graphos/platform/access-management/sso/saml-okta.md): Configure Okta as your Apollo GraphOS organization's SSO provider with this SAML setup guide.
+- [Set up SAML SSO with Microsoft Entra ID (formerly Azure AD)](https://www.apollographql.com/docs/graphos/platform/access-management/sso/saml-microsoft-entra-id.md): Configure Microsoft Entra ID (formerly Azure AD) as your Apollo GraphOS organization's SAML SSO provider with this SAML setup guide.
+- [Set up SSO with a SAML-based IdP](https://www.apollographql.com/docs/graphos/platform/access-management/sso/saml-integration-guide.md): Configure a SAML-based identity provider as your Apollo GraphOS organization's SSO provider.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Access Management > SSO > OIDC
+
+- [Set up OIDC SSO with Okta](https://www.apollographql.com/docs/graphos/platform/access-management/sso/oidc-okta.md): Configure Okta as your Apollo GraphOS organization's SSO provider with this OIDC setup guide.
+- [Set up OIDC SSO with Microsoft Entra ID (formerly Azure AD)](https://www.apollographql.com/docs/graphos/platform/access-management/sso/oidc-microsoft-entra-id.md): Configure Microsoft Entra ID (formerly Azure AD) as your Apollo GraphOS organization's SSO provider with this OIDC setup guide.
+- [Set up SSO with an OIDC-based IdP](https://www.apollographql.com/docs/graphos/platform/access-management/sso/oidc-integration-guide.md): Configure a OpenID Connect (OIDC) based identity provider as your Apollo GraphOS organization's SSO provider.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Access Management > SCIM
+
+- [SCIM Provisioning Overview](https://www.apollographql.com/docs/graphos/platform/access-management/scim.md): Automate user management in GraphOS using SCIM provisioning. Configure automated user provisioning, deprovisioning, and attribute syncing with your identity provider.
+- [Set up SCIM with Okta](https://www.apollographql.com/docs/graphos/platform/access-management/scim/okta.md): Configure Okta as your Apollo GraphOS organization's SCIM provider to automate user provisioning, deprovisioning, and role assignment.
+- [Set up SCIM with Microsoft Entra ID](https://www.apollographql.com/docs/graphos/platform/access-management/scim/microsoft-entra-id.md): Configure Microsoft Entra ID as your Apollo GraphOS organization's SCIM provider to automate user provisioning, deprovisioning, and role assignment.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Graph Management
+
+- [Add and Manage Variants](https://www.apollographql.com/docs/graphos/platform/graph-management/variants.md): Use graph variants in Apollo GraphOS to distinguish between instances of the same graph running in different environments.
+- [Add a Subgraph](https://www.apollographql.com/docs/graphos/platform/graph-management/add-subgraphs.md): Access templates to build a new subgraph that you can add to your GraphOS supergraph, whether you already have a GraphQL API or are building from scratch.
+- [Manage Subgraphs](https://www.apollographql.com/docs/graphos/platform/graph-management/manage-subgraphs.md): Learn how to view, modify, and delete subgraphs in GraphOS Studio. This guide covers managing subgraph routing URLs, understanding schema composition, and using contact info and tagging directives to enhance your supergraph's functionality.
+- [Updating Graph Components](https://www.apollographql.com/docs/graphos/platform/graph-management/updates.md): This tutorial shows how to update your federated GraphQL API safely. Upgrade your components in the recommended order to avoid errors. It also covers graph ownership transfer and deletion.
+- [Transfer graphs](https://www.apollographql.com/docs/graphos/platform/graph-management/transfers.md): Transfer graphs from one Apollo GraphOS Studio organization to another.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Production Readiness
+
+- [Production Readiness Checklist](https://www.apollographql.com/docs/graphos/platform/production-readiness/checklist.md): Use this checklist—covering the GraphOS Router, subgraphs, and clients—to identify potential gaps before your graph handles production traffic.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Production Readiness > Testing and Load Management
+
+- [Overload Protection](https://www.apollographql.com/docs/graphos/platform/production-readiness/overload-protection.md): Implement GraphQL server overload protection for high traffic scenarios to ensure availability and reduce error rates.
+- [Load Testing a Federated GraphQL API](https://www.apollographql.com/docs/graphos/platform/production-readiness/load-testing.md): Considerations for load testing with GraphQL in the Apollo ecosystem.
+- [Testing with Apollo Federation](https://www.apollographql.com/docs/graphos/platform/production-readiness/testing-with-apollo-federation.md): Test your GraphQL architecture comprehensively with unit, integration, end-to-end, composition, and component and operation testing.
+
+## Docs > Products > Platform > Apollo GraphOS Platform > Production Readiness > Environment and Deployment
+
+- [Graph Environment Best Practices](https://www.apollographql.com/docs/graphos/platform/production-readiness/environment-best-practices.md): Learn CI/CD best practices and examples when using graph variants for multiple deployment environments.
+- [Deploying API Changes with GraphOS](https://www.apollographql.com/docs/graphos/platform/production-readiness/change-management.md): Use tools like GraphOS Studio, Rover, and contracts to ensure smooth releases and minimize client impact.
+- [Keeping Schemas Up-To-Date in Client Apps](https://www.apollographql.com/docs/graphos/platform/production-readiness/updating-client-schema.md): Apollo's recommendations and best practices for keeping client apps up-to-date with supergraph schema changes.
+- [Deployment Best Practices](https://www.apollographql.com/docs/graphos/platform/production-readiness/deployment-best-practices.md): Best practices and workflows for deploying a federated GraphQL API with Apollo Federation and GraphOS.
+
+## Docs > Products > Graph Development > Apollo Connectors
+
+- [Why use Apollo Connectors?](https://www.apollographql.com/docs/graphos/connectors/why-connectors.md): Integrate and orchestrate REST services with your supergraph
+- [Troubleshooting Connectors](https://www.apollographql.com/docs/graphos/connectors/troubleshooting.md): Fixes and workarounds for logged errors and general issues with using REST API Connectors.
+
+## Docs > Products > Graph Development > Apollo Connectors > Getting Started
+
+- [Apollo Connectors Quickstart](https://www.apollographql.com/docs/graphos/connectors/getting-started.md): This step-by-step guide teaches you how to use Apollo Connectors to integrate REST APIs into your GraphQL schema. Learn to create a graph from scratch and expand it with additional API endpoints, all without writing resolvers.
+- [REST API Requirements](https://www.apollographql.com/docs/graphos/connectors/getting-started/requirements.md): Learn about the requirements for a REST API to be compatible with Connectors
+- [Version Requirements](https://www.apollographql.com/docs/graphos/connectors/getting-started/version-requirements.md): Understand the version requirements for Apollo Connectors, including Federation spec, build pipeline, and router compatibility for successful supergraph composition and runtime.
+
+## Docs > Products > Graph Development > Apollo Connectors > Connectors Library
+
+- [Connectors Library](https://www.apollographql.com/docs/graphos/connectors/library.md): Join the Apollo Connectors Community to discover, build, and contribute Connectors that simplify integrating REST APIs into your federated GraphQL architecture.
+
+## Docs > Products > Graph Development > Apollo Connectors > Connectors Library > Prebuilt Connectors
+
+- [Anthropic Connector](https://www.apollographql.com/docs/graphos/connectors/library/anthropic.md): Anthropic provides AI models including Claude for text understanding, reasoning, and safe conversations.
+- [OpenAI Connector](https://www.apollographql.com/docs/graphos/connectors/library/openai.md): OpenAI provides AI models like GPT-4 for text generation, completion, and processing tasks.
+- [AWS DynamoDB Connector](https://www.apollographql.com/docs/graphos/connectors/library/aws-dynamodb.md): Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.
+- [AWS Lambda Connector](https://www.apollographql.com/docs/graphos/connectors/library/aws-lambda.md): AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers.
+- [Strapi Connector](https://www.apollographql.com/docs/graphos/connectors/library/strapi.md): Strapi is a headless CMS that provides a customizable API for content management.
+- [Stripe Connector](https://www.apollographql.com/docs/graphos/connectors/library/stripe.md): Stripe is a payments platform that provides a REST API to support multiple checkout flows.
+- [OData Connector](https://www.apollographql.com/docs/graphos/connectors/library/odata.md): OData (Open Data Protocol) is a standard protocol for building and consuming RESTful APIs.
+
+## Docs > Products > Graph Development > Apollo Connectors > Development and Tooling
+
+- [Connectors Development Workflow and Tooling](https://www.apollographql.com/docs/graphos/connectors/tooling.md): Learn how to use Apollo's complete toolkit for building Connectors, including the Rover CLI, IDE extensions, Apollo Sandbox debugger, and Mapping Playground in an efficient development workflow.
+- [IDE Support for Connectors Development](https://www.apollographql.com/docs/graphos/connectors/tooling/ide-extensions.md): Learn how to use the Apollo IDE extensions for VS Code and JetBrains IDEs to improve your productivity when building Connectors.
+- [Using Rover for Connectors Development](https://www.apollographql.com/docs/graphos/connectors/tooling/rover.md)
+- [CLI Tools for Connectors](https://www.apollographql.com/docs/graphos/connectors/tooling/cli-tools.md): Analyze API requests, generate schemas, and create automated tests with the Rover CLI.
+- [Connectors Mapping Playground](https://www.apollographql.com/docs/graphos/connectors/tooling/mapping-playground.md)
+
+## Docs > Products > Graph Development > Apollo Connectors > Making Requests
+
+- [Making HTTP Requests](https://www.apollographql.com/docs/graphos/connectors/requests.md): Learn how to make HTTP requests with Apollo Connectors, including specifying HTTP methods, URLs, headers, and creating request bodies.
+- [Building Request URLs](https://www.apollographql.com/docs/graphos/connectors/requests/url.md): Learn how to make dynamic URLs with Apollo Connectors, including path and query parameters.
+- [Setting HTTP Request Headers](https://www.apollographql.com/docs/graphos/connectors/requests/headers.md): Set or forward headers when making HTTP requests with Connectors.
+- [Setting HTTP Request Bodies](https://www.apollographql.com/docs/graphos/connectors/requests/body.md): Set JSON or URL-encoded bodies in HTTP requests with Connectors.
+- [Batch Requests](https://www.apollographql.com/docs/graphos/connectors/requests/batching.md): Learn how to make batch requests with Apollo Connectors to solve the N+1 problem
+- [Connecting gRPC services using a JSON Bridge](https://www.apollographql.com/docs/graphos/connectors/requests/grpc-json-bridge.md): Learn how to integrate high-performance gRPC services with Apollo Connectors through a JSON bridge, including transcoding solutions to expose gRPC services as HTTP endpoints.
+
+## Docs > Products > Graph Development > Apollo Connectors > Handling Responses
+
+- [Mapping HTTP Responses](https://www.apollographql.com/docs/graphos/connectors/responses.md): Configure the selection string that determines how an API endpoint's JSON response corresponds to your GraphQL schema using Apollo Connectors.
+- [Mapping Response Fields](https://www.apollographql.com/docs/graphos/connectors/responses/fields.md): Learn how to map and transform JSON fields from REST APIs into your GraphQL schema with Apollo Connectors, including renaming, nesting, and unwrapping techniques.
+- [Error Handling with Connectors](https://www.apollographql.com/docs/graphos/connectors/responses/error-handling.md): Use the errors property on Connectors to map the errors.message and error.extensions parts of a GraphQL response when a REST endpoint returns a non-200 status.
+
+## Docs > Products > Graph Development > Apollo Connectors > Working with Entities
+
+- [Working with Entities](https://www.apollographql.com/docs/graphos/connectors/entities.md): Use Apollo Connectors to enrich and reference shared object types in a GraphQL API using REST APIs
+- [Entity Resolution Patterns](https://www.apollographql.com/docs/graphos/connectors/entities/patterns.md): Learn how to combine multiple endpoints to create complete entities and optimize data fetching with Apollo Connectors
+- [Working with Entities Across Subgraphs](https://www.apollographql.com/docs/graphos/connectors/entities/across-subgraphs.md): Use Apollo Connectors to distribute entities across subgraphs in a federated architecture
+
+## Docs > Products > Graph Development > Apollo Connectors > Mapping Language
+
+- [Mapping Language Overview](https://www.apollographql.com/docs/graphos/connectors/mapping.md): Overview of the Apollo Connectors mapping language. Use its declarative approach to build URIs, construct request bodies, and transform response data.
+- [Mapping Arrays](https://www.apollographql.com/docs/graphos/connectors/mapping/arrays.md): Learn how Apollo Connectors automatically handles arrays in selection mapping and discover techniques for transforming JSON lists and objects in your GraphQL schema.
+- [Mapping Enums](https://www.apollographql.com/docs/graphos/connectors/mapping/enums.md): Learn how to transform inconsistent string values from REST APIs into standardized GraphQL enum types using Apollo Connectors' matching and transformation techniques
+- [Using Literal Values](https://www.apollographql.com/docs/graphos/connectors/mapping/literals.md): Learn how to use literal values in Apollo Connectors to add constants, default values, and custom data structures to your GraphQL schema mappings.
+- [Abstract Types](https://www.apollographql.com/docs/graphos/connectors/mapping/abstract-types.md): Use Apollo Connectors v0.4 abstract type support to expose interface and union fields backed by REST APIs that return more than one shape of object per endpoint.
+- [Virtual Connectors](https://www.apollographql.com/docs/graphos/connectors/mapping/virtual-connectors.md): Use Apollo Connectors v0.4 virtual connectors to define fields with a `@connect` directive that omits `http:`, returning values built from arguments, configuration, and literals.
+- [Mapping Variable Reference](https://www.apollographql.com/docs/graphos/connectors/mapping/variables.md): Reference for variables in Apollo Connectors mapping language. Use variables to transform data, including accessing arguments, parent objects, and API responses.
+- [Mapping Methods Reference](https://www.apollographql.com/docs/graphos/connectors/mapping/methods.md): A reference for data transformation methods available in Apollo Connectors, including syntax, examples, and common use cases.
+
+## Docs > Products > Graph Development > Apollo Connectors > Deployment
+
+- [Connectors Deployment Overview](https://www.apollographql.com/docs/graphos/connectors/deployment.md): Deploy the high-performance GraphOS Router to power your Apollo Connectors implementation with this overview of configuration, deployment options, and best practices. - connectors - get-started
+- [Runtime Configuration Overview](https://www.apollographql.com/docs/graphos/connectors/deployment/configuration.md): Learn how to configure GraphOS Router for Apollo Connectors to orchestrate REST API calls. Set up global and source-specific options, request limits, and environment variables.
+
+## Docs > Products > Graph Development > Apollo Connectors > Deployment > Deployment Configurations
+
+- [Overriding Base URLs](https://www.apollographql.com/docs/graphos/connectors/deployment/overriding-base-urls.md): Learn how to override Apollo Connectors' baseURL configuration to connect to different REST API endpoints across development, staging, and production environments without changing your schema.
+- [Overriding Headers](https://www.apollographql.com/docs/graphos/connectors/deployment/overriding-headers.md): Use Apollo Router's header propagation features with Connectors to insert, propagate, and rename HTTP headers for REST API requests across different deployment environments.
+
+## Docs > Products > Graph Development > Apollo Connectors > Deployment > Security Configurations
+
+- [Connectors Security Configurations](https://www.apollographql.com/docs/graphos/connectors/security.md): Learn about security router configurations for Apollo Connectors including TLS encryption, authentication methods, and request limiting to secure REST API integrations.
+- [Connectors Authentication Configuration](https://www.apollographql.com/docs/graphos/connectors/security/auth.md): Learn how to configure authentication for Apollo Connectors to securely access REST APIs using AWS SigV4 and custom authentication flows with coprocessors.
+- [Connectors Request Limit Configuration](https://www.apollographql.com/docs/graphos/connectors/security/request-limits.md): Configure request limits in the GraphOS Router to cap the number of REST API calls made by Apollo Connectors during GraphQL operations.
+- [Connectors TLS Configuration](https://www.apollographql.com/docs/graphos/connectors/security/tls.md): Learn how to configure TLS encryption and client authentication for Apollo Connectors to secure communications between the GraphOS Router and REST APIs.
+
+## Docs > Products > Graph Development > Apollo Connectors > Deployment > Performance Configurations
+
+- [Connectors Performance Overview](https://www.apollographql.com/docs/graphos/connectors/performance.md): Learn about performance characteristics of Apollo Connectors including router overhead and configurations to maximize GraphQL API performance.
+- [Connectors Traffic Shaping Configuration](https://www.apollographql.com/docs/graphos/connectors/performance/traffic-shaping.md): Configure traffic shaping features like rate limits, timeouts, and HTTP/2 for Apollo Connectors to improve performance and prevent overwhelming your REST API endpoints.
+
+## Docs > Products > Graph Development > Apollo Connectors > Deployment > Observability
+
+- [Connector Observability](https://www.apollographql.com/docs/graphos/connectors/observability.md): Understand and observe Apollo Connectors' behavior and performance with query plans and tracing in GraphOS Studio and GraphOS Router.
+- [Connector Telemetry Configuration](https://www.apollographql.com/docs/graphos/connectors/observability/telemetry.md): Learn how to configure router telemetry for Apollo Connectors, including attributes, selectors, instruments, and events to monitor API performance and troubleshoot issues effectively. - connectors
+
+## Docs > Products > Graph Development > Apollo Connectors > Testing
+
+- [Connectors Testing Framework](https://www.apollographql.com/docs/graphos/connectors/testing.md): Learn how to use the Rover CLI to create and run automated tests for your Apollo Connectors, ensuring your GraphQL schema remains reliable.
+
+## Docs > Products > Graph Development > Apollo Connectors > Connectors Reference
+
+- [Apollo Connectors Changelog](https://www.apollographql.com/docs/graphos/connectors/reference/changelog.md): Documenting all changes between preview versions of Connectors
+- [Apollo Connectors Preview Features](https://www.apollographql.com/docs/graphos/connectors/reference/preview-features.md): Experimental features for Apollo Connectors
+- [Apollo Connectors Directives](https://www.apollographql.com/docs/graphos/connectors/reference/directives.md): Connect REST API endpoints to GraphQL subgraphs by using declarative schema directives
+- [Limitations of Apollo Connectors](https://www.apollographql.com/docs/graphos/connectors/reference/limitations.md): Limitations of Apollo Connectors.
+
+## Docs > Products > Graph Development > Apollo Federation > Federated Schemas
+
+- [Introduction to Apollo Federation](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/federation.md): Learn how Apollo Federation helps you declaratively orchestrate your APIs and services into a unified, federated GraphQL API using a microservices architecture.
+- [Federated Schemas](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/schema-types.md): Learn about subgraph, supergraph, and API schemas in federated GraphQL architectures.
+- [Schema Composition](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/composition.md): Learn about schema composition in a federated GraphQL architecture. Explore strategies for handling conflicting types and directives.
+- [Value Types in Apollo Federation](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/sharing-types.md): Learn how to share GraphQL types and fields across subgraphs with Apollo Federation.
+
+## Docs > Products > Graph Development > Apollo Federation > Federated Schemas > Federation Reference
+
+- [Apollo Federation Changelog](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/versions.md): Understand changes between Apollo Federation major and minor versions.
+- [Apollo Federation Directives](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/directives.md): Reference for GraphQL federation directives including @key, @extends, @sharable, @override, @requires and more.
+- [Composition Rules](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/composition-rules.md): Learn what rules subgraph schemas must follow to successfully compose in a federated GraphQL architecture.
+
+## Docs > Products > Graph Development > Apollo Federation > Federated Schemas > Federation Reference > Subgraph Reference
+
+- [Apollo Federation Subgraph Specification](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/subgraph-spec.md): Learn about Apollo Federation 2 subgraph specifications, enhanced introspection, and entity field resolution for GraphQL server libraries.
+- [Subgraph Specific Fields](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/subgraph-specific-fields.md): Subgraph-compatible server libraries automatically add some federation-specific definitions to your subgraph schema such as Query._service and Query._entities.
+- [Federation-Compatible Subgraph Implementations](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/compatible-subgraphs.md): Reference for open-source GraphQL server libraries and hosted solutions that are compatible with Apollo Federation.
+
+## Docs > Products > Graph Development > Apollo Federation > Federated Schemas > Federation Reference > Development and Tooling
+
+- [Query Plans](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/query-plans.md): Learn how your router orchestrates operations across subgraphs, ensuring seamless data retrieval for complex GraphQL operations in a federated architecture.
+- [Composition Hints](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/hints.md): Learn about hints flagged during Apollo Federation schema composition using GraphOS Studio or the Rover CLI.
+- [Apollo Federation Error Codes](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/errors.md): Reference the error codes encountered during Apollo Federation schema composition, identifying root causes and solutions for GraphQL debugging.
+
+## Docs > Products > Graph Development > Apollo Federation > Federated Schemas > Federation Reference > From Federation 1 to 2
+
+- [Moving to Apollo Federation 2](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/moving-to-federation-2.md): Upgrade from Apollo Federation 1 to Federation 2 to benefit from improved composition logic and schema flexibility.
+- [Backward Compatibility in Apollo Federation 2](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/reference/backward-compatibility.md): Frequently asked questions when transitioning from Apollo Federation 1 to Federation 2.
+
+## Docs > Products > Graph Development > Apollo Federation > Entities
+
+- [Introduction to Entities](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/intro.md): Learn to define, contribute to, and reference entities, the fundamental object types of Apollo Federation that resolve their fields across one or more subgraphs.
+
+## Docs > Products > Graph Development > Apollo Federation > Entities > Entity Essentials
+
+- [Contribute and Reference Entity Fields](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/contribute-fields.md): Learn individual subgraphs can contribute to and reference entity fields in a federated GraphQL architecture using the @required and @external directives.
+- [Define Advanced Keys](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/define-keys.md): Learn how to define compound keys, nested key fields, and multiple keys for the same entity in a federated GraphQL architecture.
+- [Entity Interfaces](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/interfaces.md): Discover how to efficiently add polymorphic fields to GraphQL interfaces using Apollo Federation's Entity Interfaces and the @interfaceObject directive.
+
+## Docs > Products > Graph Development > Apollo Federation > Entities > Entity Guides
+
+- [Thinking in Entities](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/best-practices.md): Schema design best practices for entities, including when to define, reference and extend entities.
+- [Migrate Entity and Root Fields](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/migrate-fields.md): Learn how to safely move parts of one subgraph to another subgraph in a federated GraphQL architecture using the @override directive.
+- [Resolve another subgraph's fields](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/resolve-another-subgraphs-fields.md): Learn how different subgraphs can resolve the same field using @shareable and @provides directives in a federated GraphQL architecture.
+- [Enforcing Entity Ownership in Apollo Federation](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/enforce-ownership.md): Learn how to designate entity ownership and make "entity extension" a first-class concept in your Apollo Federation 2 supergraph.
+- [Use contexts to share data](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/entities/use-contexts.md): Use the @context and @fromContext directives to enable a subgraph to share fields. These directives define contexts that enable data sharing along type hierarchies.
+
+## Docs > Products > Graph Development > Apollo Federation > Schema Design Guides > Schema Design Principles
+
+- [Demand Oriented Schema Design](https://www.apollographql.com/docs/graphos/schema-design/guides/demand-oriented-schema-design.md): Support GraphQL client applications that consume data from our federated graph by designing schemas in an abstract, demand-oriented way.
+- [Schema Naming Conventions](https://www.apollographql.com/docs/graphos/schema-design/guides/naming-conventions.md): Learn naming and casing conventions for GraphQL schema types, fields, and arguments and how to enforce them with GraphOS.
+- [Namespacing by Separation of Concerns](https://www.apollographql.com/docs/graphos/schema-design/guides/namespacing-by-separation-of-concerns.md): Organize root-level operation fields into namespaces to improve the logical structure to your GraphQL schema.
+
+## Docs > Products > Graph Development > Apollo Federation > Schema Design Guides > Schema Design Principles > Server-Driven UI
+
+- [Server-Driven UI Basics](https://www.apollographql.com/docs/graphos/schema-design/guides/sdui/basics.md): Server-driven UI  is an architectural pattern that aims to reduce client-side logic and provide consistency across client platforms.
+- [Server-Driven UI Schema Design](https://www.apollographql.com/docs/graphos/schema-design/guides/sdui/schema-design.md): Explore SDUI UI patterns to structure your graph's schema for encoding and representing UI elements, using enums, contracts, and interfaces.
+- [Server-Driven UI Client Design](https://www.apollographql.com/docs/graphos/schema-design/guides/sdui/client-design.md): Use a component registry and design systems and tokens to simplify client logic with SDUI.
+
+## Docs > Products > Graph Development > Apollo Federation > Schema Design Guides > Data Handling Techniques
+
+- [Handling the N+1 Problem](https://www.apollographql.com/docs/graphos/schema-design/guides/handling-n-plus-one.md): Learn how to optimize subgraph performance in GraphQL by efficiently handling reference resolvers to avoid the N+1 problem.
+- [Nullability](https://www.apollographql.com/docs/graphos/schema-design/guides/nullability.md): Weigh the implications of choices about nullability for every GraphQL type, field, and argument in a schema.
+- [Recommended Usage for GraphQL Interfaces](https://www.apollographql.com/docs/graphos/schema-design/guides/interfaces.md): Interfaces enable schema fields to return one of multiple object types. Explore examples and avoid common pitfalls in using interfaces.
+- [Designing Response Types](https://www.apollographql.com/docs/graphos/schema-design/guides/response-type-pattern.md): Learn different response type patterns for GraphQL queries and mutations.
+- [Errors as Data Explained](https://www.apollographql.com/docs/graphos/schema-design/guides/errors-as-data-explained.md): Union types can represent multiple types of data in a single field and can help you handle GraphQL responses with clarity and flexibility.
+- [Aggregating Data Across Subgraphs](https://www.apollographql.com/docs/graphos/schema-design/guides/aggregating-data-across-subgraphs.md): If product requirements don't align with a single domain, it may suggest the need for a new domain or subgraph.
+- [Graph Identities](https://www.apollographql.com/docs/graphos/schema-design/guides/graph-identities.md): The purpose of this technote is to demonstrate queries/mutations for identifying an actor attempting to use the graph.
+
+## Docs > Products > Graph Development > Apollo Federation > Schema Design Guides > Schema Development and Evolution
+
+- [Mocking to Unblock Development](https://www.apollographql.com/docs/graphos/schema-design/guides/mocking.md): Mock parts of your supergraph as you develop both your subgraphs and clients to enable teams to work in parallel without blocking each other.
+- [Schema Deprecations](https://www.apollographql.com/docs/graphos/schema-design/guides/deprecations.md): Gracefully manage GraphQL type and field deprecations by using field metrics and the @deprecated type system directive.
+- [Mutation Management with Apollo Federation](https://www.apollographql.com/docs/graphos/schema-design/guides/distributed-orchestration.md): Apollo Federation sequences mutation fields but additional considerations are necessary when handling state changes across distributed systems.
+- [Moving a GraphQL Monolith to Apollo Federation](https://www.apollographql.com/docs/graphos/schema-design/guides/from-monolith.md): A step-by-step guide for migrating from a GraphQL monolith to a federated supergraph with Apollo Federation.
+- [Migrating from Schema Stitching](https://www.apollographql.com/docs/graphos/schema-design/guides/migrating-from-stitching.md): Learn how to smoothly transition from schema stitching to Apollo Federation for your distributed federated GraphQL services.
+
+## Docs > Products > Graph Development > Apollo Federation > Schema Design Guides > Federated Directives
+
+- [Choosing the Right Directive](https://www.apollographql.com/docs/graphos/schema-design/guides/federated-directives/choosing-the-right-directive.md): Select the use case that best matches your problem and use the right federation directive to solve it.
+- [Using the @shareable Directive](https://www.apollographql.com/docs/graphos/schema-design/guides/federated-directives/shareable-directive.md): Learn how to use the @shareable directive in Apollo Federation. Understand common patterns, routing implications, and when to adopt or avoid this directive.
+- [Using the @provides Directive](https://www.apollographql.com/docs/graphos/schema-design/guides/federated-directives/provides-directive.md): Learn how to use the @provides directive to optimize query performance in Apollo Federation. Understand common patterns and when to adopt this directive.
+
+## Docs > Products > Graph Development > Rover CLI
+
+- [The Rover CLI](https://www.apollographql.com/docs/rover.md): Manage, maintain, and compose GraphQL graphs effortlessly with Rover CLI, the command-line interface for Apollo GraphOS.
+- [Installing Rover](https://www.apollographql.com/docs/rover/getting-started.md)
+- [Configuring Rover](https://www.apollographql.com/docs/rover/configuring.md): Configure Rover CLI for interaction with GraphOS. Learn to authenticate, set up configuration profiles, manage logging, output formats, and more.
+- [Using Rover with a Proxy Server](https://www.apollographql.com/docs/rover/proxy.md): Learn to configure Rover CLI for HTTP or SOCKS5 proxy servers. Optimize communication with Apollo's endpoints.
+- [Using Rover in CI/CD](https://www.apollographql.com/docs/rover/ci-cd.md): Run Rover commands on popular CI/CD providers using the official Docker images, GitHub Actions, or the native installer.
+- [Rover Conventions](https://www.apollographql.com/docs/rover/conventions.md): Reference for Rover command conventions including key terminology like graph, subgraph, supergraph, and graph refs to specify GraphOS variants.
+- [Privacy and Data Collection](https://www.apollographql.com/docs/rover/privacy.md): Understand what data Rover collects and how to opt out of data collection
+- [Contributing to Rover](https://www.apollographql.com/docs/rover/contributing.md): How to contribute to Rover, including prerequisites, workflows for building and testing the CLI, IDE recommendations, and PR guidelines.
+- [Rover CLI Error Codes](https://www.apollographql.com/docs/rover/errors.md): This page serves as an index for quick reference to all error codes in Rover, their descriptions, and potential solutions.
+
+## Docs > Products > Graph Development > Rover CLI > Commands
+
+- [Rover API Key Commands](https://www.apollographql.com/docs/rover/commands/api-key.md): Create, list, delete, and rename API keys for your GraphOS organization with the rover api-key commands.
+- [Rover client commands](https://www.apollographql.com/docs/rover/commands/client.md): Use rover client commands to validate your client's GraphQL operations against a published schema and extract embedded GraphQL documents from source files.
+- [Rover completion Commands](https://www.apollographql.com/docs/rover/commands/completion.md): Generate shell completion scripts to enable tab completion for Rover commands in bash and zsh shells.
+- [Rover config Commands](https://www.apollographql.com/docs/rover/commands/config.md): Create and manage configuration profiles, or different GraphOS identities, with the rover config set of commands.
+- [Rover connector Commands](https://www.apollographql.com/docs/rover/commands/connectors.md): Analyze API requests, generate schemas, and create automated tests with Rover.
+- [Rover contract Commands](https://www.apollographql.com/docs/rover/commands/contracts.md): Learn how to publish GraphOS contracts, fetch contract details, and manage contract configurations with Reover contract commands.
+- [The Rover dev Command](https://www.apollographql.com/docs/rover/commands/dev.md): Use the Rover CLI dev command to run your federated GraphQL API in your local development environment. Learn how to start a router session, add and remove subgraphs, and more.
+- [The Rover explain Command](https://www.apollographql.com/docs/rover/commands/explain.md): Use the explain command to get descriptions of Rover CLI error codes. This command helps you troubleshoot and understand the reasons behind errors.
+- [Rover install Command](https://www.apollographql.com/docs/rover/commands/install.md): Use the rover install command to reinstall Rover or to download and install officially supported plugins such as the supergraph binary, Router, and Apollo MCP Server.
+- [Rover graph Commands](https://www.apollographql.com/docs/rover/commands/graphs.md): Use Rover CLI commands to interact with graphs and fetch GraphQL API schemas from GraphOS or via introspection, including introspection JSON output for Apollo CLI migration.
+- [The Rover graph-artifact Command](https://www.apollographql.com/docs/rover/commands/graph-artifact.md): Manage graph artifacts to be retrieved by Apollo Router.
+- [The Rover init Command](https://www.apollographql.com/docs/rover/commands/init.md): Use the Rover CLI init command to initialize a federated GraphQL API or MCP Server using Apollo Federation and the GraphOS Router.
+- [The Rover license Command](https://www.apollographql.com/docs/rover/commands/license.md): Learn how to manage GraphOS Enterprise licenses, including offline licenses, using the Rover CLI license command.
+- [The Rover persisted-queries Command](https://www.apollographql.com/docs/rover/commands/persisted-queries.md): Generate and publish persisted query manifests for safelisting and performance optimization by using the Rover CLI persisted-queries command.
+- [Rover README Commands](https://www.apollographql.com/docs/rover/commands/readmes.md): Learn how to publish and retrieve your Apollo GraphOS graph variant's README using Rover CLI commands.
+- [Rover schema commands](https://www.apollographql.com/docs/rover/commands/schema.md): Use `rover` schema commands to describe and search a GraphQL schema from a local SDL file or stdin.
+- [Rover subgraph Commands](https://www.apollographql.com/docs/rover/commands/subgraphs.md): Explore Rover CLI commands for fetching, publishing, and managing subgraphs within federated GraphQL supergraphs.
+- [Rover supergraph Commands](https://www.apollographql.com/docs/rover/commands/supergraphs.md): Learn Rover CLI commands for fetching, composing, and managing supergraphs within federated GraphQL architectures.
+- [Rover template Commands](https://www.apollographql.com/docs/rover/commands/template.md): Use Rover CLI template commands to generate boilerplate code for new subgraph projects, selecting from various GraphQL Federation compatible implementations.
+
+## Docs > Products > Graph Development > Rover CLI > The Apollo CLI (deprecated)
+
+- [The Apollo CLI](https://www.apollographql.com/docs/rover/apollo-cli.md): Learn about the partially deprecated Apollo CLI and how to install it.
+- [Validating Client Operations](https://www.apollographql.com/docs/rover/validating-client-operations.md)
+- [Migrating to Rover](https://www.apollographql.com/docs/rover/migration.md): Learn about the partially deprecated Apollo CLI and how to transition to the Rover CLI for interacting with Apollo GraphOS services, including replacing `service:download` with introspection JSON output.
+
+## Docs > Products > Graph Routing > Apollo Router
+
+- [Apollo Router Quickstart](https://www.apollographql.com/docs/graphos/routing/get-started.md): This quickstart tutorial walks you through installing an Apollo Router binary, running it with an example supergraph schema and a YAML configuration file, and making test queries with Apollo Sandbox.
+- [Router Request Lifecycle](https://www.apollographql.com/docs/graphos/routing/request-lifecycle.md): Understand how GraphQL client requests get processed through the request lifecycle pipeline of an Apollo Router.
+
+## Docs > Products > Graph Routing > Apollo Router > Configuration
+
+- [Router Configuration Overview](https://www.apollographql.com/docs/graphos/routing/configuration/overview.md): Learn how to configure the Apollo GraphOS Router or Apollo Router Core with environment variables, command-line options and commands, and YAML configuration files.
+- [Hot Reload](https://www.apollographql.com/docs/graphos/routing/configuration/hot-reload-schema.md): Learn about hot reloading supergraph schemas, including support matrix, performance considerations, and production recommendations.
+- [Router Environment Variable Configuration Reference](https://www.apollographql.com/docs/graphos/routing/configuration/envvars.md): Reference of YAML configuration properties for Apollo GraphOS Router and Apollo Router Core.
+- [Router CLI Configuration Reference](https://www.apollographql.com/docs/graphos/routing/configuration/cli.md): Reference of command-line options for Apollo GraphOS Router and Apollo Router Core.
+- [Router YAML Configuration Reference](https://www.apollographql.com/docs/graphos/routing/configuration/yaml.md): Reference of YAML configuration properties for Apollo GraphOS Router and Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Security
+
+- [Supergraph Security with GraphOS Router](https://www.apollographql.com/docs/graphos/routing/security.md)
+- [Safelisting with Persisted Queries](https://www.apollographql.com/docs/graphos/routing/security/persisted-queries.md): Secure your federated GraphQL API by creating an allowlist of trusted operations. Minimize request latency and enhance performance.
+- [Authorization in the GraphOS Router](https://www.apollographql.com/docs/graphos/routing/security/authorization.md): Enforce authorization in the GraphOS Router with the @requireScopes, @authenticated, and @policy directives.
+- [Configuring CORS](https://www.apollographql.com/docs/graphos/routing/security/cors.md): Manage browser access to your Apollo GraphOS Router or Apollo Router Core with CORS configuration options, including origin whitelisting, wildcard origins, and credential passing.
+- [Cross-Site Request Forgery (CSRF) Prevention](https://www.apollographql.com/docs/graphos/routing/security/csrf.md): Prevent cross-site request forgery (CSRF) attacks in the Apollo GraphOS Router or Apollo Router Core.
+- [TLS](https://www.apollographql.com/docs/graphos/routing/security/tls.md)
+- [Request Limits](https://www.apollographql.com/docs/graphos/routing/security/request-limits.md)
+- [Demand Control](https://www.apollographql.com/docs/graphos/routing/security/demand-control.md): Protect your graph from malicious or demanding clients with Apollo GraphOS Router's demand control features. Estimate, calculate, observe, and reject high-cost GraphQL operations.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Security > Authentication
+
+- [JWT Authentication in the GraphOS Router](https://www.apollographql.com/docs/graphos/routing/security/jwt.md): Protect sensitive data by enabling JWT authentication in the Apollo GraphOS Router. Restrict access to credentialed users and systems.
+- [Authenticating Requests with the GraphOS Router](https://www.apollographql.com/docs/graphos/routing/security/router-authentication.md): Combine authorization and authentication strategies with the GraphOS Router to secure your graph through defense in depth.
+- [Subgraph Authentication](https://www.apollographql.com/docs/graphos/routing/security/subgraph-authentication.md): Secure communication to AWS subgraphs via the Apollo GraphOS Router or Apollo Router Core using AWS Signature Version 4 (SigV4).
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Studio Insights
+
+- [GraphOS Observability Overview](https://www.apollographql.com/docs/graphos/routing/observability/graphos.md): Learn how to collect supergraph metrics in order to monitor and optimize your GraphQL usage and performance. Collect raw metrics, insights, and alerts with Apollo GraphOS, GraphOS Studio, and GraphOS Router and Apollo Router Core.
+- [GraphOS reporting](https://www.apollographql.com/docs/graphos/routing/observability/graphos/graphos-reporting.md): Report GraphQL operation usage metrics from the Apollo GraphOS Router to GraphOS to enable schema checks and metrics visualization in GraphOS Studio.
+- [Federated Trace Data](https://www.apollographql.com/docs/graphos/routing/observability/graphos/federated-trace-data.md): Explore how federated traces enable fine-grained performance metrics reporting. Learn about the reporting flow and how tracing data is exposed and aggregated.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL)
+
+- [Router Telemetry](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel.md): Observe and monitor the health and performance of GraphQL operations in the Apollo GraphOS Router or Apollo Router Core by collecting and exporting telemetry logs, metrics, and traces.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Data > Metrics
+
+- [Instruments](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/instruments.md): Create and customize instruments to collect data and report measurements from the Apollo GraphOS Router's request lifecycle services.
+- [Router Instruments](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/standard-instruments.md): Reference of standard metric instruments for the request lifecycle of GraphOS Router and Apollo Router Core. Consumable via the router's metrics exporters.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Data
+
+- [Events](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/events.md): Capture standard and custom events from the Apollo GraphOS Router's request lifecycle services.
+- [Conditions](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/conditions.md): Set conditions for when events or instruments are triggered in the Apollo GraphOS Router.
+- [Selectors](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/selectors.md): Extract and select data from the Apollo GraphOS Router's pipeline services to attach to telemetry.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Data > Traces
+
+- [Spans](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/spans.md): Use spans to add contextual information from the Apollo GraphOS Router or Apollo Router Core to traces displayed by your application performance monitors (APM).
+- [OpenTelemetry standard attributes](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/standard-attributes.md): Attach OpenTelemetry (OTel) standard attributes to Apollo GraphOS Router or Apollo Router Core telemetry.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Data > Usage Guides > Subgraph Observability
+
+- [Subgraph Error Inclusion](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/usage-guides/subgraph-error-inclusion.md): Configure the Apollo GraphOS Router or Apollo Router Core to propagate subgraph errors to clients for all subgraphs or on a per-subgraph basis.
+- [Debugging Subgraph Requests from the GraphOS Router or @apollo/gateway](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/usage-guides/debugging-subgraph-requests.md): Log query plans and subgraph calls with the Apollo GraphOS Router and @apollo/gateway to help debug problematic queries.
+- [OpenTelemetry in Apollo Federation](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/usage-guides/subgraph-instrumentation.md): Learn how to configure your federated GraphQL services to generate and process telemetry data, including logs, traces, and metrics.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Data > Usage Guides > Client Observability
+
+- [Debugging Client Requests to GraphOS Router](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/usage-guides/debugging-client-requests.md): Learn how to use GraphOS router telemetry and GraphOS Insights to inspect and debug incoming HTTP client requests.
+- [Client Awareness and Enforcement](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/enabling-telemetry/usage-guides/client-id-enforcement.md): Improve GraphQL operation monitoring by tagging operations with with client details. See code examples for Apollo GraphOS Router and Apollo Server.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Exporters > Metrics Exporters
+
+- [Metrics exporters](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/telemetry-pipelines/metrics-exporters/overview.md): Collect and export metrics from the Apollo GraphOS Router or Apollo Router Core for Prometheus, OpenTelemetry Protocol (OTLP), Datadog, and New Relic.
+- [OpenTelemetry Protocol (OTLP) exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/telemetry-pipelines/metrics-exporters/otlp.md): Configure the OpenTelemetry Protocol (OTLP) exporter for metrics in the Apollo GraphOS Router or Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Exporters > Log Exporters
+
+- [Router Logging](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/telemetry-pipelines/log-exporters/overview.md): Configure logging in the Apollo GraphOS Router or Apollo Router Core. Set the log level and output format.
+- [Router Logging to stdout](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/telemetry-pipelines/log-exporters/stdout.md): Configure logging output to stdout in the Apollo GraphOS Router or Apollo Router Core. Format in human-readable text or machine-readable JSON.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > Telemetry Exporters > Trace Exporters
+
+- [Router Tracing](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/telemetry-pipelines/trace-exporters/overview.md): Collect and export tracing information from the Apollo GraphOS Router or Apollo Router Core. Supports OpenTelemetry Protocol (OTLP), Datadog, New Relic, Jaeger, Zipkin.
+- [OpenTelemetry Protocol (OTLP) exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/telemetry-pipelines/trace-exporters/otlp.md): Configure the OpenTelemetry Protocol (OTLP) exporter for tracing in the Apollo GraphOS Router or Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > Datadog
+
+- [Datadog Integration](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/datadog.md): Learn how to connect your Apollo Router to Datadog for distributed tracing, metrics collection, and performance monitoring.
+- [Router Instrumentation for Datadog](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/datadog/router-instrumentation.md): Learn how to configure router telemetry instrumentation with Datadog-specific attributes for better APM organization and error tracking.
+- [Dashboard Template for Datadog](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/datadog/observing-and-monitoring/dashboard-template.md): Set up and use pre-configured Datadog dashboards for monitoring the Apollo GraphOS Runtime. - telemetry
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > Datadog > Connecting to Datadog
+
+- [Connecting to Datadog](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/datadog/connecting-to-datadog.md): Overview of different methods to connect Apollo Router to Datadog for telemetry collection
+- [Connect to Datadog via OpenTelemetry Collector](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/datadog/connecting-to-datadog/otel-collector.md): Configure the Apollo Router to send traces and metrics to Datadog via the OpenTelemetry Collector for advanced sampling and processing.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > Datadog > Connecting to Datadog > Datadog Agent
+
+- [Datadog configuration of OTLP exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/datadog/connecting-to-datadog/datadog-agent/datadog-agent-metrics.md): Configure the OpenTelemetry Protocol (OTLP) metrics exporter for Datadog in the Apollo GraphOS Router or Apollo Router Core.
+- [Datadog configuration of OTLP exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/datadog/connecting-to-datadog/datadog-agent/datadog-agent-traces.md): Configure the OpenTelemetry Protocol (OTLP) trace exporter for Datadog in the Apollo GraphOS Router or Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > New Relic
+
+- [New Relic configuration of OTLP exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/new-relic/new-relic-otlp-metrics.md): Configure the New Relic exporter for metrics via OpenTelemetry Protocol (OTLP) in the Apollo GraphOS Router or Apollo Router Core.
+- [New Relic configuration of OTLP exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/new-relic/new-relic-otlp-traces.md): Configure the OpenTelemetry Protocol (OTLP) trace exporter for New Relic in the Apollo GraphOS Router or Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > Prometheus
+
+- [Prometheus exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/prometheus/prometheus-metrics.md): Configure the Prometheus metrics exporter endpoint in the Apollo GraphOS Router or Apollo Router Core.
+- [Connecting OpenTelemetry Traces to Prometheus](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/prometheus/otel-traces-to-prometheus.md): Convert operation traces into aggregated metrics using OpenTelemetry Collector and Prometheus for a broader view of your graph's performance.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > Zipkin
+
+- [Zipkin tracing](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/zipkin/zipkin-traces.md): Enable and configure tracing for Zipkin in Apollo GraphOS Router or Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > Jaeger
+
+- [Jaeger configuration of OTLP exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/jaeger/jaeger-traces.md): Configure the OpenTelemetry Protocol (OTLP) trace exporter for Jaeger in the Apollo GraphOS Router or Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Observability > Router Telemetry (OTEL) > APM Guides > Dynatrace
+
+- [Dynatrace configuration of OTLP exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/dynatrace/dynatrace-metrics.md): Configure the OTLP metrics exporter for Dynatrace via OpenTelemetry Protocol (OTLP) in the Apollo Router.
+- [Dynatrace configuration of OTLP exporter](https://www.apollographql.com/docs/graphos/routing/observability/router-telemetry-otel/apm-guides/dynatrace/dynatrace-traces.md): Configure the OpenTelemetry Protocol (OTLP) trace exporter for Dynatrace in the Apollo GraphOS Router or Apollo Router Core.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Performance and Scaling
+
+- [Performance and Scaling](https://www.apollographql.com/docs/graphos/routing/performance.md): Learn about performance optimization strategies for GraphOS Router including response caching, traffic shaping, and query batching.
+- [Traffic Shaping](https://www.apollographql.com/docs/graphos/routing/performance/traffic-shaping.md): Fine-tune traffic performance and reliability in GraphOS Router and Apollo Router Core with YAML configuration for client and subgraph traffic shaping.
+- [Query Batching](https://www.apollographql.com/docs/graphos/routing/performance/query-batching.md): Handle multiple GraphQL requests with GraphOS Router's query batching capabilities. Aggregate operations into single HTTP requests to preserve data consistency.
+- [Circuit Breaking](https://www.apollographql.com/docs/graphos/routing/performance/circuit-breaking.md)
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Performance and Scaling > Response Caching
+
+- [Response Caching](https://www.apollographql.com/docs/graphos/routing/performance/caching/response-caching/overview.md): Learn how response caching in GraphOS Router enables entity-level caching to reduce subgraph load and improve query latency.
+- [Response Caching Quickstart](https://www.apollographql.com/docs/graphos/routing/performance/caching/response-caching/quickstart.md): Set up response caching in GraphOS Router with Redis. Enable entity-level caching and monitor cache performance.
+- [Invalidation](https://www.apollographql.com/docs/graphos/routing/performance/caching/response-caching/invalidation.md): Configure time-to-live (TTL) for passive invalidation and use active invalidation to remove stale cache entries on demand.
+- [Response Cache Customization](https://www.apollographql.com/docs/graphos/routing/performance/caching/response-caching/customization.md): Configure per-user caching with private data, create custom cache keys with Rhai scripts, and tune advanced Redis settings.
+- [Response Cache Observability](https://www.apollographql.com/docs/graphos/routing/performance/caching/response-caching/observability.md): Track response cache performance with OpenTelemetry metrics, traces, and logs. Debug cache behavior interactively with the cache debugger in Apollo Sandbox.
+- [Response Caching FAQ](https://www.apollographql.com/docs/graphos/routing/performance/caching/response-caching/faq.md): Common questions about response caching setup, cache behavior, authorization, schema updates, and migration from entity caching.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Client Features
+
+- [Automatic Persisted Queries (APQ)](https://www.apollographql.com/docs/graphos/routing/operations/apq.md): Configure automatic persisted queries (APQ) in GraphOS Router to reduce network usage by sending query hashes instead of full query strings.
+- [Header Propagation](https://www.apollographql.com/docs/graphos/routing/header-propagation.md): Configure which HTTP headers the Apollo GraphOS Router or Apollo Router Core sends to which subgraphs. Define per-subgraph header rules, along with rules that apply to all subgraphs.
+- [@defer Directive Support](https://www.apollographql.com/docs/graphos/routing/operations/defer.md): Improve your GraphQL query performance with GraphOS Router and Apollo Router Core's support for the @defer directive. Incrementally deliver response data by deferring certain fields.
+- [File uploads](https://www.apollographql.com/docs/graphos/routing/operations/file-upload.md): Configure the GraphOS Router to receive file uploads using the GraphQL multipart request spec.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Client Features > GraphQL Subscriptions
+
+- [Overview of GraphQL Subscription Support](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/overview.md): Configure your router to support GraphQL subscriptions, enabling clients to receive real-time updates via WebSocket or HTTP callbacks.
+- [Configure GraphQL Subscription Support](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/configuration.md): Configure your router to support GraphQL subscriptions, enabling clients to receive real-time updates via WebSocket or HTTP callbacks.
+- [HTTP Callback Protocol for GraphQL Subscriptions](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/callback-protocol.md): Understand the HTTP Callback Protocol for GraphQL Subscriptions with the GraphOS Router. Learn initialization, main loop, message types, and error handling.
+- [Multipart HTTP protocol for GraphQL Subscriptions](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/multipart-protocol.md): Enable real-time updates via multipart HTTP protocol for GraphQL subscriptions with the GraphOS Router. Learn about execution, heartbeats, and error handling.
+- [Enabling HTTP Subscriptions with the GraphOS Router and an API Gateway](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/api-gateway.md): Enable HTTP multipart subscriptions when using an API gateway in front of the router.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Client Features > GraphQL Subscriptions > HTTP Callback Best Practices
+
+- [HTTP Callback Subscriptions Best Practices](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/http-callback-best-practices.md): Learn best practices for implementing GraphQL subscriptions using the HTTP callback protocol, including architecture patterns, load balancing, broker design, and client resilience.
+- [Subscription Broker Pattern](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/subscription-broker.md): Learn how to build GraphQL subscriptions using a dedicated broker service that handles all subscription logic, heartbeats, and event delivery.
+- [Guaranteed Delivery Pattern](https://www.apollographql.com/docs/graphos/routing/operations/subscriptions/guaranteed-delivery.md): Learn how to build GraphQL subscriptions with guaranteed delivery using persistent event storage, acknowledgment-based delivery, and historical backfill.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Query Planning
+
+- [Native Query Planner](https://www.apollographql.com/docs/graphos/routing/query-planning/native-query-planner.md)
+- [Best Practices for Query Planning](https://www.apollographql.com/docs/graphos/routing/query-planning/query-planning-best-practices.md): Learn best practices in GraphQL schema design to achieve efficient query planning of your graphs using Apollo Federation and Apollo Router
+- [Query Plan Caching](https://www.apollographql.com/docs/graphos/routing/query-planning/caching.md): Configure query plan caching to improve router performance by storing generated query plans in memory or Redis.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Customization
+
+- [Router Customizations](https://www.apollographql.com/docs/graphos/routing/customization/overview.md): Extend the GraphOS Router or Apollo Router Core with custom functionality. Understand the request lifecycle and how customizations intervene at specific points.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Customization > Coprocessors
+
+- [External Coprocessing](https://www.apollographql.com/docs/graphos/routing/customization/coprocessor.md): Customize the Apollo GraphOS Router with external coprocessing. Write standalone code in any language, hook into request lifecycle, and modify request/response details.
+- [Coprocessor Reference](https://www.apollographql.com/docs/graphos/routing/customization/coprocessor/reference.md)
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Customization > Rhai Scripts
+
+- [Rhai Scripts to customize routers](https://www.apollographql.com/docs/graphos/routing/customization/rhai.md): Customize your Apollo Router Core or GraphOS Router functionality with Rhai scripts. Manipulate strings, process headers and more for enhanced performance.
+- [Rhai Script API Reference](https://www.apollographql.com/docs/graphos/routing/customization/rhai/reference.md): This reference documents the symbols and behaviors that are specific to Rhai customizations for the Apollo GraphOS Router and Apollo Router Core. Includes entry point hooks, logging, and more.
+
+## Docs > Products > Graph Routing > Apollo Router > Features > Customization > Custom Builds
+
+- [Creating a Custom Apollo Router Core Binary](https://www.apollographql.com/docs/graphos/routing/customization/custom-binary.md): Compile a custom Apollo Router Core binary from source. Learn to create native Rust plugins.
+- [Writing Native Rust Plugins](https://www.apollographql.com/docs/graphos/routing/customization/native-plugins.md): Extend the Apollo GraphOS Router or Apollo Router Core with custom Rust code. Plan, build, and register plugins. Define plugin configuration and implement lifecycle hooks.
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment
+
+- [Self-Hosting the Apollo Router](https://www.apollographql.com/docs/graphos/routing/self-hosted.md)
+- [HTTP proxy configuration](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/proxy-certificates.md): Configure HTTP_PROXY, HTTPS_PROXY, and NO_PROXY to route Apollo Router's outbound connections through a proxy, and add the proxy's certificate to the router's trust store for TLS inspection environments.
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment > Docker
+
+- [Deploying the Apollo Runtime in Docker](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/docker.md): Easily deploy a container with everything you need to serve GraphQL requests using Apollo.
+- [Deploying only GraphOS Router in Docker](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/docker-router-only.md): Run an Apollo Router-only container image in Docker with examples covering basic setup, configuration overrides, debugging, and building custom Docker images.
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment > Kubernetes
+
+- [Kubernetes Quickstart](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/kubernetes/quickstart.md): Deploy the Apollo GraphOS Router or Apollo Router Core in Kubernetes using Helm charts. Customize configurations, enable metrics, and choose values for migration.
+- [Router Extensibility Features in Kubernetes](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/kubernetes/extensibility.md): How to deploy the Apollo GraphOS Router or Apollo Router Core in Kubernetes with extensibility features.
+- [Enabling Metrics Endpoints](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/kubernetes/metrics.md): Use the Apollo GraphOS Router or Apollo Router Core in Kubernetes with metrics endpoints and considerations when doing so.
+- [Considerations for Hosting the Router in Kubernetes](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/kubernetes/other-considerations.md): Learn about other considerations for hosting the router in Kubernetes, including Istio and resources.
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment > AWS
+
+- [Deploying GraphOS Router on AWS](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/aws.md): Build and deploy Apollo Router on Amazon Web Services (AWS) with Amazon Elastic Container Service (ECS)
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment > Azure
+
+- [Deploying GraphOS Router on Azure](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/azure.md): Build and deploy Apollo GraphOS Router as an Azure Container App
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment > GCP
+
+- [Deploying GraphOS Router on GCP](https://www.apollographql.com/docs/graphos/routing/self-hosted/containerization/gcp.md): Build and deploy Apollo GraphOS Router or Apollo Router Core to Google Cloud Platform (GCP) with Google Cloud Run.
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment > Managed Hosting
+
+- [Deploying GraphOS Router on Railway](https://www.apollographql.com/docs/graphos/routing/self-hosted/managed-hosting/railway.md): Deploy Apollo GraphOS Router or Apollo Router Core to Railway using their managed hosting platform.
+- [Deploying GraphOS Router on Render](https://www.apollographql.com/docs/graphos/routing/self-hosted/managed-hosting/render.md): Deploy Apollo GraphOS Router or Apollo Router Core to Render using their managed hosting platform.
+
+## Docs > Products > Graph Routing > Apollo Router > Deployment > Tools
+
+- [Router Resource Estimator](https://www.apollographql.com/docs/graphos/routing/self-hosted/resource-estimator.md): Estimate the system resources you need to allocate for the Apollo GraphOS Router to run production traffic.
+- [Health Checks](https://www.apollographql.com/docs/graphos/routing/self-hosted/health-checks.md): Learn how to run health checks to determine whether an Apollo GraphOS Router or Apollo Router Core is available and ready to start serving traffic.
+- [Managing GraphOS Router Resources in Kubernetes](https://www.apollographql.com/docs/graphos/routing/self-hosted/resource-management.md): Recommendations and considerations for determining the correct resource requests and limits for application pods in a Kubernetes system.
+
+## Docs > Products > Graph Routing > Apollo Router > Releases
+
+- [Apollo Router Changelogs](https://www.apollographql.com/docs/graphos/routing/changelog.md): Changelog of latest Apollo Router release
+- [What's New in GraphOS Router v2.x](https://www.apollographql.com/docs/graphos/routing/about-v2.md): What's new in Apollo GraphOS Router version 2.x, including Long Term Release (LTS) status, key features, and how to upgrade
+- [Upgrading from Versions 1.x](https://www.apollographql.com/docs/graphos/routing/upgrade/from-router-v1.md): Learn how to upgrade from version 1.x to 2.x of Apollo GraphOS Router.
+- [Gateway Migration Guide](https://www.apollographql.com/docs/graphos/routing/migration/from-gateway.md): Learn how to migrate a federated graph from @apollo/gateway to the Apollo GraphOS Router or Apollo Router Core without any changes to your subgraphs.
+- [Does GraphOS Router Replace My API Gateway?](https://www.apollographql.com/docs/graphos/routing/router-api-gateway-comparison.md): The GraphOS Router is not based on service mapping, it's a solution to handle your API orchestration for all your different clients operations.
+
+## Docs > Products > Graph Routing > Apollo Router > GraphOS Integration
+
+- [GraphOS Router License](https://www.apollographql.com/docs/graphos/routing/license.md): Learn how to manage the license for an Apollo GraphOS Router, including offline license configuration.
+- [Licensed GraphOS Router Features](https://www.apollographql.com/docs/graphos/routing/graphos-features.md): Unlock Enterprise features for the GraphOS Router by connecting it to Apollo GraphOS.
+- [Apollo Uplink](https://www.apollographql.com/docs/graphos/routing/uplink.md): Learn how to configure Apollo Uplink for managed GraphQL federation, including polling behavior and Uplink URLs.
+
+## Docs > Products > Graph Routing > Apollo Router > Reference
+
+- [Federation Version Support](https://www.apollographql.com/docs/graphos/routing/federation-version-support.md): This reference explains how to check that your router uses at least the minimum required federation version.
+- [Router Errors](https://www.apollographql.com/docs/graphos/routing/errors.md): Reference of error codes and HTTP status codes returned by Apollo GraphOS Router and Apollo Router Core, including explanations and solutions.
+
+## Docs > Products > Graph Routing > Apollo Operator
+
+- [Apollo GraphOS Operator](https://www.apollographql.com/docs/apollo-operator.md): The Apollo GraphOS Operator enables declarative management of GraphQL subgraphs and supergraphs using Kubernetes-native resources.
+- [Changelog](https://www.apollographql.com/docs/apollo-operator/changelog.md)
+- [Security Best Practices](https://www.apollographql.com/docs/apollo-operator/security-best-practices.md): Learn about security best practices for deploying and configuring the Apollo GraphOS Operator in production environments.
+
+## Docs > Products > Graph Routing > Apollo Operator > Getting Started
+
+- [Install Apollo GraphOS Operator](https://www.apollographql.com/docs/apollo-operator/get-started/install-operator.md): Learn how to install the Apollo GraphOS Operator in your Kubernetes cluster.
+- [Add Subgraphs](https://www.apollographql.com/docs/apollo-operator/get-started/add-subgraphs.md): Learn how to add your GraphQL services to the Apollo GraphOS Operator for automatic schema management.
+- [Deploy a Supergraph](https://www.apollographql.com/docs/apollo-operator/get-started/deploy-supergraph.md): Learn how to compose Subgraphs into SupergraphSchemas and deploy them as a running Supergraph.
+
+## Docs > Products > Graph Routing > Apollo Operator > Kubernetes Resources > Supergraph
+
+- [Supergraph resources](https://www.apollographql.com/docs/apollo-operator/resources/supergraph.md): Deploy GraphOS Routers in Kubernetes using the Apollo GraphOS Operator.
+- [Autoscaling your Supergraphs](https://www.apollographql.com/docs/apollo-operator/resources/supergraph/autoscalers.md)
+- [Migrating from the Router Helm Chart](https://www.apollographql.com/docs/apollo-operator/resources/supergraph/migrating-from-helm.md)
+- [Supergraph podTemplate](https://www.apollographql.com/docs/apollo-operator/resources/supergraph/pod_template.md)
+- [Supergraph networking](https://www.apollographql.com/docs/apollo-operator/resources/supergraph/networking.md)
+
+## Docs > Products > Graph Routing > Apollo Operator > Kubernetes Resources > Supergraph > Safe Deployments
+
+- [Safe Deployments](https://www.apollographql.com/docs/apollo-operator/resources/supergraph/rollouts.md): Enable progressive, canary‑based rollouts with controlled traffic shifting, metrics‑driven analysis, and automatic promotion or rollback.
+- [Advanced Safe Deployments](https://www.apollographql.com/docs/apollo-operator/resources/supergraph/rollouts/advanced.md): Learn about custom analysis, networking integration, and migrating from standard Deployments to Rollouts.
+
+## Docs > Products > Graph Routing > Apollo Operator > Kubernetes Resources
+
+- [SupergraphSchema resources](https://www.apollographql.com/docs/apollo-operator/resources/supergraphschema.md): Use SupergraphSchema resource to select Subgraphs and automatically compose them into a Supergraph schema.
+- [SupergraphSet resources](https://www.apollographql.com/docs/apollo-operator/resources/supergraphset.md): Use SupergraphSet resources to automatically create and manage multiple Supergraph resources from Apollo Studio graph variants.
+- [Subgraph resources](https://www.apollographql.com/docs/apollo-operator/resources/subgraph.md): Use Subgraph resources to define your subgraphs using Kubernetes-native resources.
+
+## Docs > Products > Graph Routing > Apollo Operator > Workflows
+
+- [Workflows](https://www.apollographql.com/docs/apollo-operator/workflows.md): Learn how the Apollo GraphOS Operator manages subgraphs and supergraphs, and choose the right architectural pattern for your infrastructure.
+- [Single Cluster Setup](https://www.apollographql.com/docs/apollo-operator/workflows/single-cluster.md): Understand how the Apollo GraphOS Operator performs composition when all Subgraphs, SupergraphSchema, and Supergraph are in the same cluster.
+- [Multi-Cluster and Hybrid Setup](https://www.apollographql.com/docs/apollo-operator/workflows/multi-cluster.md): Understand how the Apollo GraphOS Operator uses partial composition to manage subgraphs across multiple clusters or external systems with centralized supergraph deployment.
+- [Deploy Only Setup](https://www.apollographql.com/docs/apollo-operator/workflows/deploy-only.md): Understand how the Apollo GraphOS Operator deploys supergraphs from externally published subgraphs without managing subgraph resources.
+
+## Docs > Products > Graph Routing > Apollo Operator > Configuration
+
+- [Configuration](https://www.apollographql.com/docs/apollo-operator/configuration.md): Reference for configuring the Apollo GraphOS Operator's behavior, telemetry, and controller settings.
+- [Telemetry Configuration](https://www.apollographql.com/docs/apollo-operator/configuration/telemetry.md): Configure observability settings for the Apollo GraphOS Operator including logging, metrics export, and distributed tracing.
+- [Controllers Configuration](https://www.apollographql.com/docs/apollo-operator/configuration/controllers.md): Configure the Apollo GraphOS Operator's controllers including namespaces, rate limiting, and requeue delays.
+- [OCI Configuration](https://www.apollographql.com/docs/apollo-operator/configuration/oci.md): Configure Open Container Initiative (OCI) registry settings for the Apollo GraphOS Operator.
+- [Private Registry Configuration](https://www.apollographql.com/docs/apollo-operator/configuration/private-registries.md): Learn how to configure the Apollo GraphOS Operator to access private container registries.
+
+## Docs > Open source > Client SDKs > Apollo Client (Web)
+
+- [Introduction to Apollo Client](https://www.apollographql.com/docs/react.md): Discover Apollo Client, a powerful state management library for JavaScript. Learn how it simplifies fetching, caching, and more with GraphQL.
+- [Why Apollo Client?](https://www.apollographql.com/docs/react/why-apollo.md): Learn how Apollo Client simplifies data management with GraphQL, offers intelligent caching, and unifies remote and local data.
+- [Get started with Apollo Client](https://www.apollographql.com/docs/react/get-started.md): Learn how to set up your React app, fetch GraphQL data, and integrate Apollo Client seamlessly into your UI with this step-by-step tutorial.
+- [Migrating to Apollo Client 4.0](https://www.apollographql.com/docs/react/migrating/apollo-client-4-migration.md)
+- [](https://www.apollographql.com/docs/react/versioning-policy.md)
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Core concepts
+
+- [Queries](https://www.apollographql.com/docs/react/data/queries.md): Fetch data with the useQuery hook
+- [Suspense](https://www.apollographql.com/docs/react/data/suspense.md): Use React 18 Suspense features with Apollo Client
+- [Fragments](https://www.apollographql.com/docs/react/data/fragments.md): Share fields between operations
+- [Mutations in Apollo Client](https://www.apollographql.com/docs/react/data/mutations.md): Modify data with the useMutation hook
+- [TypeScript with Apollo Client](https://www.apollographql.com/docs/react/data/typescript.md): How to use TypeScript in your application
+- [Refetching queries in Apollo Client](https://www.apollographql.com/docs/react/data/refetching.md)
+- [Event-based refetching](https://www.apollographql.com/docs/react/data/event-based-refetching.md): Automatically refetch queries on window focus, network reconnect, or your own custom events
+- [Subscriptions](https://www.apollographql.com/docs/react/data/subscriptions.md): Get real-time updates from your GraphQL server
+- [Using GraphQL directives in Apollo Client](https://www.apollographql.com/docs/react/data/directives.md): Configure GraphQL fields and fragments
+- [Handling operation errors](https://www.apollographql.com/docs/react/data/error-handling.md): Learn how to manage errors in your application
+- [Persisted queries](https://www.apollographql.com/docs/react/data/persisted-queries.md): Secure your graph while minimizing request latency
+- [Document transforms](https://www.apollographql.com/docs/react/data/document-transforms.md): Make custom modifications to your GraphQL documents
+- [Using the @defer directive in Apollo Client](https://www.apollographql.com/docs/react/data/defer.md): Receive query response data incrementally
+- [GraphQL query best practices](https://www.apollographql.com/docs/react/data/operation-best-practices.md): Operation naming, GraphQL variables, and more
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Caching
+
+- [Caching in Apollo Client](https://www.apollographql.com/docs/react/caching/overview.md): Overview
+- [Configuring the Apollo Client cache](https://www.apollographql.com/docs/react/caching/cache-configuration.md)
+- [Reading and writing data to the cache](https://www.apollographql.com/docs/react/caching/cache-interaction.md)
+- [Garbage collection and cache eviction](https://www.apollographql.com/docs/react/caching/garbage-collection.md)
+- [Customizing the behavior of cached fields](https://www.apollographql.com/docs/react/caching/cache-field-behavior.md)
+- [Memory management](https://www.apollographql.com/docs/react/caching/memory-management.md): Learn how to choose and set custom cache sizes with Apollo Client.
+- [Advanced topics on caching in Apollo Client](https://www.apollographql.com/docs/react/caching/advanced-topics.md)
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Pagination
+
+- [Pagination in Apollo Client](https://www.apollographql.com/docs/react/pagination/overview.md): Overview
+- [Core pagination API](https://www.apollographql.com/docs/react/pagination/core-api.md): Fetching and caching paginated results
+- [Offset-based pagination](https://www.apollographql.com/docs/react/pagination/offset-based.md)
+- [Cursor-based pagination](https://www.apollographql.com/docs/react/pagination/cursor-based.md)
+- [Key arguments in Apollo Client](https://www.apollographql.com/docs/react/pagination/key-args.md): Using the keyArgs API
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Local State
+
+- [Managing local state](https://www.apollographql.com/docs/react/local-state/local-state-management.md): Interacting with local data in Apollo Client
+- [Local-only fields in Apollo Client](https://www.apollographql.com/docs/react/local-state/managing-state-with-field-policies.md): Fetch local and remote data with one GraphQL query
+- [Reactive variables](https://www.apollographql.com/docs/react/local-state/reactive-variables.md): State containers integrated into Apollo Client's reactivity model
+- [Local resolvers](https://www.apollographql.com/docs/react/local-state/local-resolvers.md): Manage local data with GraphQL like resolvers
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Development & Testing
+
+- [Developer tools](https://www.apollographql.com/docs/react/development-testing/developer-tooling.md): Improve your developer experience with these services and extensions
+- [GraphQL Codegen](https://www.apollographql.com/docs/react/development-testing/graphql-codegen.md): How to generate TypeScript types for your application
+- [Testing React components](https://www.apollographql.com/docs/react/development-testing/testing.md): Using MockedProvider and associated APIs
+- [Schema-driven testing](https://www.apollographql.com/docs/react/development-testing/schema-driven-testing.md): Using createTestSchema and associated APIs
+- [Mocking schema capabilities](https://www.apollographql.com/docs/react/development-testing/client-schema-mocking.md): Start on client-side features before your server supports them
+- [Reducing bundle size](https://www.apollographql.com/docs/react/development-testing/reducing-bundle-size.md): Squeeze those last few bytes out of your production build
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Performance
+
+- [Improving performance in Apollo Client](https://www.apollographql.com/docs/react/performance/performance.md)
+- [Optimistic mutation results](https://www.apollographql.com/docs/react/performance/optimistic-ui.md): Update your UI before your server responds
+- [Server-side rendering](https://www.apollographql.com/docs/react/performance/server-side-rendering.md)
+- [Compiling queries with Transpilers](https://www.apollographql.com/docs/react/performance/babel.md)
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Integrations
+
+- [View integrations](https://www.apollographql.com/docs/react/integrations/integrations.md): How to use Apollo Client with the view layer your application is developed in!
+- [Next.js App Router](https://www.apollographql.com/docs/react/integrations/nextjs.md): Learn how to integrate Apollo Client in Next.js applications using the App Router with support for React Server Components and Client Components.
+- [React Router framework mode](https://www.apollographql.com/docs/react/integrations/react-router.md): Learn how to integrate Apollo Client in React Router 7 applications with support for modern streaming SSR.
+- [TanStack Start](https://www.apollographql.com/docs/react/integrations/tanstack-start.md): Learn how to integrate Apollo Client in TanStack Start applications with support for modern streaming SSR.
+- [Integrating with React Native](https://www.apollographql.com/docs/react/integrations/react-native.md)
+- [Loading queries with Webpack](https://www.apollographql.com/docs/react/integrations/webpack.md)
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > Networking
+
+- [Basic HTTP networking](https://www.apollographql.com/docs/react/networking/basic-http-networking.md): Communicate with a GraphQL server over HTTP
+- [Advanced HTTP networking](https://www.apollographql.com/docs/react/networking/advanced-http-networking.md): Take full network control with Apollo Link
+- [Authentication](https://www.apollographql.com/docs/react/networking/authentication.md)
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > API Reference > Core
+
+- [class ApolloClient](https://www.apollographql.com/docs/react/api/core/ApolloClient.md): API reference
+- [class InMemoryCache](https://www.apollographql.com/docs/react/api/cache/InMemoryCache.md): API reference
+- [ObservableQuery](https://www.apollographql.com/docs/react/api/core/ObservableQuery.md): API reference
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > API Reference > Errors
+
+- [CombinedGraphQLErrors](https://www.apollographql.com/docs/react/api/errors/CombinedGraphQLErrors.md): API reference
+- [CombinedProtocolErrors](https://www.apollographql.com/docs/react/api/errors/CombinedProtocolErrors.md): API reference
+- [LinkError](https://www.apollographql.com/docs/react/api/errors/LinkError.md): API reference
+- [LocalStateError](https://www.apollographql.com/docs/react/api/errors/LocalStateError.md): API reference
+- [ServerError](https://www.apollographql.com/docs/react/api/errors/ServerError.md): API reference
+- [ServerParseError](https://www.apollographql.com/docs/react/api/errors/ServerParseError.md): API reference
+- [UnconventionalError](https://www.apollographql.com/docs/react/api/errors/UnconventionalError.md): API reference
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > API Reference > React
+
+- [ApolloProvider](https://www.apollographql.com/docs/react/api/react/ApolloProvider.md): Apollo Client API reference
+- [useQuery](https://www.apollographql.com/docs/react/api/react/useQuery.md): Apollo Client API reference
+- [useLazyQuery](https://www.apollographql.com/docs/react/api/react/useLazyQuery.md): Apollo Client API reference
+- [useMutation](https://www.apollographql.com/docs/react/api/react/useMutation.md): Apollo Client API reference
+- [useSubscription](https://www.apollographql.com/docs/react/api/react/useSubscription.md): Apollo Client API reference
+- [useFragment](https://www.apollographql.com/docs/react/api/react/useFragment.md): Apollo Client API reference
+- [useApolloClient](https://www.apollographql.com/docs/react/api/react/useApolloClient.md): Apollo Client API reference
+- [useReactiveVar](https://www.apollographql.com/docs/react/api/react/useReactiveVar.md): Apollo Client API reference
+- [useSuspenseQuery](https://www.apollographql.com/docs/react/api/react/useSuspenseQuery.md): Apollo Client API reference
+- [useBackgroundQuery](https://www.apollographql.com/docs/react/api/react/useBackgroundQuery.md): Apollo Client API reference
+- [useReadQuery](https://www.apollographql.com/docs/react/api/react/useReadQuery.md): Apollo Client API reference
+- [useLoadableQuery](https://www.apollographql.com/docs/react/api/react/useLoadableQuery.md): Apollo Client API reference
+- [useQueryRefHandlers](https://www.apollographql.com/docs/react/api/react/useQueryRefHandlers.md): Apollo Client API reference
+- [skipToken](https://www.apollographql.com/docs/react/api/react/skipToken.md): Apollo Client API reference
+- [createQueryPreloader](https://www.apollographql.com/docs/react/api/react/preloading.md): Apollo Client API reference
+- [MockProvider](https://www.apollographql.com/docs/react/api/react/testing.md): Apollo Client API reference
+- [SSR](https://www.apollographql.com/docs/react/api/react/ssr.md): Apollo Client React server side rendering API
+
+## Docs > Open source > Client SDKs > Apollo Client (Web) > API Reference > Apollo Link
+
+- [Apollo Link overview](https://www.apollographql.com/docs/react/api/link/introduction.md): Customize Apollo Client's data flow
+- [ApolloLink](https://www.apollographql.com/docs/react/api/link/apollo-link.md): API reference
+- [BaseHttpLink](https://www.apollographql.com/docs/react/api/link/apollo-link-base-http.md): Get GraphQL results over a network using HTTP fetch
+- [BaseBatchHttpLink](https://www.apollographql.com/docs/react/api/link/apollo-link-base-batch-http.md): Batch multiple operations into a single HTTP request
+- [BatchHttpLink](https://www.apollographql.com/docs/react/api/link/apollo-link-batch-http.md): Batch multiple operations into a single HTTP request
+- [BatchLink](https://www.apollographql.com/docs/react/api/link/apollo-link-batch.md): Core batching functionality for grouping multiple GraphQL operations
+- [ClientAwarenessLink](https://www.apollographql.com/docs/react/api/link/apollo-link-client-awareness.md): API reference
+- [ErrorLink](https://www.apollographql.com/docs/react/api/link/apollo-link-error.md): Handle and inspect errors in your GraphQL network stack.
+- [GraphQLWsLink](https://www.apollographql.com/docs/react/api/link/apollo-link-subscriptions.md): Execute subscriptions (or other operations) over WebSocket with the graphql-ws library
+- [HttpLink](https://www.apollographql.com/docs/react/api/link/apollo-link-http.md): Get GraphQL results over a network using HTTP fetch.
+- [PersistedQueryLink](https://www.apollographql.com/docs/react/api/link/apollo-link-persisted-queries.md): Secure your graph while minimizing request latency
+- [RemoveTypenameFromVariablesLink](https://www.apollographql.com/docs/react/api/link/apollo-link-remove-typename.md): Automatically remove __typename fields from variables.
+- [RetryLink](https://www.apollographql.com/docs/react/api/link/apollo-link-retry.md): Attempt an operation multiple times if it fails due to network or server errors.
+- [SchemaLink](https://www.apollographql.com/docs/react/api/link/apollo-link-schema.md): Assists with mocking and server-side rendering
+- [SetContextLink](https://www.apollographql.com/docs/react/api/link/apollo-link-context.md): Easily set a context on your operation, which is used by other links further down the chain.
+- [WebSocketLink](https://www.apollographql.com/docs/react/api/link/apollo-link-ws.md): Execute subscriptions (or other operations) over WebSocket with the subscriptions-transport-ws library
+- [Community links](https://www.apollographql.com/docs/react/api/link/community-links.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS
+
+- [Introduction to Apollo iOS](https://www.apollographql.com/docs/ios.md): Discover how Apollo iOS, a Swift-first, open-source GraphQL client offers type-safe code generation, caching, and robust networking.
+- [Getting Started with Apollo iOS](https://www.apollographql.com/docs/ios/get-started.md): Learn how to add Apollo iOS to your app with step-by-step instructions for installation, schema integration, code generation, and setting up a client instance for type-safe GraphQL operations.
+
+## Docs > Open source > Client SDKs > Apollo iOS > Project Configuration
+
+- [Project configuration](https://www.apollographql.com/docs/ios/project-configuration/intro.md): Structuring a GraphQL application with the Apollo iOS SDK
+- [Project Modularization](https://www.apollographql.com/docs/ios/project-configuration/modularization.md): Configuring Apollo iOS with single target vs multi-module projects
+- [Schema Types Configuration](https://www.apollographql.com/docs/ios/project-configuration/schema-types.md): Configuring schema generation for your projects needs
+- [Operation Models Configuration](https://www.apollographql.com/docs/ios/project-configuration/operation-models.md): Configuring operation models for your projects needs
+- [](https://www.apollographql.com/docs/ios/project-configuration/sdk-components.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Migration Guides
+
+- [Apollo iOS 2.0 Migration Guide](https://www.apollographql.com/docs/ios/migrations/2.0.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Tutorial
+
+- [Get started with Apollo iOS codegen](https://www.apollographql.com/docs/ios/tutorial/codegen-getting-started.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Tutorial > Build a project with Apollo
+
+- [Introduction](https://www.apollographql.com/docs/ios/tutorial/tutorial-introduction.md)
+- [1. Configure your project](https://www.apollographql.com/docs/ios/tutorial/tutorial-configure-project.md)
+- [2. Add the GraphQL Schema](https://www.apollographql.com/docs/ios/tutorial/tutorial-add-graphql-schema.md)
+- [3. Write your first query](https://www.apollographql.com/docs/ios/tutorial/tutorial-write-your-first-query.md)
+- [4. Running code generation](https://www.apollographql.com/docs/ios/tutorial/tutorial-running-code-generation.md)
+- [5. Execute your first query](https://www.apollographql.com/docs/ios/tutorial/tutorial-execute-first-query.md)
+- [6. Connect your queries to your UI](https://www.apollographql.com/docs/ios/tutorial/tutorial-connect-queries-to-ui.md)
+- [7. Add more info to the list](https://www.apollographql.com/docs/ios/tutorial/tutorial-add-more-info-to-list.md)
+- [8. Paginate results](https://www.apollographql.com/docs/ios/tutorial/tutorial-paginate-results.md)
+- [9. Complete the details view](https://www.apollographql.com/docs/ios/tutorial/tutorial-complete-details-view.md)
+- [10. Write your first mutation](https://www.apollographql.com/docs/ios/tutorial/tutorial-first-mutation.md)
+- [11. Authenticate your operations](https://www.apollographql.com/docs/ios/tutorial/tutorial-authenticate-operations.md)
+- [12. Define additional mutations](https://www.apollographql.com/docs/ios/tutorial/tutorial-define-additional-mutations.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Code Generation
+
+- [Code generation](https://www.apollographql.com/docs/ios/code-generation/introduction.md)
+- [The Codegen CLI](https://www.apollographql.com/docs/ios/code-generation/codegen-cli.md)
+- [Codegen configuration](https://www.apollographql.com/docs/ios/code-generation/codegen-configuration.md)
+- [Downloading a schema](https://www.apollographql.com/docs/ios/code-generation/downloading-schema.md)
+- [Running code generation in Swift code](https://www.apollographql.com/docs/ios/code-generation/run-codegen-in-swift-code.md)
+- [Code Generation Troubleshooting](https://www.apollographql.com/docs/ios/troubleshooting/codegen-troubleshooting.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Fetching
+
+- [Fetching Data](https://www.apollographql.com/docs/ios/fetching/fetching-data.md)
+- [Operation Arguments](https://www.apollographql.com/docs/ios/fetching/operation-arguments.md)
+- [Error Handling](https://www.apollographql.com/docs/ios/fetching/error-handling.md)
+- [Type Conditions](https://www.apollographql.com/docs/ios/fetching/type-conditions.md)
+- [Custom Scalars](https://www.apollographql.com/docs/ios/custom-scalars.md)
+- [Persisted Queries](https://www.apollographql.com/docs/ios/fetching/persisted-queries.md): Secure your graph while minimizing request latency
+- [Using the @defer directive in Apollo iOS](https://www.apollographql.com/docs/ios/fetching/defer.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Fetching > Operations
+
+- [Queries](https://www.apollographql.com/docs/ios/fetching/queries.md)
+- [Mutations](https://www.apollographql.com/docs/ios/fetching/mutations.md)
+- [Subscriptions](https://www.apollographql.com/docs/ios/fetching/subscriptions.md)
+- [Fragments](https://www.apollographql.com/docs/ios/fetching/fragments.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Caching
+
+- [Client-side caching](https://www.apollographql.com/docs/ios/caching/introduction.md)
+- [Cache setup](https://www.apollographql.com/docs/ios/caching/cache-setup.md)
+- [Direct cache access](https://www.apollographql.com/docs/ios/caching/cache-transactions.md)
+- [Custom cache keys](https://www.apollographql.com/docs/ios/caching/cache-key-resolution.md)
+- [Programmatic Cache Keys](https://www.apollographql.com/docs/ios/caching/programmatic-cache-keys.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Networking
+
+- [Creating a client](https://www.apollographql.com/docs/ios/networking/client-creation.md)
+- [WebSocket transport](https://www.apollographql.com/docs/ios/networking/websocket-transport.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Pagination
+
+- [Pagination](https://www.apollographql.com/docs/ios/pagination/introduction.md)
+- [Using custom response models](https://www.apollographql.com/docs/ios/pagination/custom-types.md)
+- [Directional Pagination](https://www.apollographql.com/docs/ios/pagination/directional-pagers.md)
+- [Multi-Query Pagination](https://www.apollographql.com/docs/ios/pagination/multi-query.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Development & Testing
+
+- [Test mocks](https://www.apollographql.com/docs/ios/testing/test-mocks.md)
+- [Using Apollo as an XCFramework](https://www.apollographql.com/docs/ios/development/using-xcframework.md)
+
+## Docs > Open source > Client SDKs > Apollo iOS > Advanced
+
+- [File uploads](https://www.apollographql.com/docs/ios/advanced/file-uploads.md): Enabling file uploads in Apollo Client for iOS
+- [Request chain customization](https://www.apollographql.com/docs/ios/advanced/request-chain.md): Learn how to customize the Apollo iOS request chain via custom interceptors
+- [Client Directives](https://www.apollographql.com/docs/ios/client-directives.md): Custom GraphQL directives used by the Apollo iOS SDK
+
+## Docs > Open source > Client SDKs > Apollo Kotlin
+
+- [Introduction to Apollo Kotlin](https://www.apollographql.com/docs/kotlin.md): Discover Apollo Kotlin, a robust GraphQL client for JVM, Android, and Kotlin multiplatform. Learn its features, setup, and usage to simplify your GraphQL operations.
+- [Migrating to Apollo Kotlin 5](https://www.apollographql.com/docs/kotlin/migration/5.0.md): Learn how to migrate from version 4 with key changes, new features, and tools designed for improved stability and maintainability. Follow step-by-step guidance and make a seamless transition
+- [Modules](https://www.apollographql.com/docs/kotlin/essentials/modules.md): Explore Apollo Kotlin's modular architecture and customize your setup by selecting only the features you need. Learn about the main, deprecated, and internal modules, and understand how they contribute to optimizing performance and maintainability.
+- [Evolution policy](https://www.apollographql.com/docs/kotlin/essentials/evolution.md): Explore Apollo Kotlin's evolution policy, including semantic versioning, breaking changes, and symbol lifecycle management.
+
+## Docs > Open source > Client SDKs > Apollo Kotlin > Configuration
+
+- [Gradle plugin configuration](https://www.apollographql.com/docs/kotlin/advanced/plugin-configuration.md)
+- [Gradle plugin recipes](https://www.apollographql.com/docs/kotlin/advanced/plugin-recipes.md)
+- [Multi Modules codegen](https://www.apollographql.com/docs/kotlin/advanced/multi-modules.md)
+- [GraphQL file types in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/essentials/file-types.md)
+- [Client Awareness](https://www.apollographql.com/docs/kotlin/advanced/client-awareness.md)
+
+## Docs > Open source > Client SDKs > Apollo Kotlin > Fetching
+
+- [Queries in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/essentials/queries.md)
+- [Mutations in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/essentials/mutations.md)
+- [Subscriptions in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/essentials/subscriptions.md)
+- [Using GraphQL variables in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/advanced/operation-variables.md)
+- [Error handling](https://www.apollographql.com/docs/kotlin/essentials/errors.md)
+- [Custom scalar types in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/essentials/custom-scalars.md)
+- [Fragments in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/essentials/fragments.md)
+- [Using the @defer and @stream directives in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/fetching/defer.md): Fetch slower schema fields asynchronously
+- [Persisted queries](https://www.apollographql.com/docs/kotlin/advanced/persisted-queries.md): Secure your graph while minimizing request latency
+
+## Docs > Open source > Client SDKs > Apollo Kotlin > Caching
+
+- [Caching in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/caching/introduction.md): Introduction
+- [Normalized caches in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/caching/normalized-cache.md)
+- [Declarative cache IDs in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/caching/declarative-ids.md)
+- [Programmatic cache IDs in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/caching/programmatic-ids.md)
+- [Watching cached data](https://www.apollographql.com/docs/kotlin/caching/query-watchers.md): Update your UI in response to cache changes
+- [ApolloStore](https://www.apollographql.com/docs/kotlin/caching/store.md)
+- [Expiration management with the normalized cache](https://www.apollographql.com/docs/kotlin/caching/expiration.md)
+- [Garbage collection](https://www.apollographql.com/docs/kotlin/caching/garbage-collection.md)
+- [](https://www.apollographql.com/docs/kotlin/caching/trimming.md)
+- [The normalized cache compiler plugin](https://www.apollographql.com/docs/kotlin/caching/compiler-plugin.md)
+- [Partial cache reads](https://www.apollographql.com/docs/kotlin/caching/partial-cache-reads.md)
+- [Options](https://www.apollographql.com/docs/kotlin/caching/options.md)
+- [Performance of the normalized cache](https://www.apollographql.com/docs/kotlin/caching/performance.md)
+- [Cache migration guide](https://www.apollographql.com/docs/kotlin/caching/migration-guide.md)
+- [HTTP cache](https://www.apollographql.com/docs/kotlin/caching/http-cache.md)
+- [Troubleshooting](https://www.apollographql.com/docs/kotlin/caching/troubleshooting.md)
+
+## Docs > Open source > Client SDKs > Apollo Kotlin > Caching > Pagination
+
+- [Pagination support in the normalized cache](https://www.apollographql.com/docs/kotlin/caching/pagination/home.md)
+- [Relay-style pagination](https://www.apollographql.com/docs/kotlin/caching/pagination/relay-style.md)
+- [Other types of pagination](https://www.apollographql.com/docs/kotlin/caching/pagination/other.md)
+- [Managing pagination manually](https://www.apollographql.com/docs/kotlin/caching/pagination/manual.md)
+
+## Docs > Open source > Client SDKs > Apollo Kotlin > Networking
+
+- [Interceptors](https://www.apollographql.com/docs/kotlin/advanced/interceptors-http.md)
+- [Using a custom HTTP client](https://www.apollographql.com/docs/kotlin/advanced/http-engine.md)
+- [Using the models without apollo-runtime](https://www.apollographql.com/docs/kotlin/advanced/no-runtime.md)
+- [Authenticate your operations](https://www.apollographql.com/docs/kotlin/advanced/authentication.md)
+- [Batching operations](https://www.apollographql.com/docs/kotlin/advanced/query-batching.md)
+
+## Docs > Open source > Client SDKs > Apollo Kotlin > Development & Testing
+
+- [Testing in Apollo Kotlin](https://www.apollographql.com/docs/kotlin/testing/overview.md): Overview
+- [Mocking HTTP responses (experimental)](https://www.apollographql.com/docs/kotlin/testing/mocking-http-responses.md)
+- [Mocking GraphQL responses](https://www.apollographql.com/docs/kotlin/testing/mocking-graphql-responses.md)
+- [Data builders](https://www.apollographql.com/docs/kotlin/testing/data-builders.md)
+- [Android Studio / IntelliJ plugin](https://www.apollographql.com/docs/kotlin/testing/android-studio-plugin.md)
+- [Apollo Debug Server](https://www.apollographql.com/docs/kotlin/testing/apollo-debug-server.md)
+
+## Docs > Open source > Client SDKs > Apollo Kotlin > Advanced
+
+- [Uploading files](https://www.apollographql.com/docs/kotlin/advanced/upload.md)
+- [Handling Networks Errors](https://www.apollographql.com/docs/kotlin/advanced/network-errors.md)
+- [Handling nullability and partial data](https://www.apollographql.com/docs/kotlin/advanced/nullability.md): Make your queries even more typesafe
+- [Using aliases](https://www.apollographql.com/docs/kotlin/advanced/using-aliases.md)
+- [Using Java](https://www.apollographql.com/docs/kotlin/advanced/java.md)
+- [Apollo AST](https://www.apollographql.com/docs/kotlin/advanced/apollo-ast.md)
+- [Apollo compiler plugins](https://www.apollographql.com/docs/kotlin/advanced/compiler-plugins.md)
+- [JS Interoperability](https://www.apollographql.com/docs/kotlin/advanced/js-interop.md)
+- [Response based codegen](https://www.apollographql.com/docs/kotlin/advanced/response-based.md)
+- [Apollo Kotlin galaxy](https://www.apollographql.com/docs/kotlin/advanced/galaxy.md)
+
+## Docs > Open source > Server Libraries > Apollo Server
+
+- [Introduction to Apollo Server](https://www.apollographql.com/docs/apollo-server.md): Learn how Apollo Server simplifies building GraphQL APIs with its straightforward setup and support for any data source or client.
+- [Get Started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started.md): Learn how to create a basic GraphQL server with Apollo Server using TypeScript or JavaScript. This tutorial covers schema definition, data management, and executing queries.
+
+## Docs > Open source > Server Libraries > Apollo Server > New in v4 and v5
+
+- [Migrating from Apollo Server 4](https://www.apollographql.com/docs/apollo-server/migration.md)
+- [Migrating from Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration-from-v3.md)
+- [Previous Versions of Apollo Server](https://www.apollographql.com/docs/apollo-server/previous-versions.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Defining a Schema
+
+- [GraphQL Schema Basics](https://www.apollographql.com/docs/apollo-server/schema/schema.md)
+- [Unions and Interfaces](https://www.apollographql.com/docs/apollo-server/schema/unions-interfaces.md): Abstract schema types
+- [Custom Scalars](https://www.apollographql.com/docs/apollo-server/schema/custom-scalars.md)
+- [Directives](https://www.apollographql.com/docs/apollo-server/schema/directives.md): Configure GraphQL types, fields, and arguments
+
+## Docs > Open source > Server Libraries > Apollo Server > Resolving Operations
+
+- [Resolvers](https://www.apollographql.com/docs/apollo-server/data/resolvers.md): How Apollo Server processes GraphQL operations
+- [Context and contextValue](https://www.apollographql.com/docs/apollo-server/data/context.md): Sharing information and request details throughout your server
+- [Error Handling](https://www.apollographql.com/docs/apollo-server/data/errors.md): Making errors actionable on the client and server
+- [Subscriptions in Apollo Server](https://www.apollographql.com/docs/apollo-server/data/subscriptions.md): Persistent GraphQL read operations
+
+## Docs > Open source > Server Libraries > Apollo Server > Fetching Data
+
+- [Fetching Data](https://www.apollographql.com/docs/apollo-server/data/fetching-data.md): Manage connections to databases and other data sources
+- [Fetching from REST](https://www.apollographql.com/docs/apollo-server/data/fetching-rest.md): Using RESTDataSource to fetch data from REST APIs
+
+## Docs > Open source > Server Libraries > Apollo Server > Web Frameworks
+
+- [Apollo Server Integrations](https://www.apollographql.com/docs/apollo-server/integrations/integration-index.md)
+- [Building Web Framework Integrations for Apollo Server](https://www.apollographql.com/docs/apollo-server/integrations/building-integrations.md)
+- [Teaching the MERN Stack to Speak GraphQL](https://www.apollographql.com/docs/apollo-server/integrations/mern.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Development Workflow
+
+- [Build and Run Queries Against Apollo Server](https://www.apollographql.com/docs/apollo-server/workflow/build-run-queries.md)
+- [Operation Request Format](https://www.apollographql.com/docs/apollo-server/workflow/requests.md): How to send requests to Apollo Server over HTTP
+- [Generating Types from a GraphQL Schema](https://www.apollographql.com/docs/apollo-server/workflow/generate-types.md): How to ensure your resolvers are type safe
+- [Mocking](https://www.apollographql.com/docs/apollo-server/testing/mocking.md): Mock your GraphQL data based on a schema.
+- [Integration Testing](https://www.apollographql.com/docs/apollo-server/testing/testing.md): Utilities for testing Apollo Server
+
+## Docs > Open source > Server Libraries > Apollo Server > Performance
+
+- [Server-Side Caching](https://www.apollographql.com/docs/apollo-server/performance/caching.md): Configure caching behavior on a per-field basis
+- [Configuring Cache Backends](https://www.apollographql.com/docs/apollo-server/performance/cache-backends.md): How to configure Apollo Server's cache
+- [Response Cache Eviction](https://www.apollographql.com/docs/apollo-server/performance/response-cache-eviction.md): Use advanced cache eviction patterns with custom cache keys to selectively evict cached responses when relevant events occur.
+- [Automatic Persisted Queries](https://www.apollographql.com/docs/apollo-server/performance/apq.md): Improve network performance by sending smaller requests
+
+## Docs > Open source > Server Libraries > Apollo Server > Security
+
+- [Authentication and Authorization](https://www.apollographql.com/docs/apollo-server/security/authentication.md): Control access to your GraphQL API
+- [Configuring CORS](https://www.apollographql.com/docs/apollo-server/security/cors.md): Control access to your server's resources
+- [Terminating SSL](https://www.apollographql.com/docs/apollo-server/security/terminating-ssl.md)
+- [Proxy Configuration](https://www.apollographql.com/docs/apollo-server/security/proxy-configuration.md): Configuring proxy settings for outgoing requests
+- [Hardening for Production](https://www.apollographql.com/docs/apollo-server/security/hardening-for-production.md): Important resources for securely deploying Apollo Server in production environments.
+
+## Docs > Open source > Server Libraries > Apollo Server > Deployment
+
+- [Deploying with AWS Lambda](https://www.apollographql.com/docs/apollo-server/deployment/lambda.md): How to deploy Apollo Server with AWS Lambda
+- [Deploying with Heroku](https://www.apollographql.com/docs/apollo-server/deployment/heroku.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Monitoring
+
+- [Metrics and Logging](https://www.apollographql.com/docs/apollo-server/monitoring/metrics.md): How to monitor Apollo Server's performance
+- [Health Checks](https://www.apollographql.com/docs/apollo-server/monitoring/health-checks.md): Determining the health status of Apollo Server
+
+## Docs > Open source > Server Libraries > Apollo Server > API Reference
+
+- [API Reference: ApolloServer](https://www.apollographql.com/docs/apollo-server/api/apollo-server.md)
+- [API Reference: startStandaloneServer](https://www.apollographql.com/docs/apollo-server/api/standalone.md)
+- [API Reference: expressMiddleware](https://www.apollographql.com/docs/apollo-server/api/express-middleware.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Plugins
+
+- [Built-In Plugins](https://www.apollographql.com/docs/apollo-server/builtin-plugins.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Plugins > Built-in
+
+- [API Reference: Usage Reporting Plugin](https://www.apollographql.com/docs/apollo-server/api/plugin/usage-reporting.md)
+- [API Reference: Schema Reporting Plugin](https://www.apollographql.com/docs/apollo-server/api/plugin/schema-reporting.md)
+- [API Reference: Inline Trace Plugin](https://www.apollographql.com/docs/apollo-server/api/plugin/inline-trace.md)
+- [API Reference: Drain HTTP Server Plugin](https://www.apollographql.com/docs/apollo-server/api/plugin/drain-http-server.md)
+- [API Reference: Cache Control Plugin](https://www.apollographql.com/docs/apollo-server/api/plugin/cache-control.md)
+- [API Reference: Landing Page Plugins](https://www.apollographql.com/docs/apollo-server/api/plugin/landing-pages.md)
+- [API Reference: Subscription Callback Plugin](https://www.apollographql.com/docs/apollo-server/api/plugin/subscription-callback.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Plugins > Custom
+
+- [Creating Apollo Server Plugins](https://www.apollographql.com/docs/apollo-server/integrations/plugins.md): Extend Apollo Server with custom functionality
+- [Apollo Server Plugin Event Reference](https://www.apollographql.com/docs/apollo-server/integrations/plugins-event-reference.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Using with Federation > As a subgraph
+
+- [Implementing a Subgraph with Apollo Server](https://www.apollographql.com/docs/apollo-server/using-federation/apollo-subgraph-setup.md)
+- [API Reference: @apollo/subgraph](https://www.apollographql.com/docs/apollo-server/using-federation/api/apollo-subgraph.md)
+
+## Docs > Open source > Server Libraries > Apollo Server > Using with Federation > As a gateway
+
+- [Implementing a Gateway with Apollo Server](https://www.apollographql.com/docs/apollo-server/using-federation/apollo-gateway-setup.md): Using a Node.js gateway as your graph router
+- [Improving Gateway Performance](https://www.apollographql.com/docs/apollo-server/using-federation/gateway-performance.md): Recommendations for improving your gateway's performance when using Apollo Server with the @apollo/gateway library.
+- [API Reference: @apollo/gateway](https://www.apollographql.com/docs/apollo-server/using-federation/api/apollo-gateway.md)
+
+## Docs > Open source > Server Libraries > Apollo MCP Server
+
+- [Apollo MCP Server](https://www.apollographql.com/docs/apollo-mcp-server.md)
+- [Apollo MCP Server Quickstart](https://www.apollographql.com/docs/apollo-mcp-server/quickstart.md)
+- [Define MCP Tools](https://www.apollographql.com/docs/apollo-mcp-server/define-tools.md)
+- [Define MCP Prompts](https://www.apollographql.com/docs/apollo-mcp-server/prompts.md)
+- [Running the Apollo MCP Server](https://www.apollographql.com/docs/apollo-mcp-server/run.md)
+- [Debugging the MCP Server](https://www.apollographql.com/docs/apollo-mcp-server/debugging.md)
+- [Authorization with Apollo MCP Server](https://www.apollographql.com/docs/apollo-mcp-server/auth.md)
+- [OpenTelemetry Integration](https://www.apollographql.com/docs/apollo-mcp-server/telemetry.md)
+- [Error Handling](https://www.apollographql.com/docs/apollo-mcp-server/error-handling.md)
+- [Best Practices](https://www.apollographql.com/docs/apollo-mcp-server/best-practices.md)
+- [Apollo MCP Server Licensing](https://www.apollographql.com/docs/apollo-mcp-server/licensing.md)
+- [Limitations](https://www.apollographql.com/docs/apollo-mcp-server/limitations.md)
+
+## Docs > Open source > Server Libraries > Apollo MCP Server > Configuration
+
+- [Config File Reference](https://www.apollographql.com/docs/apollo-mcp-server/config-file.md): Reference guide of configuration options for running Apollo MCP Server.
+- [Custom Scalars Configuration](https://www.apollographql.com/docs/apollo-mcp-server/custom-scalars.md)
+
+## Docs > Open source > Server Libraries > Apollo MCP Server > Deployment
+
+- [Deploy the MCP Server](https://www.apollographql.com/docs/apollo-mcp-server/deploy.md)
+- [Health Checks](https://www.apollographql.com/docs/apollo-mcp-server/health-checks.md)
+- [Configuring CORS for Apollo MCP Server](https://www.apollographql.com/docs/apollo-mcp-server/cors.md)
+
+## Docs > Open source > Server Libraries > Apollo MCP Server > Rhai Scripting
+
+- [Rhai Scripting](https://www.apollographql.com/docs/apollo-mcp-server/rhai-getting-started.md)
+- [Lifecycle Hooks](https://www.apollographql.com/docs/apollo-mcp-server/rhai-lifecycle.md)
+- [Functions Reference](https://www.apollographql.com/docs/apollo-mcp-server/rhai-functions.md)
+
+## Docs > Open source > Server Libraries > Apollo MCP Server > MCP Apps
+
+- [MCP Apps Overview](https://www.apollographql.com/docs/apollo-mcp-server/mcp-apps.md)
+- [MCP Apps Prerequisites](https://www.apollographql.com/docs/apollo-mcp-server/mcp-apps-prerequisites.md)
+- [MCP Apps Quickstart Guide](https://www.apollographql.com/docs/apollo-mcp-server/mcp-apps-quickstart.md)
+- [MCP Apps Development](https://www.apollographql.com/docs/apollo-mcp-server/mcp-apps-development.md)
+- [MCP Apps Architecture](https://www.apollographql.com/docs/apollo-mcp-server/mcp-apps-architecture.md)
+- [MCP Apps Reference](https://www.apollographql.com/docs/apollo-mcp-server/mcp-apps-reference.md)
+
+## Docs > Open source > Server Libraries > Apollo MCP Server > Guides
+
+- [Development to Production Workflows](https://www.apollographql.com/docs/apollo-mcp-server/guides/dev-to-prod-workflows.md)
+- [Authorization with Auth0](https://www.apollographql.com/docs/apollo-mcp-server/guides/auth-auth0.md)
+
+## Docs > Open source > Other Tools > IDE Support > IDE Support
+
+- [IDE Support for Graph Development](https://www.apollographql.com/docs/ide-support.md): Enhance your development workflow with federation-specific features in VS Code, Vim, and IntelliJ-based IDEs.
+- [Graph Development in VS Code](https://www.apollographql.com/docs/ide-support/vs-code.md): Configure Apollo's VS Code Extension to validate GraphQL schemas with Apollo Federation and Apollo Connectors.
+- [Graph Development in JetBrains IDEs](https://www.apollographql.com/docs/ide-support/jetbrains.md): Configure Apollo's Plugin to validate GraphQL schemas with Apollo Federation and Apollo Connectors.
+- [Graph Development in Vim and NeoVim](https://www.apollographql.com/docs/ide-support/vim.md): Configure Vim/NeoVim to validate GraphQL schemas with Apollo Federation and Apollo Connectors.
+
+## Docs > Resources
+
+- [Apollo Product Changelogs](https://www.apollographql.com/docs/graphos/resources/changelog.md)
+- [Apollo Glossary](https://www.apollographql.com/docs/graphos/resources/glossary.md): Glossary of Apollo and GraphQL terminology
+- [Apollo Solutions](https://www.apollographql.com/docs/graphos/resources/solutions.md): Explore Apollo's collection of GitHub repositories featuring examples, tools, and CLI utilities to accelerate your GraphQL journey. Discover resources, demos, and solutions designed by the Apollo Solutions team.
+- [Use Apollo docs with AI](https://www.apollographql.com/docs/graphos/resources/use-docs-ai.md): Learn how to connect Apollo's documentation to your own AI-powered development tools via Model Context Protocol (MCP) for real-time access to guides, examples, and best practices.
+
+## Docs > Resources > Concepts
+
+- [Graphs](https://www.apollographql.com/docs/graphos/resources/concepts/graphs.md): Explore the different types of GraphQL APIs, including monographs and supergraphs. Learn their use cases, benefits, and how they help scale your organization's data needs.
+- [GraphQL Overview](https://www.apollographql.com/docs/graphos/resources/concepts/graphql.md): Learn what GraphQL is and how it and Apollo GraphOS help your organization ship features faster. Discover which roles benefit from it and what to consider when adopting it.
+- [What is Apollo?](https://www.apollographql.com/docs/graphos/resources/what-is-apollo.md): Learn about the Apollo ecosystem, including the GraphOS platform, client and server SDKs, and developer tools.
+- [Why Apollo?](https://www.apollographql.com/docs/graphos/resources/why-apollo.md): Learn how Apollo's graph-based approach solves API orchestration challenges. Unite data from multiple sources with a GraphQL schema.
+
+## Docs > Resources > Guides
+
+- [Get Started with Apollo](https://www.apollographql.com/docs/graphos/resources/guides/get-started-overview.md)
+
+## Docs > Resources > Guides > Set up your graph
+
+- [Define your Use Case](https://www.apollographql.com/docs/graphos/resources/guides/define-usecase.md): A step-by-step guide to getting a clear understanding of the use case that motivates GraphOS onboarding efforts.
+- [Set up your Apollo Account](https://www.apollographql.com/docs/graphos/resources/guides/onboarding/account-setup.md): Set up your Apollo GraphOS account, create an organization, and invite your team. This guide helps you get started with Apollo.
+- [Set Up CI/CD](https://www.apollographql.com/docs/graphos/resources/guides/onboarding/set-up-pipelines.md): Set up a subgraph and integrate the Rover CLI to prepare your infrastructure for supergraph development
+- [Deploy Apollo Router in Test Environments](https://www.apollographql.com/docs/graphos/resources/guides/onboarding/deploy-router-testing.md): Deploy the Apollo Router in a test environment. This guide covers downloading, configuring, and running the router for non-production use.
+
+## Docs > Resources > Guides > Set up your graph > Connect APIs
+
+- [Choose your Approach](https://www.apollographql.com/docs/graphos/resources/guides/onboarding/apis/overview.md)
+- [Connect REST APIs](https://www.apollographql.com/docs/graphos/resources/guides/onboarding/apis/connect-rest-apis.md): This section guides you through a test use case for building, developing, and managing a connector-based GraphQL API with Apollo.
+- [Connect GraphQL APIs (Subgraphs)](https://www.apollographql.com/docs/graphos/resources/guides/onboarding/apis/connect-graphql-apis.md): This section guides you through a test use case for building, developing, and managing a GraphQL API with Apollo.
+
+## Docs > Resources > Guides > Test and deploy to production
+
+- [Design your Production Schema](https://www.apollographql.com/docs/graphos/resources/guides/adoption/design-production-schema.md): Learn why schema design matters and how to structure your first schema.
+- [Set up your Clients](https://www.apollographql.com/docs/graphos/resources/guides/adoption/setup-client.md): Prepare the client to ensure robust performance, reliability, and adherence to best practices for your web or mobile project.
+- [Deploy your Graph to Production](https://www.apollographql.com/docs/graphos/resources/guides/adoption/deploy-prod.md): Follow these steps to successfully deploy Apollo Router and subgraphs in your production environment and learn about best practices.
+- [Migrate Use Case Traffic](https://www.apollographql.com/docs/graphos/resources/guides/adoption/migrate-traffic.md): Learn the key steps and best practices for migrating client use case traffic from legacy APIs to your new supergraph.
+
+## Docs > Resources > Guides > GraphQL adoption guides
+
+- [GraphQL Adoption Patterns](https://www.apollographql.com/docs/graphos/resources/guides/graphql-adoption-patterns.md): Learn shortcomings and solutions for GraphQL adoption patterns and anti-patterns, including monoliths, BFFs.queries a single GraphQL server.
+- [GraphQL as an Abstraction Layer](https://www.apollographql.com/docs/graphos/resources/guides/using-graphql-for-abstraction.md): Avoid BFF sprawl by using GraphQL as an abstraction between service consumers and backend services.
+- [Supergraph Stewardship](https://www.apollographql.com/docs/graphos/resources/guides/supergraph-stewardship.md): Strong stewardship practices maintain a supergraph's integrity while simultaneously driving its adoption across teams.
+
+## Docs > Resources > Release Policies
+
+- [Apollo Feature Launch Stages](https://www.apollographql.com/docs/graphos/resources/feature-launch-stages.md)
+- [GraphOS Runtime Release Lifecycle](https://www.apollographql.com/docs/graphos/resources/runtime-release-lifecycle.md)
+- [Apollo Client Library Release Lifecycle](https://www.apollographql.com/docs/graphos/resources/client-library-release-lifecycle.md)
+
+## Docs > Resources > Architecture
+
+- [Reference Architecture](https://www.apollographql.com/docs/graphos/resources/architecture.md): Learn about the fundamental concepts and configuration underlying Apollo's reference architecture for enterprise deployment of GraphOS with a self-hosted router.
+
+## Docs > Resources > Architecture > Supergraph Architecture Framework
+
+- [Supergraph Architecture Framework](https://www.apollographql.com/docs/graphos/resources/saf.md): Learn about best practices and assess your graph's current state
+- [Operational Excellence](https://www.apollographql.com/docs/graphos/resources/saf/operational-excellence.md): Learn best practices for GraphQL schema design, organization structure, standards enforcement, and supergraph scaling and health maintenance.
+- [Security](https://www.apollographql.com/docs/graphos/resources/saf/security.md): Secure your federated GraphQL API with Apollo GraphOS and a defense-in-depth approach. Prevent data leakage and protect upstream resources.
+- [Reliability](https://www.apollographql.com/docs/graphos/resources/saf/reliability.md): Boost your federated GraphQL API's reliability via effective testing, efficient resource usage, and preventing issues before they reach production.
+- [Performance](https://www.apollographql.com/docs/graphos/resources/saf/performance.md): Enhance federated GraphQL API performance with optimization techniques including subscriptions, caching, and observability tools.
+- [Developer Experience](https://www.apollographql.com/docs/graphos/resources/saf/developer-experience.md): Enhance developer productivity with GraphQL Federation via streamlined workflows, effective schema management, and comprehensive onboarding.
+

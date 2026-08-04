@@ -235,6 +235,12 @@ apis:
     type: GitHubRepository
   - url: https://www.apollographql.com/docs/graphos/reference/federation/versions
     type: ChangeLog
+  - url: json-schema/supergraph-configuration.json
+    type: JSONSchema
+  - url: json-schema/router-configuration.json
+    type: JSONSchema
+  - url: rules/apollo-federation-jsonschema-spectral-rules.yml
+    type: Rules
   description: >-
     Apollo Federation enables declarative composition of multiple APIs into a
     single federated GraphQL API. It serves as an API orchestration layer
@@ -490,6 +496,18 @@ common:
 - name: Agent Skills
   url: https://github.com/apollographql/skills
   type: AgentSkills
+- url: graphql/apollo-graphql-graphos.graphql
+  type: GraphQL
+- url: mcp/apollo-graphql-mcp.yml
+  type: MCPServer
+- url: https://www.apollographql.com/llms.txt
+  type: LlmsText
+- url: well-known/apollo-graphql-api-catalog.json
+  type: WellKnown
+- url: well-known/apollo-graphql-api-catalog.json
+  type: APICatalog
+- url: https://forgeglobal.com/apollo-graph_stock/
+  type: SecondaryMarket
 created: '2025-06-10T00:00:00.000Z'
 modified: '2026-05-19'
 position: Consumer
@@ -497,8 +515,18 @@ segments:
 - Clients
 - ProCode_API_Composition
 description: >-
-  Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is the
-  fastest and safest way to build and scale your APIs.
+  Apollo Graph, Inc. — trading publicly as Apollo and Apollo GraphQL — is the San Francisco
+  company behind the Apollo GraphQL platform: Apollo GraphOS (a hosted supergraph platform with a
+  schema registry, schema checks, proposals, launches, and operation/field insights), the Apollo
+  Router and Apollo Federation for composing many subgraphs into one graph, Apollo Connectors for
+  bringing REST endpoints into a graph without writing resolvers, Apollo Server for Node.js, and
+  the Apollo Client families for Web/React, iOS, and Kotlin. More recently the company has pushed
+  into agent infrastructure with the Apollo MCP Server and GraphOS MCP Server, positioning a
+  governed GraphQL schema as the orchestration layer AI agents call instead of raw REST. The
+  company has raised more than $180 million, including a $130 million Series D in 2021, and its
+  shares trade on secondary marketplaces such as Forge Global, Hiive, and Nasdaq Private Market.
+  "Apollo Graph" is the legal entity name that appears on those private-stock listings; the
+  operating brand is Apollo GraphQL.
 integrations:
 - name: Logo 1
 - name: Logo 2

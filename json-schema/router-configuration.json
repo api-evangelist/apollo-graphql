@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/apollo-federation/json-schema/router-configuration.json",
+  "title": "Apollo Router Configuration",
+  "description": "JSON Schema for Apollo Router configuration (router.yaml).",
+  "type": "object",
+  "properties": {
+    "supergraph": {
+      "type": "object",
+      "properties": {
+        "listen": {
+          "type": "string",
+          "default": "127.0.0.1:4000",
+          "description": "Address the router listens on."
+        },
+        "path": {
+          "type": "string",
+          "default": "/",
+          "description": "Path for the GraphQL endpoint."
+        },
+        "introspection": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable GraphQL introspection."
+        }
+      }
+    },
+    "cors": {
+      "type": "object",
+      "properties": {
+        "origins": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Allowed CORS origins."
+        },
+        "allow_any_origin": {
+          "type": "boolean",
+          "default": false,
+          "description": "Allow any origin."
+        },
+        "methods": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "allow_headers": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "headers": {
+      "type": "object",
+      "properties": {
+        "all": {
+          "$ref": "#/$defs/HeaderRules"
+        },
+        "subgraphs": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/HeaderRules"
+          }
+        }
+      }
+    },
+    "telemetry": {
+      "type": "object",
+      "properties": {
+        "apollo": {
+          "type": "object",
+          "properties": {
+            "endpoint": { "type": "string" },
+            "apollo_key": { "type": "string" },
+            "apollo_graph_ref": { "type": "string" }
+          }
+        },
+        "tracing": {
+          "type": "object",
+          "properties": {
+            "trace_config": {
+              "type": "object",
+              "properties": {
+                "service_name": { "type": "string" },
+                "sampler": {
+                  "type": "string",
+                  "enum": ["always_on", "always_off"]
+                }
+              }
+            },
+            "otlp": {
+              "type": "object",
+              "properties": {
+                "enabled": { "type": "boolean" },
+                "endpoint": { "type": "string" },
+                "protocol": {
+                  "type": "string",
+                  "enum": ["grpc", "http"]
+                }
+              }
+            },
+            "jaeger": {
+              "type": "object",
+              "properties": {
+                "enabled": { "type": "boolean" },
+                "agent": {
+                  "type": "object",
+                  "properties": {
+                    "endpoint": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "prometheus": {
+              "type": "object",
+              "properties": {
+                "enabled": { "type": "boolean", "default": false },
+                "listen": { "type": "string" },
+                "path": { "type": "string", "default": "/metrics" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "traffic_shaping": {
+      "type": "object",
+      "properties": {
+        "all": {
+          "$ref": "#/$defs/TrafficShapingConfig"
+        },
+        "subgraphs": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/TrafficShapingConfig"
+          }
+        },
+        "router": {
+          "type": "object",
+          "properties": {
+            "timeout": { "type": "string" },
+            "global_rate_limit": {
+              "type": "object",
+              "properties": {
+                "capacity": { "type": "integer" },
+                "interval": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "max_depth": { "type": "integer", "description": "Maximum query depth." },
+        "max_height": { "type": "integer", "description": "Maximum query height." },
+        "max_aliases": { "type": "integer", "description": "Maximum number of aliases." },
+        "max_root_fields": { "type": "integer", "description": "Maximum root fields." },
+        "parser_max_tokens": { "type": "integer" },
+        "parser_max_recursion": { "type": "integer" }
+      }
+    },
+    "sandbox": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Apollo Sandbox explorer."
+        }
+      }
+    },
+    "homepage": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable the router homepage."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "HeaderRules": {
+      "type": "object",
+      "properties": {
+        "request": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "propagate": {
+                "type": "object",
+                "properties": {
+                  "named": { "type": "string" },
+                  "matching": { "type": "string" },
+                  "rename": { "type": "string" },
+                  "default": { "type": "string" }
+                }
+              },
+              "remove": {
+                "type": "object",
+                "properties": {
+                  "named": { "type": "string" },
+                  "matching": { "type": "string" }
+                }
+              },
+              "insert": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "value": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "TrafficShapingConfig": {
+      "type": "object",
+      "properties": {
+        "timeout": {
+          "type": "string",
+          "description": "Request timeout duration."
+        },
+        "deduplicate_query": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable query deduplication."
+        },
+        "compression": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable response compression."
+        }
+      }
+    }
+  }
+}
