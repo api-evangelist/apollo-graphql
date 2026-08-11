@@ -12,8 +12,6 @@ apis:
   - GraphQL
   humanURL: ' https://www.apollographql.com/'
   properties:
-  - url: ' https://www.apollographql.com/'
-    type: Documentation
   - url: graphql/apollo-graphql-graphql.md
     type: GraphQL
   description: >-
