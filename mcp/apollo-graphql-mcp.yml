@@ -66,3 +66,11 @@ tools:
   description: 'Retrieve schema lint violations from a graph''s most recent check workflows: each diagnostic''s
     coordinate, severity level, message, rule, and source location, plus error/warning/total/ignored counts.
     Use to assess schema '
+deployment:
+  mode: remote
+  endpoint: https://mcp.apollographql.com/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
