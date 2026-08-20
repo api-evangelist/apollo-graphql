@@ -68,6 +68,13 @@ apis:
 - aid: apollo-graphql:apollo-client-web
   name: Apollo Client (Web)
   tags:
+  - Clients
+  - GraphQL
+  - JavaScript
+  - React
+  - State Management
+  - TypeScript
+  tags_raw:
   - Client
   - GraphQL
   - JavaScript
@@ -97,6 +104,12 @@ apis:
 - aid: apollo-graphql:apollo-client-ios
   name: Apollo Client (iOS)
   tags:
+  - Clients
+  - GraphQL
+  - iOS
+  - Mobile
+  - Swift
+  tags_raw:
   - Client
   - GraphQL
   - iOS
@@ -118,6 +131,13 @@ apis:
 - aid: apollo-graphql:apollo-client-kotlin
   name: Apollo Client (Kotlin)
   tags:
+  - Android
+  - Clients
+  - GraphQL
+  - JVM
+  - Kotlin
+  - Mobile
+  tags_raw:
   - Android
   - Client
   - GraphQL
@@ -247,6 +267,10 @@ apis:
 - aid: apollo-graphql:apollo-mcp-server
   name: Apollo MCP Server
   tags:
+  - Artificial Intelligence
+  - GraphQL
+  - MCP
+  tags_raw:
   - AI
   - GraphQL
   - MCP
