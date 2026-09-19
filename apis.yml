@@ -45,6 +45,12 @@ apis:
   - GraphQL
   - JavaScript
   - Node.js
+  - Servers
+  - TypeScript
+  tags_raw:
+  - GraphQL
+  - JavaScript
+  - Node.js
   - Server
   - TypeScript
   humanURL: https://www.apollographql.com/docs/apollo-server
@@ -160,6 +166,12 @@ apis:
 - aid: apollo-graphql:apollo-router
   name: Apollo Router
   tags:
+  - Federation
+  - Gateways
+  - GraphQL
+  - Router
+  - Rust
+  tags_raw:
   - Federation
   - Gateway
   - GraphQL
