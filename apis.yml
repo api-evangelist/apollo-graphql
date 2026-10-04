@@ -10,7 +10,7 @@ apis:
   - Federation
   - Graph
   - GraphQL
-  humanURL: ' https://www.apollographql.com/'
+  humanURL: https://www.apollographql.com/
   properties:
   - url: graphql/apollo-graphql-graphql.md
     type: GraphQL
@@ -310,16 +310,23 @@ tags:
 - Supergraph
 type: Index
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - apollographql/apollo-client
+    - apollographql/apollo-ios
+    - apollographql/apollo-kotlin
+    - apollographql/apollo-server
+    - apollographql/federation
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -371,7 +378,7 @@ common:
   type: Hub
   description: 'null'
 - url: >-
-    https://community.apollographql.com/?_gl=1*1su9vuw*_gcl_au*Njc4MTcyOTc1LjE3NDk1ODk4Nzg.
+    https://community.apollographql.com/
   name: Apollo Community - Apollo GraphQL community
   type: Forums
   description: 'null'
@@ -406,12 +413,12 @@ common:
   type: Partners
   description: 'null'
 - url: >-
-    https://support.apollographql.com/?_gl=1*hmmq01*_gcl_au*Njc4MTcyOTc1LjE3NDk1ODk4Nzg.
+    https://support.apollographql.com/
   name: Apollo Support
   type: Support
   description: 'null'
 - url: >-
-    https://studio.apollographql.com/signup?_gl=1%2Ahmmq01%2A_gcl_au%2ANjc4MTcyOTc1LjE3NDk1ODk4Nzg.
+    https://studio.apollographql.com/signup
   name: Studio
   type: Signup
   description: 'null'

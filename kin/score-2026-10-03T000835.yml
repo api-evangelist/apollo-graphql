@@ -1,24 +1,22 @@
-# Kin Score artifact — apollo-graphql — 2026-08-24T064859
+# Kin Score artifact — apollo-graphql — 2026-10-03T000835
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: apollo-graphql
-  schema_version: 0.12.1
-  scored_at: '2026-08-24'
-  run_ts: 2026-08-24T064859
-  composite: 50.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T000835
+  composite: 50.5
   band: developing
   facets:
-    discoverability: 72.2
-    contract_quality: 54.4
-    governance: 9.8
-    operational_transparency: 55.3
-    developer_ergonomics: 35.7
-    commercial_clarity: 68.4
+    discoverability: 73.3
+    contract_quality: 48.9
     contract_governance: 9.8
+    operational_transparency: 55.3
+    developer_ergonomics: 42.1
     access_clarity: 68.4
   agent_readiness:
-    score: 32.9
+    score: 27.3
     band: agent-aware
     dimensions:
       spec_presence: true
@@ -31,18 +29,20 @@ kin_score:
       openapi_examples: false
       rate_limit_signal: documented
       event_surface_described: false
-      agent_skills: true
+      agent_skills: unknown
       well_known_catalog: false
       consent_identity: false
       agent_card: false
       dry_run_mode: false
-  needs_work:
-    owner: catalog
-    reasons:
-    - owner: catalog
-      reason: no_resolvable_host
-    detected: '2026-08-18'
-    note: Recorded so this provider's gaps can be attributed. Does not affect the
-      composite.
+      delegated_identity: false
+      protected_resource_metadata: false
+      dynamic_client_registration: false
+      agentic_commerce: false
+  regulatory:
+    applies: true
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+    matched_via: fallback
   provenance:
     mcp: first-party
