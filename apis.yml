@@ -343,6 +343,12 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apollo-graphql.png
 access: 3rd-Party
 common:
+- type: Plans
+  url: plans/apollo-graphql-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/apollo-graphql-rate-limits.yml
+- type: FinOps
+  url: finops/apollo-graphql-finops.yml
 - type: DomainSecurity
   url: security/apollo-graphql-domain-security.yml
 - url: https://www.apollographql.com/
