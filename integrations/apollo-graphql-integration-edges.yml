@@ -1,6 +1,7 @@
 generated: '2026-10-13'
 method: searched
 checked:
+- datadog/integrations/datadog-integration-edges.yml
 - https://aws.amazon.com/marketplace/
 - https://github.com/marketplace?type=actions
 - https://github.com/marketplace?type=apps
@@ -92,6 +93,23 @@ edges:
   - Verified domain
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
+- partner_name: Datadog (own)
+  partner: datadog
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://github.com/DataDog/integrations-extras/tree/master/apollo
+  mirror_of: datadog/integrations/datadog-integration-edges.yml
+  apps:
+  - Apollo
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Caching
 source:
 - https://github.com/marketplace?type=actions
 - https://github.com/marketplace?type=apps
