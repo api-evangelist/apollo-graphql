@@ -7,6 +7,7 @@ checked:
 - https://github.com/marketplace?type=apps
 - https://marketplace.visualstudio.com/vscode
 - https://plugins.jetbrains.com/
+- https://registry.modelcontextprotocol.io/v0/servers
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -93,6 +94,37 @@ edges:
   - Verified domain
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.apollographql
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: io.github.apollographql/graphos-mcp-server
+    register_id: io.github.apollographql/graphos-mcp-server
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-14'
+  mcp_registry:
+    servers:
+    - io.github.apollographql/graphos-mcp-server
+    hosted_remote: 1
+    local_package: 0
+    transports:
+      streamable-http: 1
+    auth_declared: 0
+    catalog_declared: true
+    namespace_domains:
+    - apollographql.com
+  matched_by:
+  - remote-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
 - partner_name: Datadog (own)
   partner: datadog
   partner_match: mirror
