@@ -15,3 +15,51 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: apollo-graphql-github-marketplace-apps
+  label: GitHub Marketplace (apps)
+  partner: github
+  partner_name: GitHub Marketplace (apps)
+  type: marketplace
+  marketplace: github-apps
+  channel: partner-built
+  evidence: https://github.com/marketplace/apollo-studio
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: apollo-graphql-github-marketplace-actions
+  label: GitHub Marketplace (actions)
+  partner: github-actions
+  partner_name: GitHub Marketplace (actions)
+  type: marketplace
+  marketplace: github-actions
+  channel: partner-built
+  evidence: https://github.com/marketplace/actions/apollo-federation-subgraph-compatibility
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: apollo-graphql-jetbrains-marketplace
+  label: JetBrains Marketplace
+  partner: jetbrains
+  partner_name: JetBrains Marketplace
+  type: marketplace
+  marketplace: jetbrains
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/apollographql
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: apollo-graphql-visual-studio-code-marketplace
+  label: Visual Studio Code Marketplace
+  partner: vs-code-marketplace
+  partner_name: Visual Studio Code Marketplace
+  type: marketplace
+  marketplace: vscode
+  channel: partner-built
+  evidence: https://marketplace.visualstudio.com/publishers/apollographql
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
