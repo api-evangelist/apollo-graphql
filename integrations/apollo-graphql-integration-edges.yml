@@ -3,6 +3,9 @@ method: searched
 checked:
 - datadog/integrations/datadog-integration-edges.yml
 - https://aws.amazon.com/marketplace/
+- https://focus.finops.org/data-generators/
+- https://github.com/cncf/k8s-conformance
+- https://github.com/cncf/landscape
 - https://github.com/marketplace?type=actions
 - https://github.com/marketplace?type=apps
 - https://marketplace.visualstudio.com/vscode
@@ -94,37 +97,6 @@ edges:
   - Verified domain
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
-- partner_name: MCP Registry
-  partner: mcp
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.apollographql
-  contract_reference:
-    register: registry.modelcontextprotocol.io
-    spec_file: null
-    role: mcp-server-listing
-    registered_name: io.github.apollographql/graphos-mcp-server
-    register_id: io.github.apollographql/graphos-mcp-server
-    detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
-  mcp_registry:
-    servers:
-    - io.github.apollographql/graphos-mcp-server
-    hosted_remote: 1
-    local_package: 0
-    transports:
-      streamable-http: 1
-    auth_declared: 0
-    catalog_declared: true
-    namespace_domains:
-    - apollographql.com
-  matched_by:
-  - remote-domain
-  detected_by: sweep-agent-tools.py
-  first_seen: '2026-10-14'
 - partner_name: Datadog (own)
   partner: datadog
   partner_match: mirror
@@ -142,6 +114,69 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: Caching
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.apollographql
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: io.github.apollographql/graphos-mcp-server
+    register_id: io.github.apollographql/graphos-mcp-server
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-15'
+  mcp_registry:
+    servers:
+    - io.github.apollographql/graphos-mcp-server
+    hosted_remote: 1
+    local_package: 0
+    transports:
+      streamable-http: 1
+    auth_declared: 0
+    catalog_declared: true
+    namespace_domains:
+    - apollographql.com
+  matched_by:
+  - remote-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
+- partner_name: CNCF (Cloud Native Landscape)
+  partner: cncf
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: Cloud native landscape
+  evidence: https://github.com/cncf/landscape/blob/3a7d378b1824b82e729a453bb03fa6f1e37557e1/landscape.yml
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: CNCF Cloud Native Landscape (github.com/cncf/landscape landscape.yml @3a7d378b18)
+    spec_file: null
+    standard: Cloud Native (CNCF)
+    role: cncf-member (Silver)
+    registered_name: Apollo
+    registered_names:
+    - Apollo
+    website: https://www.apollographql.com/
+    matched_domain: apollographql.com
+    matched_by: domain
+    member_tier: Silver
+    joined: '2023-12-01'
+    end_user: false
+    cncf_projects: []
+    landscape_categories: []
+    landscape_entries: 0
+    signal_note: 'participation only: a landscape listing is standard-participant evidence, not depth. Entries,
+      categories, tier and projects are CONTEXT, never read (breadth is not credit)'
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-15'
+  detected_by: sweep-cloud-native.py
+  first_seen: '2026-10-15'
 source:
 - https://github.com/marketplace?type=actions
 - https://github.com/marketplace?type=apps
