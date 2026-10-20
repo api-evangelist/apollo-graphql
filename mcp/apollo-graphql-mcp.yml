@@ -18,54 +18,222 @@ evidence:
   method: POST
   note: jsonrpc tools/list returned 13 tools with inputSchema
 tools:
-- name: GetTopOperations
-  description: Identify the most-used operations on a graph variant for a time range, with request counts,
-    types, and signatures. Use to find high-traffic operations, detect unused operations, and prioritize
-    findings by traffic impact.
+- name: DeleteSubgraph
+  description: 'Remove a subgraph from a variant and start composition, the same write that `rover subgraph
+    delete` performs. Returns the composition errors that the removal causes. This deletes the subgraph
+    from the variant and can break the running router. Set dryRun to true first: the response then reports
+    the composition result that the removal would produce, including updatedGateway, and deletes nothing.
+    Provide the graph ID, the variant name, and the subgraph name.'
+- name: GetSchemaChecks
+  description: 'List past schema checks for a graph: each check''s ID, status, timestamps, the subgraph
+    it checked, the variant it ran against, the commit, and the status of each task in the check, plus
+    the total count for the filter. Use this to find a check, then pass its ID to GetCheckResults for
+    failure details. Provide the graph ID. Optionally filter by status (PASSED, FAILED, PENDING), subgraph
+    names, branches, variants, authors, or check IDs, and page with limit and offset.'
 - name: GetPersistedQueryListStatus
-  description: Check whether a graph variant has a Persisted Query List (PQL) and its current build (revision
-    and operation count). Use to assess PQL configuration — a production variant with no PQL is a security
-    gap. Provide the graph
-- name: GetLaunchHistory
-  description: Retrieve recent launches for a graph variant (most recent first) to detect deployment instability
-    such as repeated failures or frequent superseded launches. Each entry includes the launch id, status,
-    and timestamps, so y
-- name: ApolloConnectorsSpec
-  description: Returns the Apollo Connectors specification for guidance on creating or modifying GraphQL
-    schemas that use @connect or @source.
-- name: GetLaunch
-  description: 'Inspect a single launch by ID for full detail: status, timestamps, which subgraphs changed,
-    composition errors, and the schema diff summary. Use to drill into a specific launch — e.g. a failed
-    or superseded one found via'
-- name: GetSubgraphMetrics
-  description: 'Top subgraphs/connectors by traffic/health for a graph over a time window, as compact
-    CSV (header row + one row per subgraph per day). Columns: start timestamp, end exclusive timestamp,
-    fetch service name, fetch count, f'
-- name: GetMyIdentity
-  description: 'Resolve the caller''s identity from their API key. Call this FIRST when the user asks
-    about "my graph" but has not provided a graph ID. For a graph/service key, `me` resolves to a Graph:
-    use `id` as the graphId and `varia'
+  description: Check whether a graph variant has a Persisted Query List (PQL), and return its ID, its
+    name, and its current build (revision and operation count). Pass the ID to PublishPersistedQueries.
+    Use to assess PQL configuration — a production variant with no PQL is a security gap. Provide the
+    graph ID and variant name.
+- name: GetSupergraphSchema
+  description: 'Read the composed supergraph schema (SDL) for a graph variant, with the composition ID
+    and any composition errors. This is the same read that `rover supergraph fetch` performs. A supergraph
+    schema is the single schema that composition builds from every subgraph, and it carries federation
+    directives that the API schema does not. The response holds the whole document and is not truncated,
+    and a supergraph schema is larger than the API schema it produces. Expect the same order of size:
+    a large federated graph exceeds 800,000 characters, roughly 200,000 tokens. A variant that is not
+    federated has no composition result, and the tool returns null for it rather than an empty document.
+    Provide the graph ID and the variant name.'
 - name: ApolloDocsRead
   description: Reads an Apollo documentation page by slug in chunks. Use slugs returned by ApolloDocsSearch.
-- name: GetOperationMetrics
-  description: 'Top operations by usage/health for a graph over a time window, as compact CSV (header
-    row + one row per operation per day). Columns: start timestamp, end exclusive timestamp, operation
-    name, request count, request latenc'
-- name: GetLatestLaunch
-  description: 'Inspect the most recent launch for a graph variant: status, completion time, subgraph
-    changes, composition errors, and a schema diff summary vs the previous launch (additions/removals/edits/deprecations
-    plus affected ope'
-- name: GetVariantDetails
-  description: 'Retrieve detailed metadata for a graph variant: federation version, subgraph inventory
-    (names), router status and any pending router version, and the current router configuration (raw YAML).
-    Use this to assess a variant'''
+- name: GetCheckResults
+  description: 'Read the outcome of one schema check run: the overall status, and for each task in the
+    run the composition errors, lint diagnostics, schema changes with the client operations they affect,
+    downstream variant results, and custom check violations. Use this after GetSchemaChecks gives you
+    a check ID. Provide the graph ID and the check ID. The affected operations are paged with affectedOperationsLimit
+    and affectedOperationsOffset; the change list is capped by the server, and areChangesTruncated reports
+    when that happened.'
 - name: ApolloDocsSearch
   description: Searches official Apollo documentation for GraphQL, GraphOS, Apollo Router, Apollo Client,
     MCP Server, schema design, deployment, and Connectors. Returns URLs, slugs, and excerpts.
+- name: ValidateOperations
+  description: Validate client GraphQL operations against a variant's published schema and return each
+    problem's type (FAILURE, WARNING, INVALID), code, description, and the name of the operation it came
+    from. This is the same check that `rover client check` runs. Nothing is published and no state changes.
+    Provide the graph ID and the operations, each one a body and an optional name. Optionally name the
+    variant to validate against; the default is "current".
+- name: PublishContract
+  description: 'Create or update a contract variant and start a launch for it, the same write that `rover
+    contract publish` performs. A contract variant is a filtered view of another variant''s schema, built
+    by including and excluding schema elements by tag. The filter configuration replaces the previous
+    one in full, so send the complete include and exclude lists rather than only the tags you want to
+    change. The same applies to hideUnreachableTypes, which has no default: when you update a contract,
+    pass the value it has now. GetContractConfig states that value in its description. Returns the contract
+    variant and a link to the launch, or the error messages that stopped it. Provide the graph ID, the
+    contract variant name, the source variant, the include and exclude tag lists, and whether to hide
+    unreachable types.'
+- name: PublishReadme
+  description: Replace the README of a graph variant, the same write that `rover readme publish` performs.
+    The README is the Markdown document shown on the variant's page in GraphOS Studio. The new text replaces
+    the whole README, so read the current one with GetReadme first if you intend to keep any of it. Provide
+    the graph ID, the variant name, and the full README text.
+- name: GetLatestLaunch
+  description: 'Inspect the most recent launch for a graph variant: status, completion time, subgraph
+    changes, composition errors, and a schema diff summary vs the previous launch (additions/removals/edits/deprecations
+    plus affected operations). Use to assess schema composition health and the impact of recent schema
+    changes. Also returns the latest approved launch for comparison. Provide the graph ID and variant
+    name.'
+- name: GetLaunch
+  description: 'Inspect a single launch by ID for full detail: status, timestamps, which subgraphs changed,
+    composition errors, and the schema diff summary. Use to drill into a specific launch — e.g. a failed
+    or superseded one found via GetLaunchHistory (pass its id here). Provide the graph ID, variant name,
+    and launch ID.'
+- name: LintSchema
+  description: Lint a GraphQL schema document against the graph's lint rules and return each diagnostic's
+    coordinate, severity level, message, rule, and source location, plus the error, warning, total, and
+    ignored counts. This is the same check that `rover graph lint` and `rover subgraph lint` run. Nothing
+    is published and no state changes. Provide the graph ID and the schema as SDL. Optionally provide
+    baseSdl to report only the diagnostics that the new schema introduces against that base.
+- name: ApolloConnectorsSpec
+  description: Returns the Apollo Connectors specification for guidance on creating or modifying GraphQL
+    schemas that use @connect or @source.
 - name: GetLintResults
-  description: 'Retrieve schema lint violations from a graph''s most recent check workflows: each diagnostic''s
+  description: 'Retrieve schema lint violations from a graph''s most recent schema checks: each diagnostic''s
     coordinate, severity level, message, rule, and source location, plus error/warning/total/ignored counts.
-    Use to assess schema '
+    Use to assess schema quality and naming/best-practice violations. Provide the graph ID and optionally
+    a limit (default 5 most recent schema checks).'
+- name: GetContractConfig
+  description: 'Read the filter configuration of a contract variant: the tags it includes, the tags it
+    excludes, the source variant it is built from, and a human-readable description of the configuration.
+    This is the same read that `rover contract describe` performs. A contract variant is a filtered view
+    of another variant''s schema, built by including and excluding schema elements by tag. The filter
+    configuration does not include whether unreachable types are hidden. The description states it, so
+    read it there before you update a contract with PublishContract. A variant that is not a contract
+    returns null for the filter configuration. Provide the graph ID and the contract variant name.'
+- name: GetClientMetrics
+  description: 'Traffic broken down by client for a graph over a time window, as compact CSV. Columns:
+    start timestamp, end exclusive timestamp, client name, client version, operation name, request count,
+    request latency p50 ms, request latency p99 ms, request with error count. Answers which clients call
+    a graph, which client versions are still on the wire, and which client drives errors or latency. Clients
+    that do not report `apollographql-client-name`/`-version` come back with empty name and version columns.
+    Ranked by `orderBy` descending: default REQUEST_COUNT (busiest); REQUEST_WITH_ERROR_COUNT for most
+    error-prone, REQUEST_LATENCY_P99_MS for slowest. `variantName` and `operationName` scope to one or
+    more variants or operations by exact name (omit for all). Rows are one per client + version + operation,
+    so a busy graph has far more groups than the other metrics tools: scope by `operationName` or raise
+    `limit` when a breakdown looks truncated. Keep the default `resolution` of ENTIRE_RANGE for totals
+    and top-N, which gives one row per group ranked over the whole window. DAY/HOUR/MINUTE give one row
+    per group per bucket ranked within each bucket, so a window total then needs a per-group sum plus
+    a `limit` big enough to cover every bucket; too small a `limit` silently undercounts. Only HOUR and
+    MINUTE accept a `to` of now, so use them for bursts in the last 24 hours. Avoid MONTH: it labels buckets
+    by calendar month, not by the requested window.'
+- name: RunSchemaCheck
+  description: Start a schema check of a proposed schema against a variant, the same check that `rover
+    graph check` starts. Use this for a monograph or for a whole supergraph schema; use RunSubgraphCheck
+    for one subgraph. The check runs in the background, so this returns a workflow ID and a Studio URL,
+    not a result. Pass the returned workflowID to GetCheckResults to read the outcome. Provide the graph
+    ID, the variant name, and the proposed schema as SDL. Optionally provide the git branch and commit
+    to label the run in Studio.
+- name: PublishGraphSchema
+  description: Publish a schema to a graph variant, the same write that `rover graph publish` performs.
+    Use this for a monograph; use PublishSubgraph for one subgraph of a federated graph. Returns a result
+    code, whether the publish succeeded, a human-readable message, and the hash of the published schema.
+    This changes the schema registry and can change what clients see. Run RunSchemaCheck first to see
+    the effect on client operations. Provide the graph ID, the variant name, and the schema as SDL. Optionally
+    provide the git branch and commit to label the publication.
+- name: PublishSubgraph
+  description: Publish a subgraph schema to a variant and start composition, the same write that `rover
+    subgraph publish` performs. Returns whether the subgraph was created or updated, any composition errors,
+    and the launch that started. This changes the schema registry and can change what the router serves.
+    Run RunSubgraphCheck first to see the effect on client operations. Provide the graph ID, the variant
+    name, the subgraph name, and the schema as SDL. Provide the routing URL when you add a subgraph or
+    move its endpoint. Optionally provide a revision label and the git branch and commit.
+- name: DeleteGraph
+  description: 'Delete a graph, the same write that `rover graph delete` performs. This is a soft delete:
+    the data is not removed permanently and Apollo support can restore the graph. Every variant of the
+    graph stops serving, so confirm the graph ID with the user before you call this. Returns null on success.
+    Provide the graph ID.'
+- name: GetSubgraphSchema
+  description: 'Read one subgraph''s published schema (SDL) from a variant, with its routing URL, revision,
+    and last update time. This is the same read that `rover subgraph fetch` performs. Read one subgraph
+    at a time: a whole supergraph document is much larger and can pass the token limit of the model. Provide
+    the graph ID, the variant name, and the subgraph name. Use GetVariantDetails first if you do not know
+    the subgraph names.'
+- name: GetSubgraphMetrics
+  description: 'Top subgraphs/connectors by traffic/health for a graph over a time window, as compact
+    CSV. Columns: start timestamp, end exclusive timestamp, fetch service name, fetch count, fetch latency
+    p50 ms, fetch latency p99 ms, fetch with errors count. Ranked by `orderBy` descending: default FETCH_COUNT
+    (busiest); FETCH_WITH_ERRORS_COUNT for most error-prone, FETCH_LATENCY_P99_MS for slowest. `variantName`
+    scopes to one or more variants (omit for all). `subgraphName` scopes to one or more subgraphs by exact
+    name (omit for all); pattern/substring matching is not supported. `clients` scopes to the fetches
+    driven by one or more clients; omit `clientVersion` to match every version of that client, and use
+    GetClientMetrics to discover the names a graph sees. Keep the default `resolution` of ENTIRE_RANGE
+    for totals and top-N, which gives one row per subgraph ranked over the whole window. DAY/HOUR/MINUTE
+    give one row per subgraph per bucket ranked within each bucket, so a window total then needs a per-subgraph
+    sum plus a `limit` big enough to cover every bucket; too small a `limit` silently undercounts. Only
+    HOUR and MINUTE accept a `to` of now, so use them for bursts in the last 24 hours. Avoid MONTH: it
+    labels buckets by calendar month, not by the requested window.'
+- name: GetVariantDetails
+  description: 'Retrieve metadata for a graph variant: its identifier, federation version, the URL of
+    its GraphQL endpoint, and its subgraph inventory (names only). Use this to assess a variant''s composition
+    setup, such as subgraph inventory and federation version compliance. Provide the graph ID and variant
+    name (e.g., "production").'
+- name: GetOperationMetrics
+  description: 'Top operations by usage/health for a graph over a time window, as compact CSV. Columns:
+    start timestamp, end exclusive timestamp, operation name, request count, request latency p50 ms, request
+    latency p99 ms, request with error count. Ranked by `orderBy` descending: default REQUEST_COUNT (busiest);
+    REQUEST_WITH_ERROR_COUNT for most error-prone, REQUEST_LATENCY_P99_MS for slowest. `variantName` scopes
+    to one or more variants (omit for all). `clients` scopes to one or more clients; omit `clientVersion`
+    to match every version of that client, and use GetClientMetrics to discover the names a graph sees.
+    Keep the default `resolution` of ENTIRE_RANGE for totals and top-N, which gives one row per operation
+    ranked over the whole window. DAY/HOUR/MINUTE give one row per operation per bucket ranked within
+    each bucket, so a window total then needs a per-operation sum plus a `limit` big enough to cover every
+    bucket; too small a `limit` silently undercounts. Only HOUR and MINUTE accept a `to` of now, so use
+    them for bursts in the last 24 hours. Avoid MONTH: it labels buckets by calendar month, not by the
+    requested window.'
+- name: RunSubgraphCheck
+  description: Start a schema check of one proposed subgraph schema against a variant, the same check
+    that `rover subgraph check` starts. The check runs in the background, so this returns a workflow ID
+    and a Studio URL, not a result. Pass the returned workflowID to GetCheckResults to read the outcome.
+    Provide the graph ID, the variant name, the subgraph name, and the proposed subgraph schema as SDL.
+    Optionally provide the git branch and commit to label the run in Studio.
+- name: GetReadme
+  description: Read the README of a graph variant, with the time it was last updated and who updated it.
+    This is the same read that `rover readme fetch` performs. The README is the Markdown document shown
+    on the variant's page in GraphOS Studio. Provide the graph ID and the variant name.
+- name: GetLaunchHistory
+  description: Retrieve recent launches for a graph variant (most recent first) to detect deployment instability
+    such as repeated failures or frequent superseded launches. Each entry includes the launch id, status,
+    and timestamps, so you can identify a specific launch and drill into it with GetLaunch. Use to assess
+    deployment stability. Provide the graph ID, variant name, and optionally a limit (default 20 most
+    recent launches, max 100 per page) and an offset to page further back.
+- name: GetMyIdentity
+  description: 'Resolve the caller''s identity from their API key or OAuth token. Call this FIRST when
+    the user asks about "my graph" but has not provided a graph ID. For a graph/service key, `me` resolves
+    to a Graph: use `id` as the graphId and `variants[].name` as the variant for the graph-scoped health-check
+    tools, so the user does not have to supply either. For a user (personal key or OAuth), `me` resolves
+    to a User instead: there''s no single graph, so each org membership''s `graphs[].id` / `graphs[].variants[].name`
+    lists the graphId/variant options the graph-scoped tools need, across every org the user belongs to.
+    Also handles service-account keys.'
+- name: GetGraphSchema
+  description: Read the schema (SDL) that is currently published to a graph variant, with its hash and
+    publication time. This is the same read that `rover graph fetch` performs. The response holds the
+    whole document and is not truncated. A large federated graph measured over 800,000 characters, roughly
+    200,000 tokens, which exceeds the context window of most models. Prefer GetSubgraphSchema, which reads
+    one subgraph at a time, and use this tool only when you need the whole API schema. Provide the graph
+    ID and the variant name.
+- name: PublishPersistedQueries
+  description: 'Publish operations to a persisted query list, the same write that `rover persisted-queries
+    publish` performs. A persisted query list is the set of operations a router accepts when it is configured
+    to reject anything else. Operations you do not mention stay in the list unchanged: pass operations
+    to add or replace entries, and remove to drop them. Returns the new revision and the total operation
+    count, or reports that nothing changed. Use GetPersistedQueryListStatus to find the list ID and its
+    current revision. Provide the graph ID and the persisted query list ID.'
+- name: GetTopOperations
+  description: Identify the most-used operations on a graph variant for a time range, with request counts,
+    types, and signatures. Use to find high-traffic operations, detect unused operations, and prioritize
+    findings by traffic impact. Provide graph ID, variant, and a from/to time range (ISO 8601 timestamps;
+    `to` must be at least 6 hours before now), plus an optional limit (default 50). This report is rate
+    limited.
 deployment:
   mode: remote
   endpoint: https://mcp.apollographql.com/mcp
@@ -101,3 +269,4 @@ tool_quality:
   scored: false
   note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
     from Glimind's agent-readiness audit.
+tools_count: 32
