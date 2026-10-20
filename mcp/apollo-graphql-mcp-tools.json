@@ -1,0 +1,1736 @@
+{
+  "endpoint": "https://mcp.apollographql.com/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "graphos-mcp-server",
+    "title": "GraphOS MCP Server",
+    "version": "1.20.0",
+    "description": "Public Apollo documentation and Connectors spec tools (no auth), plus graph tools that inspect a graph, run schema checks, and publish schemas, contracts, and persisted queries, and that require either a GraphOS sign-in or a GraphOS API key in the x-api-key header.",
+    "websiteUrl": "https://www.apollographql.com/docs/graphos/platform/graphos-mcp-server/install"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "DeleteSubgraph",
+        "description": "Remove a subgraph from a variant and start composition, the same write that `rover subgraph delete` performs. Returns the composition errors that the removal causes. This deletes the subgraph from the variant and can break the running router. Set dryRun to true first: the response then reports the composition result that the removal would produce, including updatedGateway, and deletes nothing. Provide the graph ID, the variant name, and the subgraph name.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "subgraphName": {
+              "type": "string"
+            },
+            "dryRun": {
+              "description": "Do not remove the service, but recompose without it and report any errors.",
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": false
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "subgraphName"
+          ]
+        },
+        "annotations": {
+          "title": "Delete a subgraph",
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetSchemaChecks",
+        "description": "List past schema checks for a graph: each check's ID, status, timestamps, the subgraph it checked, the variant it ran against, the commit, and the status of each task in the check, plus the total count for the filter. Use this to find a check, then pass its ID to GetCheckResults for failure details. Provide the graph ID. Optionally filter by status (PASSED, FAILED, PENDING), subgraph names, branches, variants, authors, or check IDs, and page with limit and offset.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "limit": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 20
+            },
+            "offset": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0
+            },
+            "status": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/CheckFilterInputStatusOption"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "subgraphs": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "branches": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "variants": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "authors": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "ids": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "graphId"
+          ],
+          "definitions": {
+            "CheckFilterInputStatusOption": {
+              "description": "Options for filtering CheckWorkflows by status\nThis should always match CheckWorkflowStatus\n\nValues:\nFAILED: \nPENDING: \nPASSED: ",
+              "type": "string",
+              "enum": [
+                "FAILED",
+                "PENDING",
+                "PASSED"
+              ]
+            }
+          }
+        },
+        "annotations": {
+          "title": "List schema checks",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetPersistedQueryListStatus",
+        "description": "Check whether a graph variant has a Persisted Query List (PQL), and return its ID, its name, and its current build (revision and operation count). Pass the ID to PublishPersistedQueries. Use to assess PQL configuration — a production variant with no PQL is a security gap. Provide the graph ID and variant name.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get persisted query list status",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetSupergraphSchema",
+        "description": "Read the composed supergraph schema (SDL) for a graph variant, with the composition ID and any composition errors. This is the same read that `rover supergraph fetch` performs. A supergraph schema is the single schema that composition builds from every subgraph, and it carries federation directives that the API schema does not. The response holds the whole document and is not truncated, and a supergraph schema is larger than the API schema it produces. Expect the same order of size: a large federated graph exceeds 800,000 characters, roughly 200,000 tokens. A variant that is not federated has no composition result, and the tool returns null for it rather than an empty document. Provide the graph ID and the variant name.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get a supergraph schema",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "ApolloDocsRead",
+        "description": "Reads an Apollo documentation page by slug in chunks. Use slugs returned by ApolloDocsSearch.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "description": "The slug returned from the ApolloDocsSearch tool",
+              "type": "string"
+            },
+            "chunkIndex": {
+              "description": "The character index to start reading from, will return up to the next 10000 characters",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "slug",
+            "chunkIndex"
+          ]
+        },
+        "annotations": {
+          "title": "Read Apollo documentation",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "GetCheckResults",
+        "description": "Read the outcome of one schema check run: the overall status, and for each task in the run the composition errors, lint diagnostics, schema changes with the client operations they affect, downstream variant results, and custom check violations. Use this after GetSchemaChecks gives you a check ID. Provide the graph ID and the check ID. The affected operations are paged with affectedOperationsLimit and affectedOperationsOffset; the change list is capped by the server, and areChangesTruncated reports when that happened.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "checkId": {
+              "type": "string"
+            },
+            "affectedOperationsLimit": {
+              "description": "The maximum number of affected queries to return. Must be 50 or fewer.#The maximum number of affected queries to return. Must be 50 or fewer.#The maximum number of affected queries to return. Must be 50 or fewer.#The maximum number of affected queries to return. Must be 50 or fewer.",
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 20
+            },
+            "affectedOperationsOffset": {
+              "description": "How many items to skip before starting to return results.\nFor example, with `limit: 10` and `offset: 10`, you get items 11–20.#How many items to skip before starting to return results.\nFor example, with `limit: 10` and `offset: 10`, you get items 11–20.#How many items to skip before starting to return results.\nFor example, with `limit: 10` and `offset: 10`, you get items 11–20.#How many items to skip before starting to return results.\nFor example, with `limit: 10` and `offset: 10`, you get items 11–20.",
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0
+            }
+          },
+          "required": [
+            "graphId",
+            "checkId"
+          ]
+        },
+        "annotations": {
+          "title": "Get schema check results",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "ApolloDocsSearch",
+        "description": "Searches official Apollo documentation for GraphQL, GraphOS, Apollo Router, Apollo Client, MCP Server, schema design, deployment, and Connectors. Returns URLs, slugs, and excerpts.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "description": "Use terms that would lead to broad result with a maximum of 2 keywords.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        },
+        "annotations": {
+          "title": "Search Apollo documentation",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "ValidateOperations",
+        "description": "Validate client GraphQL operations against a variant's published schema and return each problem's type (FAILURE, WARNING, INVALID), code, description, and the name of the operation it came from. This is the same check that `rover client check` runs. Nothing is published and no state changes. Provide the graph ID and the operations, each one a body and an optional name. Optionally name the variant to validate against; the default is \"current\".",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "operations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/OperationDocumentInput"
+              }
+            },
+            "variant": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "current"
+            }
+          },
+          "required": [
+            "graphId",
+            "operations"
+          ],
+          "definitions": {
+            "OperationDocumentInput": {
+              "type": "object",
+              "properties": {
+                "body": {
+                  "description": "Operation document body",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Operation name",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "body"
+              ]
+            }
+          }
+        },
+        "annotations": {
+          "title": "Validate client operations",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "PublishContract",
+        "description": "Create or update a contract variant and start a launch for it, the same write that `rover contract publish` performs. A contract variant is a filtered view of another variant's schema, built by including and excluding schema elements by tag. The filter configuration replaces the previous one in full, so send the complete include and exclude lists rather than only the tags you want to change. The same applies to hideUnreachableTypes, which has no default: when you update a contract, pass the value it has now. GetContractConfig states that value in its description. Returns the contract variant and a link to the launch, or the error messages that stopped it. Provide the graph ID, the contract variant name, the source variant, the include and exclude tag lists, and whether to hide unreachable types.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "contractVariant": {
+              "description": "The name of the contract variant, e.g. `public-api`. Once set, this value cannot be changed.",
+              "type": "string"
+            },
+            "sourceVariant": {
+              "description": "The graphRef of the variant the contract will be derived from, e.g. `my-graph@production`. Once set, this value cannot be changed.",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "include": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "exclude": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "hideUnreachableTypes": {
+              "type": "boolean"
+            },
+            "initiateLaunch": {
+              "description": "Whether a launch and schema publish should be initiated after updating configuration. Defaults to `true`.",
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": true
+            }
+          },
+          "required": [
+            "graphId",
+            "contractVariant",
+            "include",
+            "exclude",
+            "hideUnreachableTypes"
+          ]
+        },
+        "annotations": {
+          "title": "Publish a contract",
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "PublishReadme",
+        "description": "Replace the README of a graph variant, the same write that `rover readme publish` performs. The README is the Markdown document shown on the variant's page in GraphOS Studio. The new text replaces the whole README, so read the current one with GetReadme first if you intend to keep any of it. Provide the graph ID, the variant name, and the full README text.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "readme": {
+              "description": "The full new text of the README, as a Markdown-formatted string.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "readme"
+          ]
+        },
+        "annotations": {
+          "title": "Publish a variant README",
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetLatestLaunch",
+        "description": "Inspect the most recent launch for a graph variant: status, completion time, subgraph changes, composition errors, and a schema diff summary vs the previous launch (additions/removals/edits/deprecations plus affected operations). Use to assess schema composition health and the impact of recent schema changes. Also returns the latest approved launch for comparison. Provide the graph ID and variant name.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get latest launch",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetLaunch",
+        "description": "Inspect a single launch by ID for full detail: status, timestamps, which subgraphs changed, composition errors, and the schema diff summary. Use to drill into a specific launch — e.g. a failed or superseded one found via GetLaunchHistory (pass its id here). Provide the graph ID, variant name, and launch ID.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "launchId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "launchId"
+          ]
+        },
+        "annotations": {
+          "title": "Get a specific launch",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "LintSchema",
+        "description": "Lint a GraphQL schema document against the graph's lint rules and return each diagnostic's coordinate, severity level, message, rule, and source location, plus the error, warning, total, and ignored counts. This is the same check that `rover graph lint` and `rover subgraph lint` run. Nothing is published and no state changes. Provide the graph ID and the schema as SDL. Optionally provide baseSdl to report only the diagnostics that the new schema introduces against that base.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "sdl": {
+              "description": "The schema to lint.",
+              "type": "string"
+            },
+            "baseSdl": {
+              "description": "The schema to diff rule violations against, if not provided the full set of rule violations will be returned for the proposed sdl.",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "graphId",
+            "sdl"
+          ]
+        },
+        "annotations": {
+          "title": "Lint a schema",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "ApolloConnectorsSpec",
+        "description": "Returns the Apollo Connectors specification for guidance on creating or modifying GraphQL schemas that use @connect or @source.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        },
+        "annotations": {
+          "title": "Read the Apollo Connectors specification",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "GetLintResults",
+        "description": "Retrieve schema lint violations from a graph's most recent schema checks: each diagnostic's coordinate, severity level, message, rule, and source location, plus error/warning/total/ignored counts. Use to assess schema quality and naming/best-practice violations. Provide the graph ID and optionally a limit (default 5 most recent schema checks).",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "limit": {
+              "type": "integer",
+              "default": 5
+            }
+          },
+          "required": [
+            "graphId"
+          ]
+        },
+        "annotations": {
+          "title": "Get schema lint results",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetContractConfig",
+        "description": "Read the filter configuration of a contract variant: the tags it includes, the tags it excludes, the source variant it is built from, and a human-readable description of the configuration. This is the same read that `rover contract describe` performs. A contract variant is a filtered view of another variant's schema, built by including and excluding schema elements by tag. The filter configuration does not include whether unreachable types are hidden. The description states it, so read it there before you update a contract with PublishContract. A variant that is not a contract returns null for the filter configuration. Provide the graph ID and the contract variant name.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get a contract configuration",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetClientMetrics",
+        "description": "Traffic broken down by client for a graph over a time window, as compact CSV. Columns: start timestamp, end exclusive timestamp, client name, client version, operation name, request count, request latency p50 ms, request latency p99 ms, request with error count. Answers which clients call a graph, which client versions are still on the wire, and which client drives errors or latency. Clients that do not report `apollographql-client-name`/`-version` come back with empty name and version columns. Ranked by `orderBy` descending: default REQUEST_COUNT (busiest); REQUEST_WITH_ERROR_COUNT for most error-prone, REQUEST_LATENCY_P99_MS for slowest. `variantName` and `operationName` scope to one or more variants or operations by exact name (omit for all). Rows are one per client + version + operation, so a busy graph has far more groups than the other metrics tools: scope by `operationName` or raise `limit` when a breakdown looks truncated. Keep the default `resolution` of ENTIRE_RANGE for totals and top-N, which gives one row per group ranked over the whole window. DAY/HOUR/MINUTE give one row per group per bucket ranked within each bucket, so a window total then needs a per-group sum plus a `limit` big enough to cover every bucket; too small a `limit` silently undercounts. Only HOUR and MINUTE accept a `to` of now, so use them for bursts in the last 24 hours. Avoid MONTH: it labels buckets by calendar month, not by the requested window.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "from": {
+              "description": "The starting timestamp for the report. Must be in the format: 2025-01-01T00:00:00Z (ISO 8601).",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "to": {
+              "description": "The ending timestamp for the report. Must be in the format: 2025-01-01T08:00:00Z (ISO 8601).",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "resolution": {
+              "description": "The resolution of the time groups for the report. This resolution will affect the range of times that can be used for the 'from' and\n'to' timestamps:\n- For the MINUTE resolution, the total time between 'from' and 'to' must be no more than 1 day, and the 'from' time must be no earlier than 30 days ago.\n- For the HOUR resolution, the total time between 'from' and 'to' must be no more than 7 days, and the 'from' time must be no earlier than 90 days ago.\n- For the DAY, MONTH, and ENTIRE_RANGE resolutions, the 'from' time must be no earlier than 549 days ago (approx 18 months), and the 'to' time must be no later than 1 day ago.\nIf these criteria are not met, this will return a REQUEST_INVALID error.",
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/TimeseriesReportResolution"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "ENTIRE_RANGE"
+            },
+            "orderBy": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/OperationInsightsTimeseriesReportMetric"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "REQUEST_COUNT"
+            },
+            "variantName": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "operationName": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "limit": {
+              "description": "Maximum number of records to return (default: 100, max 10000).",
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 50
+            }
+          },
+          "required": [
+            "graphId",
+            "from",
+            "to"
+          ],
+          "definitions": {
+            "Timestamp": {
+              "description": "ISO 8601, extended format with nanoseconds, Zulu (or \"[+-]seconds\" as a string or number relative to now)"
+            },
+            "TimeseriesReportResolution": {
+              "description": "The size of each time bucket in a timeseries report.\n\nValues:\nDAY: One-day buckets.\nENTIRE_RANGE: Single bucket containing the entire time range.\nHOUR: One-hour buckets.\nMINUTE: One-minute buckets.\nMONTH: One-month buckets.",
+              "type": "string",
+              "enum": [
+                "DAY",
+                "ENTIRE_RANGE",
+                "HOUR",
+                "MINUTE",
+                "MONTH"
+              ]
+            },
+            "OperationInsightsTimeseriesReportMetric": {
+              "description": "\n\nValues:\nREQUEST_COUNT: \nREQUEST_LATENCY_P50_MS: \nREQUEST_LATENCY_P90_MS: \nREQUEST_LATENCY_P99_MS: \nREQUEST_WITH_ERROR_COUNT: ",
+              "type": "string",
+              "enum": [
+                "REQUEST_COUNT",
+                "REQUEST_LATENCY_P50_MS",
+                "REQUEST_LATENCY_P90_MS",
+                "REQUEST_LATENCY_P99_MS",
+                "REQUEST_WITH_ERROR_COUNT"
+              ]
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get client metrics",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "RunSchemaCheck",
+        "description": "Start a schema check of a proposed schema against a variant, the same check that `rover graph check` starts. Use this for a monograph or for a whole supergraph schema; use RunSubgraphCheck for one subgraph. The check runs in the background, so this returns a workflow ID and a Studio URL, not a result. Pass the returned workflowID to GetCheckResults to read the outcome. Provide the graph ID, the variant name, and the proposed schema as SDL. Optionally provide the git branch and commit to label the run in Studio.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "proposedSchema": {
+              "type": "string"
+            },
+            "branch": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "commit": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "proposedSchema"
+          ]
+        },
+        "annotations": {
+          "title": "Run a schema check",
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "PublishGraphSchema",
+        "description": "Publish a schema to a graph variant, the same write that `rover graph publish` performs. Use this for a monograph; use PublishSubgraph for one subgraph of a federated graph. Returns a result code, whether the publish succeeded, a human-readable message, and the hash of the published schema. This changes the schema registry and can change what clients see. Run RunSchemaCheck first to see the effect on client operations. Provide the graph ID, the variant name, and the schema as SDL. Optionally provide the git branch and commit to label the publication.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "schemaDocument": {
+              "type": "string"
+            },
+            "branch": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "commit": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "schemaDocument"
+          ]
+        },
+        "annotations": {
+          "title": "Publish a graph schema",
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "PublishSubgraph",
+        "description": "Publish a subgraph schema to a variant and start composition, the same write that `rover subgraph publish` performs. Returns whether the subgraph was created or updated, any composition errors, and the launch that started. This changes the schema registry and can change what the router serves. Run RunSubgraphCheck first to see the effect on client operations. Provide the graph ID, the variant name, the subgraph name, and the schema as SDL. Provide the routing URL when you add a subgraph or move its endpoint. Optionally provide a revision label and the git branch and commit.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "subgraphName": {
+              "type": "string"
+            },
+            "sdl": {
+              "type": "string"
+            },
+            "url": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "revision": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": ""
+            },
+            "branch": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "commit": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "subgraphName",
+            "sdl"
+          ]
+        },
+        "annotations": {
+          "title": "Publish a subgraph schema",
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "DeleteGraph",
+        "description": "Delete a graph, the same write that `rover graph delete` performs. This is a soft delete: the data is not removed permanently and Apollo support can restore the graph. Every variant of the graph stops serving, so confirm the graph ID with the user before you call this. Returns null on success. Provide the graph ID.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId"
+          ]
+        },
+        "annotations": {
+          "title": "Delete a graph",
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetSubgraphSchema",
+        "description": "Read one subgraph's published schema (SDL) from a variant, with its routing URL, revision, and last update time. This is the same read that `rover subgraph fetch` performs. Read one subgraph at a time: a whole supergraph document is much larger and can pass the token limit of the model. Provide the graph ID, the variant name, and the subgraph name. Use GetVariantDetails first if you do not know the subgraph names.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "subgraphName": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "subgraphName"
+          ]
+        },
+        "annotations": {
+          "title": "Get a subgraph schema",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetSubgraphMetrics",
+        "description": "Top subgraphs/connectors by traffic/health for a graph over a time window, as compact CSV. Columns: start timestamp, end exclusive timestamp, fetch service name, fetch count, fetch latency p50 ms, fetch latency p99 ms, fetch with errors count. Ranked by `orderBy` descending: default FETCH_COUNT (busiest); FETCH_WITH_ERRORS_COUNT for most error-prone, FETCH_LATENCY_P99_MS for slowest. `variantName` scopes to one or more variants (omit for all). `subgraphName` scopes to one or more subgraphs by exact name (omit for all); pattern/substring matching is not supported. `clients` scopes to the fetches driven by one or more clients; omit `clientVersion` to match every version of that client, and use GetClientMetrics to discover the names a graph sees. Keep the default `resolution` of ENTIRE_RANGE for totals and top-N, which gives one row per subgraph ranked over the whole window. DAY/HOUR/MINUTE give one row per subgraph per bucket ranked within each bucket, so a window total then needs a per-subgraph sum plus a `limit` big enough to cover every bucket; too small a `limit` silently undercounts. Only HOUR and MINUTE accept a `to` of now, so use them for bursts in the last 24 hours. Avoid MONTH: it labels buckets by calendar month, not by the requested window.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "from": {
+              "description": "The starting timestamp for the report. Must be in the format: 2025-01-01T00:00:00Z (ISO 8601).",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "to": {
+              "description": "The ending timestamp for the report. Must be in the format: 2025-01-01T08:00:00Z (ISO 8601).",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "resolution": {
+              "description": "The resolution of the time groups for the report. This resolution will affect the range of times that can be used for the 'from' and\n'to' timestamps:\n- For the MINUTE resolution, the total time between 'from' and 'to' must be no more than 1 day, and the 'from' time must be no earlier than 30 days ago.\n- For the HOUR resolution, the total time between 'from' and 'to' must be no more than 7 days, and the 'from' time must be no earlier than 90 days ago.\n- For the DAY, MONTH, and ENTIRE_RANGE resolutions, the 'from' time must be no earlier than 549 days ago (approx 18 months), and the 'to' time must be no later than 1 day ago.\nIf these criteria are not met, this will return a REQUEST_INVALID error.",
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/TimeseriesReportResolution"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "ENTIRE_RANGE"
+            },
+            "orderBy": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/SubgraphInsightsTimeseriesReportMetric"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "FETCH_COUNT"
+            },
+            "variantName": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "subgraphName": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "clients": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "$ref": "#/definitions/SubgraphInsightsTimeseriesReportClientFilterInInput"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "limit": {
+              "description": "Maximum number of records to return (default: 100, max 10000).",
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 50
+            }
+          },
+          "required": [
+            "graphId",
+            "from",
+            "to"
+          ],
+          "definitions": {
+            "Timestamp": {
+              "description": "ISO 8601, extended format with nanoseconds, Zulu (or \"[+-]seconds\" as a string or number relative to now)"
+            },
+            "TimeseriesReportResolution": {
+              "description": "The size of each time bucket in a timeseries report.\n\nValues:\nDAY: One-day buckets.\nENTIRE_RANGE: Single bucket containing the entire time range.\nHOUR: One-hour buckets.\nMINUTE: One-minute buckets.\nMONTH: One-month buckets.",
+              "type": "string",
+              "enum": [
+                "DAY",
+                "ENTIRE_RANGE",
+                "HOUR",
+                "MINUTE",
+                "MONTH"
+              ]
+            },
+            "SubgraphInsightsTimeseriesReportMetric": {
+              "description": "Metrics available for subgraph and connector timeseries fetches, representing aggregated data\ncollected over the given time window for the selected dimensions. Each request from the router to a downstream subgraph\nor connector service is counted as a fetch.\n\nValues:\nFETCH_COUNT: The total number of fetch requests sent from the router to the downstream subgraph or connector service as part of its query plan execution.\nFETCH_LATENCY_P50_MS: The 50th percentile (median) latency of fetches (in milliseconds).\nFETCH_LATENCY_P90_MS: The 90th percentile latency of fetch requests (in milliseconds).\nFETCH_LATENCY_P99_MS: The 99th percentile latency of fetch requests (in milliseconds).\nFETCH_WITH_ERRORS_COUNT: The number of fetch requests that resulted in error responses from the downstream service.",
+              "type": "string",
+              "enum": [
+                "FETCH_COUNT",
+                "FETCH_LATENCY_P50_MS",
+                "FETCH_LATENCY_P90_MS",
+                "FETCH_LATENCY_P99_MS",
+                "FETCH_WITH_ERRORS_COUNT"
+              ]
+            },
+            "SubgraphInsightsTimeseriesReportClientFilterInInput": {
+              "description": "The named type and version of the clients to include or exclude in the subgraph and connector timeseries report.",
+              "type": "object",
+              "properties": {
+                "clientName": {
+                  "description": "The client name.",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "clientVersion": {
+                  "description": "The client version.",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get subgraph metrics",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetVariantDetails",
+        "description": "Retrieve metadata for a graph variant: its identifier, federation version, the URL of its GraphQL endpoint, and its subgraph inventory (names only). Use this to assess a variant's composition setup, such as subgraph inventory and federation version compliance. Provide the graph ID and variant name (e.g., \"production\").",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get graph variant details",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetOperationMetrics",
+        "description": "Top operations by usage/health for a graph over a time window, as compact CSV. Columns: start timestamp, end exclusive timestamp, operation name, request count, request latency p50 ms, request latency p99 ms, request with error count. Ranked by `orderBy` descending: default REQUEST_COUNT (busiest); REQUEST_WITH_ERROR_COUNT for most error-prone, REQUEST_LATENCY_P99_MS for slowest. `variantName` scopes to one or more variants (omit for all). `clients` scopes to one or more clients; omit `clientVersion` to match every version of that client, and use GetClientMetrics to discover the names a graph sees. Keep the default `resolution` of ENTIRE_RANGE for totals and top-N, which gives one row per operation ranked over the whole window. DAY/HOUR/MINUTE give one row per operation per bucket ranked within each bucket, so a window total then needs a per-operation sum plus a `limit` big enough to cover every bucket; too small a `limit` silently undercounts. Only HOUR and MINUTE accept a `to` of now, so use them for bursts in the last 24 hours. Avoid MONTH: it labels buckets by calendar month, not by the requested window.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "from": {
+              "description": "The starting timestamp for the report. Must be in the format: 2025-01-01T00:00:00Z (ISO 8601).",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "to": {
+              "description": "The ending timestamp for the report. Must be in the format: 2025-01-01T08:00:00Z (ISO 8601).",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "resolution": {
+              "description": "The resolution of the time groups for the report. This resolution will affect the range of times that can be used for the 'from' and\n'to' timestamps:\n- For the MINUTE resolution, the total time between 'from' and 'to' must be no more than 1 day, and the 'from' time must be no earlier than 30 days ago.\n- For the HOUR resolution, the total time between 'from' and 'to' must be no more than 7 days, and the 'from' time must be no earlier than 90 days ago.\n- For the DAY, MONTH, and ENTIRE_RANGE resolutions, the 'from' time must be no earlier than 549 days ago (approx 18 months), and the 'to' time must be no later than 1 day ago.\nIf these criteria are not met, this will return a REQUEST_INVALID error.",
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/TimeseriesReportResolution"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "ENTIRE_RANGE"
+            },
+            "orderBy": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/OperationInsightsTimeseriesReportMetric"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "REQUEST_COUNT"
+            },
+            "variantName": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "clients": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "$ref": "#/definitions/OperationInsightsTimeseriesReportClientFilterInInput"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "limit": {
+              "description": "Maximum number of records to return (default: 100, max 10000).",
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 50
+            }
+          },
+          "required": [
+            "graphId",
+            "from",
+            "to"
+          ],
+          "definitions": {
+            "Timestamp": {
+              "description": "ISO 8601, extended format with nanoseconds, Zulu (or \"[+-]seconds\" as a string or number relative to now)"
+            },
+            "TimeseriesReportResolution": {
+              "description": "The size of each time bucket in a timeseries report.\n\nValues:\nDAY: One-day buckets.\nENTIRE_RANGE: Single bucket containing the entire time range.\nHOUR: One-hour buckets.\nMINUTE: One-minute buckets.\nMONTH: One-month buckets.",
+              "type": "string",
+              "enum": [
+                "DAY",
+                "ENTIRE_RANGE",
+                "HOUR",
+                "MINUTE",
+                "MONTH"
+              ]
+            },
+            "OperationInsightsTimeseriesReportMetric": {
+              "description": "\n\nValues:\nREQUEST_COUNT: \nREQUEST_LATENCY_P50_MS: \nREQUEST_LATENCY_P90_MS: \nREQUEST_LATENCY_P99_MS: \nREQUEST_WITH_ERROR_COUNT: ",
+              "type": "string",
+              "enum": [
+                "REQUEST_COUNT",
+                "REQUEST_LATENCY_P50_MS",
+                "REQUEST_LATENCY_P90_MS",
+                "REQUEST_LATENCY_P99_MS",
+                "REQUEST_WITH_ERROR_COUNT"
+              ]
+            },
+            "OperationInsightsTimeseriesReportClientFilterInInput": {
+              "description": "The named type and version of the clients to include or exclude in the operation timeseries report.",
+              "type": "object",
+              "properties": {
+                "clientName": {
+                  "description": "The client name.",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "clientVersion": {
+                  "description": "The client version.",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get operation metrics",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "RunSubgraphCheck",
+        "description": "Start a schema check of one proposed subgraph schema against a variant, the same check that `rover subgraph check` starts. The check runs in the background, so this returns a workflow ID and a Studio URL, not a result. Pass the returned workflowID to GetCheckResults to read the outcome. Provide the graph ID, the variant name, the subgraph name, and the proposed subgraph schema as SDL. Optionally provide the git branch and commit to label the run in Studio.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "subgraphName": {
+              "type": "string"
+            },
+            "proposedSchema": {
+              "$ref": "#/definitions/GraphQLDocument"
+            },
+            "branch": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "commit": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "subgraphName",
+            "proposedSchema"
+          ],
+          "definitions": {
+            "GraphQLDocument": {
+              "description": "A GraphQL document, such as a schema in SDL syntax.",
+              "type": "string"
+            }
+          }
+        },
+        "annotations": {
+          "title": "Run a subgraph schema check",
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetReadme",
+        "description": "Read the README of a graph variant, with the time it was last updated and who updated it. This is the same read that `rover readme fetch` performs. The README is the Markdown document shown on the variant's page in GraphOS Studio. Provide the graph ID and the variant name.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get a variant README",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetLaunchHistory",
+        "description": "Retrieve recent launches for a graph variant (most recent first) to detect deployment instability such as repeated failures or frequent superseded launches. Each entry includes the launch id, status, and timestamps, so you can identify a specific launch and drill into it with GetLaunch. Use to assess deployment stability. Provide the graph ID, variant name, and optionally a limit (default 20 most recent launches, max 100 per page) and an offset to page further back.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "limit": {
+              "type": "integer",
+              "default": 20
+            },
+            "offset": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get launch history",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetMyIdentity",
+        "description": "Resolve the caller's identity from their API key or OAuth token. Call this FIRST when the user asks about \"my graph\" but has not provided a graph ID. For a graph/service key, `me` resolves to a Graph: use `id` as the graphId and `variants[].name` as the variant for the graph-scoped health-check tools, so the user does not have to supply either. For a user (personal key or OAuth), `me` resolves to a User instead: there's no single graph, so each org membership's `graphs[].id` / `graphs[].variants[].name` lists the graphId/variant options the graph-scoped tools need, across every org the user belongs to. Also handles service-account keys.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        },
+        "annotations": {
+          "title": "Get my GraphOS identity",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetGraphSchema",
+        "description": "Read the schema (SDL) that is currently published to a graph variant, with its hash and publication time. This is the same read that `rover graph fetch` performs. The response holds the whole document and is not truncated. A large federated graph measured over 800,000 characters, roughly 200,000 tokens, which exceeds the context window of most models. Prefer GetSubgraphSchema, which reads one subgraph at a time, and use this tool only when you need the whole API schema. Provide the graph ID and the variant name.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "graphId",
+            "variant"
+          ]
+        },
+        "annotations": {
+          "title": "Get a graph schema",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "PublishPersistedQueries",
+        "description": "Publish operations to a persisted query list, the same write that `rover persisted-queries publish` performs. A persisted query list is the set of operations a router accepts when it is configured to reject anything else. Operations you do not mention stay in the list unchanged: pass operations to add or replace entries, and remove to drop them. Returns the new revision and the total operation count, or reports that nothing changed. Use GetPersistedQueryListStatus to find the list ID and its current revision. Provide the graph ID and the persisted query list ID.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "listId": {
+              "type": "string"
+            },
+            "operations": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/PersistedQueryInput"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "remove": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/PersistedQueryIdInput"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "allowOverwrittenOperations": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "graphId",
+            "listId"
+          ],
+          "definitions": {
+            "PersistedQueryInput": {
+              "description": "Operations to be published to the Persisted Query List.",
+              "type": "object",
+              "properties": {
+                "body": {
+                  "description": "The GraphQL document for this operation, including all necessary fragment definitions.",
+                  "$ref": "#/definitions/GraphQLDocument"
+                },
+                "clientName": {
+                  "description": "An optional client name to associate with the operation. Two operations with the same ID but different client names are treated as distinct operations.",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "id": {
+                  "description": "An opaque identifier for this operation. This should map uniquely to an operation body; editing the body should generally result in a new ID. Apollo's tools generally use the lowercase hex SHA256 of the operation body.",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "A name for the operation. Typically this is the name of the actual GraphQL operation in the body. This does not need to be unique within a Persisted Query List; as a client project evolves and its operations change, multiple operations with the same name (but different body and id) can be published.",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The operation's type.",
+                  "$ref": "#/definitions/OperationType"
+                }
+              },
+              "required": [
+                "body",
+                "id",
+                "name",
+                "type"
+              ]
+            },
+            "GraphQLDocument": {
+              "description": "A GraphQL document, such as a schema in SDL syntax.",
+              "type": "string"
+            },
+            "OperationType": {
+              "description": "\n\nValues:\nMUTATION: \nQUERY: \nSUBSCRIPTION: ",
+              "type": "string",
+              "enum": [
+                "MUTATION",
+                "QUERY",
+                "SUBSCRIPTION"
+              ]
+            },
+            "PersistedQueryIdInput": {
+              "description": "Full identifier for an operation in a Persisted Query List.",
+              "type": "object",
+              "properties": {
+                "clientName": {
+                  "description": "An optional client name to associate with the operation. Two operations with the same ID but different client names are treated as distinct operations. An operation with the same ID and a null client name is treated as a distinct operation as well.",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "id": {
+                  "description": "An opaque identifier for this operation. For a given client name, this should map uniquely to an operation body; editing the body should generally result in a new ID. Apollo's tools generally use the lowercase hex SHA256 of the operation body.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ]
+            }
+          }
+        },
+        "annotations": {
+          "title": "Publish persisted queries",
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "GetTopOperations",
+        "description": "Identify the most-used operations on a graph variant for a time range, with request counts, types, and signatures. Use to find high-traffic operations, detect unused operations, and prioritize findings by traffic impact. Provide graph ID, variant, and a from/to time range (ISO 8601 timestamps; `to` must be at least 6 hours before now), plus an optional limit (default 50). This report is rate limited.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "graphId": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "from": {
+              "description": "The starting timestamp for the report.\n\n- Must be in the format: 2025-01-01T00:00:00Z (ISO 8601).\n  - Must be within the last 549 days.\n  - The duration between 'from' and 'to' must not exceed 31 days.",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "to": {
+              "description": "The ending timestamp for the report.\n\n- Must be in the format: 2025-01-01T08:00:00Z (ISO 8601).\n- Must be at least 6 hours from the current time.\n  - The duration between 'from' and 'to' must not exceed 31 days.",
+              "$ref": "#/definitions/Timestamp"
+            },
+            "limit": {
+              "description": "Maximum number of records to return (default: 10)",
+              "type": "integer",
+              "default": 50
+            }
+          },
+          "required": [
+            "graphId",
+            "variant",
+            "from",
+            "to"
+          ],
+          "definitions": {
+            "Timestamp": {
+              "description": "ISO 8601, extended format with nanoseconds, Zulu (or \"[+-]seconds\" as a string or number relative to now)"
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get top operations",
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        }
+      }
+    ]
+  }
+}

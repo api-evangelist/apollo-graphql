@@ -74,3 +74,30 @@ deployment:
   tools: 13
   checked: '2026-08-12'
   source: catalog MCP census
+tool_quality:
+  tool_count: 32
+  tokens_total: 10959
+  tokens_per_tool_median: 237
+  heavy_tools:
+  - name: GetSubgraphMetrics
+    tokens: 1430
+  heavy_tool_count: 1
+  params_total: 122
+  params_undescribed: 95
+  params_described_pct: 22.1
+  tools_with_undescribed_params: 28
+  tools_annotated: 32
+  annotated_pct: 100.0
+  state_changing_unhinted: []
+  tools_missing_schema: 0
+  short_descriptions: 0
+  duplicate_descriptions: 0
+  duplicate_names: 0
+  nonportable_names: []
+  output_schema_count: 0
+  token_estimate: chars/3.6 of each compact tool definition
+  source: mcp/apollo-graphql-mcp-tools.json
+  measured: '2026-10-20'
+  scored: false
+  note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
+    from Glimind's agent-readiness audit.
