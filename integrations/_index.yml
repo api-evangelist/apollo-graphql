@@ -291,3 +291,33 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: apollo-graphql-y-combinator
+  label: Y Combinator
+  partner: y-combinator
+  partner_name: Y Combinator
+  category: accelerator portfolio participation
+  type: register
+  channel: standard-directory
+  evidence: https://www.ycombinator.com/companies/apollo
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Y Combinator company directory (ycombinator.com/companies/<slug>)
+    standard: null
+    spec_file: null
+    role: accelerator-portfolio-company
+    registered_name: Apollo
+    register_id: https://www.ycombinator.com/companies/apollo
+    register_country: US
+    register_website: http://apollographql.com/
+    matched_domain: apollographql.com
+    matched_by: domain
+    signal_note: 'participation only: the accelerator''s own portfolio register lists the company (cohort / investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-accelerator-portfolios.py
+    detected: '2026-10-21'
+    batch: Summer 2011
+    year: '2012'
+    status: Active
+  status: not-a-workflow
+  arazzo: null
