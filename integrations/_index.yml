@@ -351,3 +351,72 @@
     sector: Enterprise;Growth
   status: not-a-workflow
   arazzo: null
+- slug: apollo-graphql-graphql-foundation-members
+  label: GraphQL Foundation (members)
+  partner_name: GraphQL Foundation (members)
+  category: GraphQL standards body membership
+  type: register
+  channel: standard-directory
+  evidence: https://graphql.org/foundation/members/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: GraphQL Foundation members (graphql.org/foundation/members; graphql.landscape2.io/data/full.json)
+    standard: GraphQL
+    spec_file: null
+    role: graphql-foundation-member
+    registered_name: Apollo GraphQL
+    register_id: graphql-foundation-member--general--apollo-graphql-member
+    matched_domain: apollographql.com
+    matched_by: domain
+    signal_note: 'participation only: membership level is partner_tier, never counted'
+    detected_by: sweep-graphql-ecosystem.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
+- slug: apollo-graphql-graphql-org-tools-and-libraries
+  label: GraphQL.org tools and libraries
+  partner_name: GraphQL.org tools and libraries
+  category: GraphQL tooling listing
+  type: register
+  channel: standard-directory
+  evidence: https://graphql.org/community/tools-and-libraries/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: GraphQL.org tools and libraries (graphql.org/community/tools-and-libraries; github.com/graphql/graphql.github.io
+      src/code)
+    standard: GraphQL
+    spec_file: null
+    role: graphql-org-listed-vendor
+    registered_name: Apollo Client
+    register_id: src/code/language-support/javascript/client/apollo-client.md
+    matched_domain: apollographql.com
+    matched_by: domain
+    listed_products:
+    - product_type: javascript client
+      entries:
+      - Apollo Client
+    - product_type: javascript server
+      entries:
+      - Apollo Server
+    - product_type: services
+      entries:
+      - Apollo Studio
+    - product_type: swift-objective-c-ios client
+      entries:
+      - Apollo iOS
+    - product_type: 'tools: gateways-supergraphs'
+      entries:
+      - Apollo Router
+    signal_note: 'participation only: a reviewed listing on graphql.org, not a conformance certification; listed
+      products (one per section) are context, never counted'
+    detected_by: sweep-graphql-ecosystem.py
+    detected: '2026-10-21'
+    other_registrations:
+    - Apollo Router
+    - Apollo Server
+    - Apollo Studio
+    - Apollo iOS
+  status: not-a-workflow
+  arazzo: null
