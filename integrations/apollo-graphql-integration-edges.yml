@@ -34,6 +34,9 @@ checked:
 - https://graphql.landscape2.io/data/full.json
 - https://graphql.org/community/tools-and-libraries/
 - https://graphql.org/foundation/members/
+- https://aur.archlinux.org/cgit/aur.git/tree/.SRCINFO
+- https://aur.archlinux.org/packages-meta-ext-v1.json.gz
+- https://aur.archlinux.org/rpc/v5/info
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -557,6 +560,53 @@ edges:
     - Apollo iOS
   detected_by: sweep-graphql-ecosystem.py
   first_seen: '2026-10-21'
+- partner_name: Arch User Repository (AUR)
+  partner: null
+  partner_match: null
+  type: register
+  direction: provider-built
+  category: official CLI (Arch User Repository (AUR))
+  evidence: https://aur.archlinux.org/packages/apollo-rover
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Arch User Repository (AUR) (public package index)
+    spec_file: null
+    packages:
+    - name: apollo-rover
+      kind: aur
+      version: 1.0.1-1
+      released: '2026-10-22'
+      released_field: AUR LastModified
+      out_of_date: false
+      lapsed: false
+      page: https://aur.archlinux.org/packages/apollo-rover
+      upstream: https://github.com/apollographql/rover
+      cli: 'AUR description: CLI for Apollo''s suite of GraphQL developer productivity tools'
+      repo_leg: github-org:apollographql
+      publisher_leg: artifact-github-org:apollographql
+      matched_by: github-org
+    - name: apollo-rover-bin
+      kind: aur
+      version: 0.40.0-1
+      released: '2026-06-13'
+      released_field: AUR LastModified
+      out_of_date: false
+      lapsed: false
+      page: https://aur.archlinux.org/packages/apollo-rover-bin
+      upstream: https://github.com/apollographql/rover
+      cli: 'AUR description: CLI for Apollo''s suite of GraphQL developer productivity tools (binary release)'
+      repo_leg: github-org:apollographql
+      publisher_leg: artifact-github-org:apollographql
+      matched_by: github-org
+    current: true
+    signal_note: 'the provider''s own command-line tool packaged for Arch Linux (community-maintained PKGBUILD whose
+      upstream and source artifact are the provider''s): distribution, not an integration; lapsed = flagged out-of-date
+      or not updated in 24 months'
+    detected_by: sweep-aur-vendor-cli-packages.py
+    detected: '2026-10-23'
+  detected_by: sweep-aur-vendor-cli-packages.py
+  first_seen: '2026-10-23'
 source:
 - https://github.com/marketplace?type=actions
 - https://github.com/marketplace?type=apps
