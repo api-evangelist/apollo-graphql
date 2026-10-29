@@ -1,4 +1,4 @@
-# Apollo GraphQL (apollo-graphql)
+# Apollo GraphQL
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,241 +64,169 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is the fastest and safest way to build and scale your APIs. Apollo GraphQL provides the industry-leading GraphQL platform including Apollo Server, Apollo Client, Apollo Router, Apollo Federation, and the GraphOS platform for building, managing, and scaling supergraphs.
+Apollo Graph, Inc. — trading publicly as Apollo and Apollo GraphQL — is the San Francisco company behind the Apollo GraphQL platform: Apollo GraphOS (a hosted supergraph platform with a schema registry, schema checks, proposals, launches, and operation/field insights), the Apollo Router and Apollo Federation for composing many subgraphs into one graph, Apollo Connectors for bringing REST endpoints into a graph without writing resolvers, Apollo Server for Node.js, and the Apollo Client families for Web/React, iOS, and Kotlin. More recently the company has pushed into agent infrastructure with the Apollo MCP Server and GraphOS MCP Server, positioning a governed GraphQL schema as the orchestration layer AI agents call instead of raw REST. The company has raised more than $180 million, including a $130 million Series D in 2021, and its shares trade on secondary marketplaces such as Forge Global, Hiive, and Nasdaq Private Market. "Apollo Graph" is the legal entity name that appears on those private-stock listings; the operating brand is Apollo GraphQL.
 
-**URL:** [https://www.apollographql.com/](https://www.apollographql.com/)
+**Areas:** API Orchestration · Clients · Connectors · Federation · Graph · GraphQL · Router · Schema Registry · Supergraph
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Apollo GraphQL on APIs.io
 
-## Tags:
+Everything profiled for Apollo GraphQL is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apollo-graphql/](https://apis.io/providers/apollo-graphql/)** — or go straight to one of the APIs or properties below.
 
- - API Orchestration, Clients, Connectors, Federation, Graph, GraphQL, Router, Schema Registry, Supergraph
+### APIs (11)
 
-## Timestamps
+- [Apollo GraphQL](https://apis.io/apis/apollo-graphql/apollo-graphql/) — Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is the fastest and safest way to build and scale your APIs.
+- [Apollo GraphOS Platform API](https://apis.io/apis/apollo-graphql/apollo-graphos-platform-api/) — The GraphOS Platform API enables programmatic management of Apollo GraphOS, including publishing schemas, running schema checks, managing proposals,…
+- [Apollo Server](https://apis.io/apis/apollo-graphql/apollo-server/) — Apollo Server is an open-source, spec-compliant GraphQL server compatible with any GraphQL client. It is the recommended way to build a production-ready,…
+- [Apollo Client (Web)](https://apis.io/apis/apollo-graphql/apollo-client-web/) — Apollo Client is a comprehensive state management library for JavaScript and TypeScript applications. It is the industry-leading GraphQL client for React,…
+- [Apollo Client (iOS)](https://apis.io/apis/apollo-graphql/apollo-client-ios/) — Apollo iOS is a Swift-first, open-source GraphQL client for native iOS applications. It executes queries and mutations using a GraphQL server and returns…
+- [Apollo Client (Kotlin)](https://apis.io/apis/apollo-graphql/apollo-client-kotlin/) — Apollo Kotlin is a strongly-typed, caching GraphQL client for the JVM, Android, and Kotlin multiplatform. It generates Kotlin models for GraphQL operations…
+- [Apollo Router](https://apis.io/apis/apollo-graphql/apollo-router/) — Apollo Router is a high-performance graph router written in Rust for running federated supergraphs using Apollo Federation 2. It serves as the execution…
+- [Apollo Connectors](https://apis.io/apis/apollo-graphql/apollo-connectors/) — Apollo Connectors simplify REST API orchestration in graphs, replacing unmaintainable procedural code with scalable, declarative schema directives. They…
+- [Rover CLI](https://apis.io/apis/apollo-graphql/rover-cli/) — Rover is the command-line interface for managing and maintaining graphs with Apollo GraphOS. It supports publishing subgraph schemas, running a supergraph…
+- [Apollo Federation](https://apis.io/apis/apollo-graphql/apollo-federation/) — Apollo Federation enables declarative composition of multiple APIs into a single federated GraphQL API. It serves as an API orchestration layer where…
+- [Apollo MCP Server](https://apis.io/apis/apollo-graphql/apollo-mcp-server/) — Apollo MCP Server provides Model Context Protocol integration for Apollo GraphQL, enabling AI agents and large language models to interact with GraphQL APIs…
 
-- **Created:** 2025-06-10
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Apollo GraphQL
-Whether your team is new to GraphQL, or seasoned experts, learn why Apollo is the fastest and safest way to build and scale your APIs.
+#### GraphQL (1)
 
-**Human URL:** [https://www.apollographql.com/](https://www.apollographql.com/)
+GraphQL schemas.
 
-#### Tags:
+- [Apollo GraphQL GraphQL API](https://apis.io/graphqls/apollo-graphql/apollo-graphql-graphql/)
 
- - GraphQL, Graph, Clients, Connectors, Federation
+#### MCP servers (2)
 
-#### Properties
+Model Context Protocol servers that expose the API to agents.
 
-- [Documentation](https://www.apollographql.com/)
+- [apollo-graphos](https://apis.io/servers/apollo-graphql/apollo-graphos/)
+- [MCP Server](https://apis.io/servers/apollo-graphql/mcp-server/)
 
-### Apollo GraphOS Platform API
-The GraphOS Platform API enables programmatic management of Apollo GraphOS, including publishing schemas, running schema checks, managing proposals, handling API keys, and accessing operation and field insights data.
+#### Agent skills (14)
 
-**Human URL:** [https://www.apollographql.com/docs/graphos/platform/platform-api](https://www.apollographql.com/docs/graphos/platform/platform-api)
+Agent skills built on the API.
 
-#### Tags:
+- [apollo-client](https://apis.io/agent-skills/apollo-graphql/apollo-client/)
+- [apollo-connectors](https://apis.io/agent-skills/apollo-graphql/apollo-connectors/)
+- [apollo-federation](https://apis.io/agent-skills/apollo-graphql/apollo-federation/)
+- [apollo-ios](https://apis.io/agent-skills/apollo-graphql/apollo-ios/)
+- [apollo-kotlin](https://apis.io/agent-skills/apollo-graphql/apollo-kotlin/)
+- [apollo-mcp-server](https://apis.io/agent-skills/apollo-graphql/apollo-mcp-server/)
+- [apollo-router](https://apis.io/agent-skills/apollo-graphql/apollo-router/)
+- [apollo-router-plugin-creator](https://apis.io/agent-skills/apollo-graphql/apollo-router-plugin-creator/)
+- [apollo-server](https://apis.io/agent-skills/apollo-graphql/apollo-server/)
+- [graphql-operations](https://apis.io/agent-skills/apollo-graphql/graphql-operations/)
+- [graphql-schema](https://apis.io/agent-skills/apollo-graphql/graphql-schema/)
+- [rover](https://apis.io/agent-skills/apollo-graphql/rover/)
+- [rust-best-practices](https://apis.io/agent-skills/apollo-graphql/rust-best-practices/)
+- [skill-creator](https://apis.io/agent-skills/apollo-graphql/skill-creator/)
 
- - API Management, Federation, GraphQL, Platform, Schema Registry
+#### JSON Schema (2)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://www.apollographql.com/docs/graphos/platform/platform-api)
-- [GettingStarted](https://www.apollographql.com/docs/graphos/platform)
-- [Security](https://www.apollographql.com/docs/graphos/platform/security/overview)
-- [SchemaManagement](https://www.apollographql.com/docs/graphos/platform/schema-management)
+- [Apollo Router Configuration](https://apis.io/schemas/apollo-graphql/router-configuration/)
+- [Apollo Federation Supergraph Configuration](https://apis.io/schemas/apollo-graphql/supergraph-configuration/)
 
-### Apollo Server
-Apollo Server is an open-source, spec-compliant GraphQL server compatible with any GraphQL client. It is the recommended way to build a production-ready, self-documenting GraphQL API that can use data from any source.
+#### Governance rules (1)
 
-**Human URL:** [https://www.apollographql.com/docs/apollo-server](https://www.apollographql.com/docs/apollo-server)
+Spectral rulesets for the provider's contracts.
 
-#### Tags:
+- [Apollo GraphQL — apollo federation jsonschema rules](https://apis.io/rules/apollo-graphql/apollo-federation-jsonschema-spectral-rules/)
 
- - GraphQL, JavaScript, Node.js, Server, TypeScript
+#### Security (1)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://www.apollographql.com/docs/apollo-server)
-- [APIReference](https://www.apollographql.com/docs/apollo-server/api/apollo-server)
-- [GitHubRepository](https://github.com/apollographql/apollo-server)
-- [PackageManager](https://www.npmjs.com/package/@apollo/server)
-- [Changelog](https://github.com/apollographql/apollo-server/blob/main/packages/server/CHANGELOG.md)
+- [Apollo Graphql Domain Security](https://apis.io/security/apollo-graphql/apollo-graphql-domain-security/)
 
-### Apollo Client (Web)
-Apollo Client is a comprehensive state management library for JavaScript and TypeScript applications. It is the industry-leading GraphQL client for React, Vue, Angular, and more.
+#### Plans and pricing (1)
 
-**Human URL:** [https://www.apollographql.com/docs/react](https://www.apollographql.com/docs/react)
+Published plans, tiers and prices.
 
-#### Tags:
+- [Apollo Graphql Plans Pricing](https://apis.io/plans/apollo-graphql/apollo-graphql-plans-pricing/)
 
- - Client, GraphQL, JavaScript, React, State Management, TypeScript
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://www.apollographql.com/docs/react)
-- [GettingStarted](https://www.apollographql.com/docs/react/get-started)
-- [APIReference](https://www.apollographql.com/docs/react/api/core/ApolloClient)
-- [GitHubRepository](https://github.com/apollographql/apollo-client)
-- [PackageManager](https://www.npmjs.com/package/@apollo/client)
-- [Changelog](https://github.com/apollographql/apollo-client/blob/main/CHANGELOG.md)
+- [Apollo Graphql Rate Limits](https://apis.io/rate-limits/apollo-graphql/apollo-graphql-rate-limits/)
 
-### Apollo Client (iOS)
-Apollo iOS is a Swift-first, open-source GraphQL client for native iOS applications.
+#### FinOps (1)
 
-**Human URL:** [https://www.apollographql.com/docs/ios](https://www.apollographql.com/docs/ios)
+What the API costs to run, by operation.
 
-#### Tags:
+- [Apollo Graphql Finops](https://apis.io/finops/apollo-graphql/apollo-graphql-finops/)
 
- - Client, GraphQL, iOS, Mobile, Swift
+## Where to find this API
 
-#### Properties
-
-- [Documentation](https://www.apollographql.com/docs/ios)
-- [GitHubRepository](https://github.com/apollographql/apollo-ios)
-- [Changelog](https://github.com/apollographql/apollo-ios/blob/main/CHANGELOG.md)
-
-### Apollo Client (Kotlin)
-Apollo Kotlin is a strongly-typed, caching GraphQL client for the JVM, Android, and Kotlin multiplatform.
-
-**Human URL:** [https://www.apollographql.com/docs/kotlin](https://www.apollographql.com/docs/kotlin)
-
-#### Tags:
-
- - Android, Client, GraphQL, JVM, Kotlin, Mobile
-
-#### Properties
-
-- [Documentation](https://www.apollographql.com/docs/kotlin)
-- [GitHubRepository](https://github.com/apollographql/apollo-kotlin)
-- [Changelog](https://github.com/apollographql/apollo-kotlin/releases)
-
-### Apollo Router
-Apollo Router is a high-performance graph router written in Rust for running federated supergraphs using Apollo Federation 2.
-
-**Human URL:** [https://www.apollographql.com/docs/graphos/routing](https://www.apollographql.com/docs/graphos/routing)
-
-#### Tags:
-
- - Federation, Gateway, GraphQL, Router, Rust
-
-#### Properties
-
-- [Documentation](https://www.apollographql.com/docs/graphos/routing)
-- [Configuration](https://www.apollographql.com/docs/graphos/routing/configuration/overview)
-- [GitHubRepository](https://github.com/apollographql/router)
-- [Changelog](https://github.com/apollographql/router/releases)
-
-### Apollo Connectors
-Apollo Connectors simplify REST API orchestration in graphs, replacing unmaintainable procedural code with scalable, declarative schema directives.
-
-**Human URL:** [https://www.apollographql.com/docs/graphos/connectors](https://www.apollographql.com/docs/graphos/connectors)
-
-#### Tags:
-
- - Connectors, Federation, GraphQL, Integration, REST
-
-#### Properties
-
-- [Documentation](https://www.apollographql.com/docs/graphos/connectors)
-- [GettingStarted](https://www.apollographql.com/docs/graphos/connectors/getting-started)
-
-### Rover CLI
-Rover is the command-line interface for managing and maintaining graphs with Apollo GraphOS.
-
-**Human URL:** [https://www.apollographql.com/docs/rover](https://www.apollographql.com/docs/rover)
-
-#### Tags:
-
- - CI/CD, CLI, Federation, GraphQL, Schema Management
-
-#### Properties
-
-- [Documentation](https://www.apollographql.com/docs/rover)
-- [GettingStarted](https://www.apollographql.com/docs/rover/getting-started)
-- [GitHubRepository](https://github.com/apollographql/rover)
-- [Changelog](https://github.com/apollographql/rover/blob/main/CHANGELOG.md)
-
-### Apollo MCP Server
-Apollo MCP Server provides Model Context Protocol integration for Apollo GraphQL, enabling AI agents to interact with GraphQL APIs through the MCP standard.
-
-**Human URL:** [https://www.apollographql.com/docs/apollo-mcp-server](https://www.apollographql.com/docs/apollo-mcp-server)
-
-#### Tags:
-
- - AI, GraphQL, MCP, Model Context Protocol
-
-#### Properties
-
-- [Documentation](https://www.apollographql.com/docs/apollo-mcp-server)
-- [Changelog](https://github.com/apollographql/apollo-mcp-server/releases)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.apollographql.com/)
-- [Pricing](https://www.apollographql.com/pricing)
 - [Documentation](https://www.apollographql.com/docs)
-- [Tutorials](https://www.apollographql.com/tutorials/)
+- [Getting started](https://www.apollographql.com/docs/quickstart)
+- [Pricing](https://www.apollographql.com/pricing)
+- [Support](https://www.apollographql.com/enterprise/support)
+- [Changelog](https://www.apollographql.com/docs/graphos/resources/changelog)
 - [Blog](https://www.apollographql.com/blog)
-- [Hub](https://www.apollographql.com/developers)
-- [Support](https://support.apollographql.com/)
-- [ProfessionalServices](https://www.apollographql.com/professional-services)
-- [Events](https://www.apollographql.com/events)
-- [GitHubOrganization](https://github.com/apollographql)
-- [Twitter](https://twitter.com/apollographql)
-- [LinkedIn](https://www.linkedin.com/company/apollo-graphql)
-- [YouTube](https://www.youtube.com/c/ApolloGraphQL)
-- [StatusPage](https://status.apollographql.com/)
-- [PrivacyPolicy](https://www.apollographql.com/privacy-policy)
-- [TermsOfService](https://www.apollographql.com/Apollo-Website-Terms-of-Service.pdf)
-- [SignUp](https://studio.apollographql.com/signup)
-- [Login](https://studio.apollographql.com/login?from=%2Fwelcome)
-- [GettingStarted](https://www.apollographql.com/docs/quickstart)
+- [Security](https://www.apollographql.com/trust/compliance-and-security)
+- [Terms of service](https://www.apollographql.com/Apollo-Website-Terms-of-Service.pdf)
+- [Privacy policy](https://www.apollographql.com/privacy-policy)
+- [GitHub](https://github.com/apollographql)
+- [Status](https://status.apollographql.com/)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Build GraphQL APIs | Build production-ready GraphQL APIs with Apollo Server. |
-| Deploy GraphQL APIs | Deploy federated supergraphs using Apollo Router. |
-| Scale GraphQL APIs | Scale GraphQL with Federation and Apollo GraphOS platform. |
-| GraphQL Clients | Client libraries for React, iOS, Kotlin, and more. |
-| Schema Registry | Centralized schema management and versioning in GraphOS. |
-| Connectors | Declarative REST API integration into federated graphs. |
-| Studio | Apollo Studio for schema management and observability. |
-| CLI | Rover CLI for schema publishing, checks, and management. |
-| Router | Apollo Router for high-performance federated query routing. |
-| Federation | Apollo Federation for composing distributed GraphQL APIs. |
-| Platform API | GraphOS Platform API for programmatic management. |
-| MCP Server | Apollo MCP Server for AI agent GraphQL integration. |
-| IDE Support | VS Code and JetBrains IDE support for GraphQL development. |
+**Kin Score 49.0** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.3 |
+| Contract quality | 48.9 |
+| Contract governance | 9.8 |
+| Operational transparency | 55.3 |
+| Developer ergonomics | 42.1 |
+| Access clarity | 60.5 |
 
-| Name | Description |
-|------|-------------|
-| AI-driven Experiences | Build AI-powered applications using GraphQL and MCP Server. |
-| Developer Efficiency | Improve developer productivity with GraphQL tooling and schema governance. |
-| Enhanced Customer Experience | Deliver faster, unified API experiences to end users. |
-| Modernization | Modernize legacy REST APIs into a federated GraphQL layer. |
-| Mergers and Acquisitions | Unify disparate API systems post-merger using federation. |
+**Agent readiness 25.4** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-| Name | Description |
-|------|-------------|
-| Anthropic | Apollo Connector for Anthropic AI API integration. |
-| OpenAI | Apollo Connector for OpenAI API integration. |
-| OData | Apollo Connector for OData REST API integration. |
-| AWS DynamoDB | Apollo Connector for AWS DynamoDB integration. |
-| Stripe | Apollo Connector for Stripe payment API integration. |
-| AWS Lambda | Apollo Connector for AWS Lambda invocation. |
-| Strapi | Apollo Connector for Strapi CMS integration. |
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apollo-graphql/](https://apis.io/providers/apollo-graphql/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apollo GraphQL: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apollo-graphql/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
